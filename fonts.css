@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_100.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_200.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_800.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./assets/fonts/SF_Pro_900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}

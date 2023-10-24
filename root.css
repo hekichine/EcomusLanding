@@ -1,9 +1,331 @@
-@import url('https://v1.fontapi.ir/css/SFProDisplay');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: SF Pro Display, sans-serif;                                    
+:root {
+  --body-bg: #04050e;
+  --text-accent: #fff;
+  --text-second: #c7c7c7;
+  --container-max-w-dk: 1760px;
+  --container-max-w-tb: calc(100vw - 60px);
+  --container-max-w-mb: calc(100vw - 30px);
+  --badge-1: #cae972;
+  --badge-2: #fa6060;
+  --btn-color: #fff;
+  --btn-bg: #000;
+  --btn-color-hover: #000;
+  --link-color: #fff;
+  --link-color-active: #ff9c8d;
+}
+body {
+  font-family: SF Pro Display, sans-serif;
+  color: var(--text-accent);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 175% */
+  background: var(--body-bg);
+}
+a {
+  color: var(--link-color);
+  transition: all 0.25s ease-in-out;
+}
+a:hover {
+  color: var(--link-color-active);
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*  container width */
+.container {
+  max-width: var(--container-max-w);
+  --container-max-w: var(--container-max-w-mb);
+  padding: 0;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .container {
+    --container-max-w: var(--container-max-w-tb);
+  }
+}
+@media (min-width: 1780px) {
+  .container {
+    --container-max-w: var(--container-max-w-dk);
+  }
+}
+:disabled {
+  cursor: default;
+}
+p {
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+}
+/* 
+  1. Font size
+  2. Font weight
+  3. Grid Spacing
+  4. Button
+
+*/
+/* 
+   ** font size
+*/
+/* 1. Heading */
+/* 
+  font size: 200px 120px 100px 70px 60px 50px 40px 30px
+*/
+
+.hdt-fz1 {
+  font-size: 70px;
+}
+.hdt-fz2 {
+  font-size: 60px;
+}
+.hdt-fz3 {
+  font-size: 50px;
+}
+.hdt-fz4 {
+  font-size: 40px;
+}
+.hdt-fz5 {
+  font-size: 30px;
+}
+.hdt-fz6 {
+  font-size: 24px;
+}
+.hdt-fz7 {
+  font-size: 20px;
+}
+.hdt-fz8 {
+  font-size: 18px;
+}
+.hdt-fz9 {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .hdt-fz1 {
+    font-size: 100px;
+  }
+  .hdt-fz2 {
+    font-size: 80px;
+  }
+  .hdt-fz3 {
+    font-size: 70px;
+  }
+  .hdt-fz4 {
+    font-size: 60px;
+  }
+  .hdt-fz5 {
+    font-size: 50px;
+  }
+  .hdt-fz6 {
+    font-size: 40px;
+  }
+  .hdt-fz7 {
+    font-size: 30px;
+  }
+  .hdt-fz8 {
+    font-size: 20px;
+  }
+  .hdt-fz9 {
+    font-size: 16px;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .hdt-fz1 {
+    font-size: 120px;
+  }
+  .hdt-fz2 {
+    font-size: 90px;
+  }
+  .hdt-fz3 {
+    font-size: 75px;
+  }
+  .hdt-fz4 {
+    font-size: 60px;
+  }
+  .hdt-fz5 {
+    font-size: 50px;
+  }
+  .hdt-fz6 {
+    font-size: 40px;
+  }
+  .hdt-fz7 {
+    font-size: 30px;
+  }
+  .hdt-fz8 {
+    font-size: 24px;
+  }
+  .hdt-fz9 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1780px) {
+  .hdt-fz1 {
+    font-size: 200px;
+  }
+  .hdt-fz2 {
+    font-size: 120px;
+  }
+  .hdt-fz3 {
+    font-size: 100px;
+  }
+  .hdt-fz4 {
+    font-size: 70px;
+  }
+  .hdt-fz5 {
+    font-size: 60px;
+  }
+  .hdt-fz6 {
+    font-size: 50px;
+  }
+  .hdt-fz7 {
+    font-size: 40px;
+  }
+  .hdt-fz8 {
+    font-size: 30px;
+  }
+  .hdt-fz9 {
+    font-size: 24px;
+  }
+}
+/* 2. Font weight */
+
+.hdt-fw-100 {
+  font-weight: 100;
+}
+.hdt-fw-200 {
+  font-weight: 200;
+}
+.hdt-fw-300 {
+  font-weight: 300;
+}
+.hdt-fw-400 {
+  font-weight: 400;
+}
+.hdt-fw-500 {
+  font-weight: 500;
+}
+.hdt-fw-600 {
+  font-weight: 600;
+}
+.hdt-fw-700 {
+  font-weight: 700;
+}
+.hdt-fw-800 {
+  font-weight: 800;
+}
+.hdt-fw-900 {
+  font-weight: 900;
+}
+/* 3. label */
+
+.hdt-label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 266.667% */
+}
+.hdt-badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.55px;
+  border-radius: 100px;
+  background-color: var(--badge-color);
+  text-transform: uppercase;
+}
+.hdt-badge-1 {
+  --badge-color: var(--badge-1);
+}
+.hdt-badge-2 {
+  --badge-color: var(--badge-2);
+}
+
+/*  3. Grid spacing */
+.hdt-spacing-15 {
+  --bs-gutter-x: 15px;
+  --bs-gutter-y: 15px;
+}
+@media (min-width: 768px) {
+  .md\:hdt-spacing-30 {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 30px;
+  }
+}
+@media (min-width: 1780px) {
+  .lg\:hdt-spacing-41 {
+    --bs-gutter-x: 41px;
+    --bs-gutter-y: 36px;
+  }
+}
+
+/* 4. Button */
+.hdt-btn {
+  display: inline-flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--btn-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 0.25s ease-in-out;
+}
+
+.hdt-btn-style1 {
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+.hdt-btn-hover-icon {
+  gap: 0;
+}
+.hdt-btn-hover-icon .hdt-icon {
+  opacity: 0;
+  width: 0px;
+  transition: all 0.3s linear;
+  font-size: 10px;
+}
+.hdt-btn:hover {
+  color: var(--btn-color);
+}
+.hdt-btn-hover-icon:hover .hdt-icon {
+  opacity: 1;
+  width: 16px;
+  margin-left: 3px;
+}
+
+.hdt-btn-outline {
+  background-color: transparent;
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  border-radius: 100px;
+  transition: 0.15s ease-in;
 }

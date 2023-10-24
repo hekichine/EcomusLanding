@@ -1,8 +1,9 @@
+@import url('https://v1.fontapi.ir/css/SFProDisplay');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  /* font-family: 'SF Pro Display', sans-serif;                                             */
+  font-family: SF Pro Display, sans-serif;                                    
 }

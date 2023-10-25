@@ -54,6 +54,12 @@ ol {
   padding-left: 0;
   padding-right: 0;
 }
+.hdt-s-text {
+  color: var(--text-accent);
+}
+.hdt-s-text2 {
+  color: var(--text-second);
+}
 @media (min-width: 768px) {
   .container {
     --container-max-w: var(--container-max-w-tb);
@@ -328,4 +334,52 @@ a {
   border: 1px solid var(--btn-color);
   border-radius: 100px;
   transition: 0.15s ease-in;
+}
+#cursor {
+  width: 350px;
+  height: 350px;
+  position: fixed;
+  top: 300px;
+  left: 500px;
+
+  border-radius: 100%;
+  mix-blend-mode: difference;
+  /* pointer-events: none; */
+  transform: translateX(-50%) translateY(-50%);
+
+  transition: all 0.25s linear;
+  animation-timing-function: .25s linear;
+  z-index: -1;
+  opacity: 0.7;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 46.07%,
+    rgba(53, 52, 124, 0) 91.91%
+  );
+  filter: blur(150px);
+}
+/* image */
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.hdt-ratio {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  align-items: stretch;
+}
+.hdt-ratio::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block !important;
+  padding-bottom: var(--ratio-percent);
+}
+.hdt-ratio--adapt_image .hdt-ratio {
+  --ratio-percent: calc(100% / (var(--aspect-ratioapt)));
 }

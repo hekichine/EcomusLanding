@@ -75,12 +75,22 @@ const app = {
       }
     })
   },
+  cursor:()=>{
+    const cursor = document.getElementById('cursor');
+    
+    document.addEventListener('mousemove',e =>{
+      // console.log(e.clientX,e.clientY);
+      cursor.style.top = e.clientY + `px`;
+      cursor.style.left = e.clientX + `px`;
+    })
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
     app.header_change_bg();
     app.nav_on_mb();
     app.open_menu_mb();
+    app.cursor()
   },
 };
 app.start();

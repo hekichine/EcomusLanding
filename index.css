@@ -6,22 +6,38 @@
 */
 
 /* 1. header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.15s linear;
+}
+.hdt-nav-up {
+  transform: translateY(-100%);
+}
+.hdt-nav-down {
+  transform: translateY(0);
+}
+.hdt-nav-not-root .hdt-header {
+  background-color: #12131699;
+  backdrop-filter: blur(14px);
+}
 .hdt-header {
   padding: 20px 0;
+  transition: 0.35s linear;
 }
 .hdt-header a.hdt-btn {
   height: 43px;
 }
 .hdt-header_wrap {
-  align-items: center;
+  align-items: center;position: relative;
 }
-.hdt-menu_nav {
-  display: none;
-}
+
 .hdt-header li a {
   padding: 10px 16px;
 }
-.hdt-header .hdt-logo{
+.hdt-header .hdt-logo {
   margin: 0 auto;
 }
 .hdt-nav_button {
@@ -37,25 +53,15 @@
   width: 30px;
   height: 2px;
   display: inline-block;
-  transition: .25s ease-in;
+  transition: 0.25s ease-in;
 }
-.hdt-nav_button .hdt-ctrl:nth-child(1){
-  transform: rotate(45deg);
-  transform-origin: 20%;
+.hdt-menu_nav.open {
+transform: translateX(0);
+opacity: 1;
 }
 
-.hdt-nav_button .hdt-ctrl:nth-child(3){
-  transform: rotate(-45deg);
-  transform-origin: 20%;
-  background-color: red;
-}
-.hdt-nav_button .hdt-ctrl:nth-child(2){
-  opacity: 0;
-}
 @media (min-width: 1024px) {
-  .hdt-header {
-    padding: 32px 0;
-  }
+  
   .hdt-header_wrap {
     gap: 39px;
   }
@@ -65,6 +71,9 @@
   .hdt-nav_button {
     display: none;
   }
+  .close-menu{
+    display: none;
+  }
   .hdt-menu_nav {
     display: flex;
     justify-content: space-between;
@@ -72,5 +81,56 @@
   }
   .hdt-header .hdt-nav {
     flex: 1 0 auto;
+  }
+}
+@media (min-width: 1440px){
+  .hdt-header {
+    padding: 32px 0;
+  }
+}
+@media (max-width: 1023px){
+  .hdt-menu_nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70vw;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(4px);
+    padding: 25px;
+    transition: .25s linear;
+    transform: translateX(-100%);
+    transform-origin: left;
+    opacity: 0;
+    box-shadow:  0px 1px 1px 0px #fff
+  }
+  .hdt-menu_nav ul{
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  .hdt-menu_nav.open .close-menu{
+    position: absolute;
+    top: 15px;
+    right: 0;transform: translateX(100%);
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,.3);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hdt-nav_button{
+    position: absolute;
+    top: 0;left: 0;bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 625px){
+  .hdt-menu_nav{
+    width: 80vw;
   }
 }

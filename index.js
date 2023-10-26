@@ -88,7 +88,7 @@ const app = {
     let $grid = $('.demo-layout').isotope({
       itemSelector: '.col',
       layoutMode: 'fitRows',
-      filter: ".fashion",
+      filter: "*",
     })
     $('[filter-tabs]').on('click','button',function(){
       var filterValue = $( this ).attr('data-filter');
@@ -112,4 +112,6 @@ const app = {
     app.filter()
   },
 };
-app.start();
+$(document).on('ready',function(){
+  app.start();
+})

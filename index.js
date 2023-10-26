@@ -109,8 +109,20 @@ const app = {
     app.open_menu_mb();
     app.cursor();
     app.tabs();
-    app.filter()
+    // app.filter();
   },
 };
 
 app.start();
+
+$(document).on('load',function(){
+  let $grid = $('.demo-layout').isotope({
+    itemSelector: '.col',
+    layoutMode: 'fitRows',
+    filter: "*",
+  })
+  $('[filter-tabs]').on('click','button',function(){
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  })
+})

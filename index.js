@@ -112,6 +112,5 @@ const app = {
     app.filter()
   },
 };
-$(document).on('ready',function(){
-  app.start();
-})
+
+app.start();

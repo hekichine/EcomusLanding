@@ -84,13 +84,31 @@ const app = {
       cursor.style.left = e.clientX + `px`;
     })
   },
+  filter:()=>{
+    let $grid = $('.demo-layout').isotope({
+      itemSelector: '.col',
+      layoutMode: 'fitRows'
+    })
+    $('[filter-tabs]').on('click','button',function(){
+      var filterValue = $( this ).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    })
+  },
+  tabs:()=>{
+    $('[filter-tabs]').on('click','button',function(){
+      $('[filter-tabs]').find('button.is-active').removeClass('is-active')
+      $(this).addClass('is-active');
+    })
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
     app.header_change_bg();
     app.nav_on_mb();
     app.open_menu_mb();
-    app.cursor()
+    app.cursor();
+    app.tabs();
+    app.filter()
   },
 };
 app.start();

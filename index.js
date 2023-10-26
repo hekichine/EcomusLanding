@@ -85,8 +85,8 @@ const app = {
     })
   },
   filter:()=>{
-    let $grid = $('.demo-layout').isotope({
-      itemSelector: '.col',
+    let $grid = $('#isotope').isotope({
+      itemSelector: '.isotope-item',
       layoutMode: 'fitRows',
       filter: "*",
     })
@@ -114,15 +114,3 @@ const app = {
 };
 
 app.start();
-
-$(document).on('load',function(){
-  let $grid = $('.demo-layout').isotope({
-    itemSelector: '.col',
-    layoutMode: 'fitRows',
-    filter: "*",
-  })
-  $('[filter-tabs]').on('click','button',function(){
-    var filterValue = $( this ).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-  })
-})

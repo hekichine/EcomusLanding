@@ -524,9 +524,7 @@ header {
   border: none;
   background: linear-gradient(96deg, #FF9C8D 2.41%, #D655A5 48.93%, #6053CB 94.5%);
 }
-.empower .img{
-  width: fit-content;
-}
+
 .empower .col-left{
   display: flex;
   align-items: center;

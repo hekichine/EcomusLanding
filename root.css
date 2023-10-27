@@ -7,7 +7,7 @@
   --body-bg: #04050e;
   --text-accent: #fff;
   --text-second: #c7c7c7;
-  --container-max-w-dk: 1760px;
+  --container-max-w-dk: 1775px;
   --container-max-w-tb: calc(100vw - 60px);
   --container-max-w-mb: calc(100vw - 30px);
   --container-sm: 1440px;
@@ -47,12 +47,10 @@ ol {
 .container-sm {
   max-width: var(--container-max-w);
   --container-max-w: var(--container-max-w-mb);
-  padding: 0;
+  --bs-gutter-x:15px;
 }
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
   --bs-gutter-x: 0rem;
   --bs-gutter-y: 0;
 }

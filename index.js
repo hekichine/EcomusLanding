@@ -248,12 +248,10 @@ const app = {
     });
   },
   empower_masonry: () => {
-
     $('.empower_grid').isotope({
       layoutMode: 'packery',
       itemSelector: '.col'
     });
-    
   },
   start: () => {
     console.log("App start ...");

@@ -109,7 +109,7 @@ const app = {
     app.open_menu_mb();
     app.cursor();
     app.tabs();
-    // app.filter();
+    app.filter();
   },
 };
 

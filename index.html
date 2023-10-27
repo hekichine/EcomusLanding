@@ -23,8 +23,6 @@
   </head>
 
   <body>
-    <div id="cursor">
-    </div>
     <header>
       <div class="hdt-header">
         <div class="hdt-header_wrap d-flex container">
@@ -35,12 +33,14 @@
               <span class="hdt-ctrl"></span>
             </button>
             <div append-body class="hdt-menu_nav">
+              <div class="overlay"></div>
+             <div class="menu__wrap">
               <button class="close-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" hight="24" width="24" viewBox="0 0 24 24"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
               </button>
               <ul class="hdt-menu d-flex">
                 <li>
-                  <a href="#">Demos</a>
+                  <a href="#" class="cursor-hover-item" data-cursor-text="Demos!" data-cursor-text-repeat="4">Demos</a>
                 </li>
                 <li>
                   <a href="#">Features</a>
@@ -61,6 +61,7 @@
               <a href="#" class="hdt-btn hdt-btn-style1 hdt-btn-hover-icon">Pucharse - 19$ 
                 <svg class="hdt-icon" viewBox="0 0 24 24" focusable="false" width="16" height="16" class="chakra-icon css-1628nfh"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg>
               </a>
+             </div>
             </div>
           </div>
           <div class="hdt-logo">
@@ -72,7 +73,7 @@
     <main>
       <section class="banner hdt-ratio--adapt_image">
         <div class="section-inner">
-          <div class="button-label">
+          <div class="button-label cursor-hover-item" data-cursor-text="Shopify OS 2.0" data-cursor-text-repeat="6">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M0 10.4C8.5656 12.3036 9.2 20.8 9.2 20.8C9.2 20.8 9.8344 12.3036 18.4 10.4C9.8344 8.4964 9.2 0 9.2 0C9.2 0 8.5656 8.4964 0 10.4ZM12.8 18.4C14.1492 18.6601 15.3805 19.343 16.3155 20.3499C17.2504 21.3568 17.8404 22.6353 18 24C18.1596 22.6353 18.7496 21.3568 19.6845 20.3499C20.6195 19.343 21.8508 18.6601 23.2 18.4C21.8508 18.1399 20.6195 17.457 19.6845 16.4501C18.7496 15.4432 18.1596 14.1647 18 12.8C17.8404 14.1647 17.2504 15.4432 16.3155 16.4501C15.3805 17.457 14.1492 18.1399 12.8 18.4Z" fill="white"/>
             </svg>
@@ -354,7 +355,7 @@
             </div>
           </div>
           <div class="container">
-            <div id="isotope" class="row hdt-spacing-15 md:hdt-spacing-30 lg:hdt-spacing-41 demo-layout">
+            <div id="isotope" class="row hdt-spacing-15 md:hdt-spacing-30 lg:hdt-spacing-41 demo-layout hdt-ratio--adapt_image">
                 <div class="fashion isotope-item col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                   <div class="col-inner">
                     <div class="dots">
@@ -373,7 +374,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img width="375" height="397" loading="lazy" src="./assets/images/demo_grid/1.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/1.jpeg" alt="Fashion 01">
+                     </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -399,7 +402,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/2.jpeg" alt="Fashion 01">
+                      <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                        <img loading="lazy" src="./assets/images/demo_grid/2.jpeg" alt="Fashion 01">
+                      </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -425,7 +430,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/3.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/3.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -451,7 +458,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/4.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/4.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -477,7 +486,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/5.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/5.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -503,7 +514,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/6.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/6.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -529,7 +542,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/7.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/7.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -555,7 +570,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/8.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/8.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -581,7 +598,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/9.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/9.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -607,7 +626,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/10.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/10.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -633,7 +654,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/11.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/11.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -659,7 +682,9 @@
                         </svg></a>
                       </div>
                      </div>
-                      <img  width="375" height="397"  loading="lazy" src="./assets/images/demo_grid/4.jpeg" alt="Fashion 01">
+                     <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
+                      <img loading="lazy" src="./assets/images/demo_grid/4.jpeg" alt="Fashion 01">
+                    </div>
                     </div>
                     <div class="info">
                       <a href="#" target="_blank">Home Main</a>
@@ -673,13 +698,308 @@
       </section>
       <section class="empower">
         <div class="section-inner">
-
+          <div class="container tophead hdt-ratio--adapt_image">
+            <div class="row">
+              <div class="col col-12 col-md-6 col-lg-8">
+                <div class="col-inner col-left">
+                  <div class="img hdt-ratio" style="--aspect-ratioapt: 277/277;">
+                    <img loading="lazy" src="./assets/images/empower_circle.png" alt="">
+                  </div>
+                  <div class="svg_wrap">
+                    <div class="top">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="61" height="67" viewBox="0 0 61 67" fill="none">
+                        <path d="M13.3095 53.2376H60.3962V66.5471H0V0.111328H60.0607V13.4209H13.3095V26.6185H42.8366V39.9281H13.3095V53.2376Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="81" height="67" viewBox="0 0 81 67" fill="none">
+                        <path d="M65.6285 0.111328H80.8394V66.5471H67.4181V26.8422L48.1807 66.5471H32.7462L13.397 26.8422V66.5471H0.0874634V0.111328H15.1865L40.4635 52.0073L65.6285 0.111328Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="68" height="67" viewBox="0 0 68 67" fill="none">
+                        <path d="M56.7989 0.111328L67.7597 10.0655V38.6978L56.9107 47.8691H14.186V66.5471H0.876465V0.111328H56.7989ZM54.4501 15.9933L51.654 13.4209H14.186V34.5595H52.1014L54.4501 32.5463V15.9933Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="68" height="67" viewBox="0 0 68 67" fill="none">
+                        <path d="M56.2029 0.111328L67.2756 10.0655V57.3759L56.4266 66.5471H11.1295L0.280518 57.3759V10.0655L11.3531 0.111328H56.2029ZM53.966 15.9933L51.0581 13.4209H16.498L13.7019 15.9933V51.2244L16.0506 53.2376H51.5054L53.966 51.2244V15.9933Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="113" height="67" viewBox="0 0 113 67" fill="none">
+                        <path d="M98.0777 0H112.058L90.4722 66.5477H72.5771L56.3596 16.7767L40.1421 66.5477H22.2469L0.549011 0H14.5296L31.1945 51.0012L47.7475 0H64.8598L81.5247 51.0012L98.0777 0Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="61" height="67" viewBox="0 0 61 67" fill="none">
+                        <path d="M13.9 53.2376H60.9867V66.5471H0.590454V0.111328H60.6511V13.4209H13.9V26.6185H43.427V39.9281H13.9V53.2376Z" fill="white"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="67" viewBox="0 0 69 67" fill="none">
+                        <path d="M52.2384 47.8691L68.7914 66.5471H51.0081L34.5669 47.8691H13.9874V66.5471H0.677917V0.111328H56.6003L67.5611 10.0655V38.6978L56.7121 47.8691H52.2384ZM51.9028 34.5595L54.2515 32.5463V15.9933L51.4555 13.4209H13.9874V34.5595H51.9028Z" fill="white"/>
+                      </svg>
+                    </div>
+                    <div class="bot">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="479" height="71" viewBox="0 0 479 71" fill="none">
+                        <path d="M420.218 1.36401H419.832L419.546 1.62373L408.585 11.5779L408.258 11.8755V12.3182V31.891V32.3021L408.547 32.5944L418.948 43.1078L419.243 43.4056L419.662 43.4045L459.546 43.2937L461.831 45.3156V53.0032L460.014 54.4903H409.258H408.258V55.4903V68.7998V69.7998H409.258H465.292H465.658L465.937 69.5635L476.786 60.3923L477.141 60.0927V59.6286V39.0491V38.61L476.818 38.3129L465.745 28.135L465.456 27.8691L465.063 27.8713L425.564 28.0925L423.567 26.0089V18.6848L425.753 16.6735H476.141H477.141V15.6735V2.36401V1.36401H476.141H420.218ZM382.802 1.36401H381.802V2.36401V53.0032L379.984 54.4903H345.256L343.538 53.0172V2.36401V1.36401H342.538H329.228H328.228V2.36401V59.6286V60.0927L328.583 60.3923L339.432 69.5635L339.711 69.7998H340.077H385.262H385.629L385.908 69.5635L396.757 60.3923L397.111 60.0927V59.6286V2.36401V1.36401H396.111H382.802ZM299.204 1.36401H298.578L298.304 1.92769L274.037 51.9723L249.661 1.92612L249.387 1.36401H248.762H233.663H232.663V2.36401V68.7998V69.7998H233.663H246.973H247.973V68.7998V33.4297L265.423 69.2379L265.697 69.7998H266.322H281.756H282.383L282.656 69.2359L299.994 33.4523V68.7998V69.7998H300.994H314.415H315.415V68.7998V2.36401V1.36401H314.415H299.204ZM209.083 1.62035L208.797 1.36401H208.414H163.564H163.181L162.896 1.62035L151.823 11.5745L151.492 11.8725V12.3182V59.6286V60.0927L151.846 60.3923L162.695 69.5635L162.974 69.7998H163.341H208.638H209.004L209.283 69.5635L220.132 60.3923L220.487 60.0927V59.6286V12.3182V11.8725L220.155 11.5745L209.083 1.62035ZM129.896 1.62035L129.61 1.36401H129.227H84.3772H83.9938L83.7087 1.62035L72.636 11.5745L72.3046 11.8725V12.3182V59.6286V60.0927L72.659 60.3923L83.5079 69.5635L83.7875 69.7998H84.1535H129.451H129.817L130.096 69.5635L140.945 60.3923L141.3 60.0927V59.6286V46.6546V45.6546H140.3H126.878H125.878V46.6546V53.0172L124.16 54.4903H89.4316L87.6141 53.0032V18.6965L89.9009 16.6735H123.692L125.878 18.6848V24.733V25.733H126.878H140.3H141.3V24.733V12.3182V11.8725L140.968 11.5745L129.896 1.62035ZM63.3962 55.4903V54.4903H62.3962H16.3095V43.1808H44.8366H45.8366V42.1808V28.8712V27.8712H44.8366H16.3095V16.6735H62.0607H63.0607V15.6735V2.36401V1.36401H62.0607H2H1V2.36401V68.7998V69.7998H2H62.3962H63.3962V68.7998V55.4903ZM202.89 16.6735L205.177 18.6965V53.0032L203.36 54.4903H168.632L166.913 53.0172V18.6848L169.099 16.6735H202.89Z" stroke="url(#paint0_linear_4453_611)" stroke-width="2"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_4453_611" x1="12.9077" y1="18.0501" x2="477.371" y2="47.05" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF9C8D"/>
+                            <stop offset="0.505208" stop-color="#D655A5"/>
+                            <stop offset="1" stop-color="#6053CB"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner col-right">
+                  <div class="top">
+                    <span class="empower-circle">
+                      <div class="text-circle" id="text-circle">HIGHTCONVERTING</div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32" fill="none">
+                        <path d="M19.9128 12.3221C19.8543 12.219 19.7695 12.1333 19.667 12.0736C19.5646 12.014 19.4481 11.9825 19.3294 11.9825H10.5452L12.0179 0.74388C12.0337 0.593468 11.9984 0.442121 11.9176 0.314208C11.8368 0.186294 11.7153 0.0892565 11.5725 0.0387195C11.4298 -0.0118176 11.2742 -0.0129136 11.1308 0.035608C10.9874 0.0841296 10.8645 0.179445 10.7819 0.306208L0.0993274 18.9988C0.0368589 19.1003 0.00262133 19.2166 0.000144621 19.3357C-0.00233209 19.4548 0.0270416 19.5724 0.0852376 19.6764C0.143434 19.7804 0.228345 19.867 0.331218 19.9273C0.43409 19.9875 0.551199 20.0193 0.670471 20.0194H9.32345L8.15635 31.2749C8.14489 31.4248 8.18394 31.5742 8.2673 31.6994C8.35066 31.8246 8.47353 31.9183 8.61637 31.9657C8.75922 32.013 8.91382 32.0113 9.05559 31.9608C9.19735 31.9103 9.31814 31.8139 9.39872 31.687L19.9048 12.9963C19.9657 12.8947 19.9985 12.7788 20 12.6603C20.0014 12.5419 19.9713 12.4251 19.9128 12.3221Z" fill="url(#paint0_linear_4453_498)"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_4453_498" x1="3.61204" y1="7.55555" x2="15.794" y2="21.1994" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF9C8D"/>
+                            <stop offset="0.505208" stop-color="#D655A5"/>
+                            <stop offset="1" stop-color="#6053CB"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="190" height="39" viewBox="0 0 190 39" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4197 31.6019C31.4821 28.6791 34.0566 23.1021 33.4004 17.6435L28.3737 20.5457C28.0109 23.25 26.4426 25.7626 23.8969 27.2324C19.5384 29.7488 13.9651 28.2554 11.4486 23.8969C8.93222 19.5383 10.4256 13.965 14.7841 11.4486C18.2203 9.46473 22.4114 9.97306 25.2645 12.4128L17.5096 16.89L16.2682 23.4922L28.0597 16.6844L31.3832 14.7656L32.5028 14.1192C32.2515 13.488 31.9517 12.8671 31.6019 12.2614C27.6922 5.48957 19.0332 3.16937 12.2614 7.07908C5.48959 10.9888 3.16943 19.6478 7.07912 26.4196C10.9888 33.1914 19.6478 35.5116 26.4197 31.6019Z" fill="white"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M162.076 9.13959V21.4811C162.076 23.29 161.394 24.8292 160.005 26.1837C158.614 27.4963 157.074 28.1229 155.253 28.1229C153.426 28.1229 151.843 27.4917 150.457 26.1837C149.079 24.8402 148.43 23.3049 148.43 21.4811V5.85885L142.854 9.07847V21.0867C142.854 24.5718 144.024 27.5505 146.344 29.9048L146.348 29.9087L146.352 29.9126C148.719 32.2656 151.696 33.4638 155.253 33.4638C158.807 33.4638 161.787 32.268 164.114 29.9087C166.483 27.5526 167.653 24.571 167.653 21.0867V5.91999L162.076 9.13959ZM66.5533 23.4339L65.4727 25.6692L65.4587 25.6944C64.0318 28.2641 62.1841 30.2218 59.905 31.5255C57.6263 32.8289 54.9784 33.4431 52.0073 33.4199L52.003 33.4199C47.9996 33.3729 44.5486 32.0006 41.6554 29.325C38.7452 26.6337 37.2789 23.301 37.2305 19.434C37.182 15.5135 38.604 12.1779 41.5072 9.39878L41.5104 9.3958L41.5135 9.39285C44.4425 6.63504 47.9373 5.16397 52.0007 5.11629C54.9117 5.06953 57.6285 5.8287 60.1316 7.3282L60.1372 7.33155L60.1428 7.33496C62.4831 8.77631 64.2658 10.5841 65.3138 12.8673L65.315 12.87L66.4626 15.409H60.3712L60.0651 14.9032C58.3201 12.0194 55.7347 10.5374 52.1299 10.4568C49.7741 10.4187 47.6932 11.2219 45.7592 12.9844L45.7555 12.9877L45.7518 12.9911C43.7522 14.7786 42.8069 16.8751 42.8069 19.29C42.8069 21.7165 43.7177 23.781 45.5548 25.5712C47.3844 27.3108 49.5445 28.1623 52.0438 28.1231L52.0463 28.123L52.0489 28.123C55.7222 28.0828 58.3491 26.6662 60.1259 23.9144L60.4362 23.4339H66.5533ZM82.5262 5.20457C86.3523 5.34602 89.6778 6.77193 92.3483 9.55905C95.005 12.2878 96.3711 15.5622 96.3711 19.3338C96.3711 23.2101 94.9018 26.5798 92.0106 29.3942C89.158 32.1711 85.6831 33.5603 81.6882 33.4195C77.8548 33.3236 74.5296 31.8943 71.8617 29.1556C69.1965 26.4196 67.8808 23.1415 67.8808 19.3776C67.8808 15.4671 69.3431 12.0524 72.1932 9.27655C75.0484 6.45145 78.5288 5.06221 82.5262 5.20457ZM81.8088 28.0799L81.816 28.0803C84.3456 28.1975 86.4308 27.3938 88.1984 25.5558L88.2024 25.5516L88.2065 25.5474C90.04 23.6833 90.8783 21.5801 90.8399 19.0962C90.7568 16.7285 89.874 14.7349 88.205 13.031C86.5555 11.347 84.6243 10.5447 82.3061 10.5447H82.2974L82.2888 10.5446C79.845 10.5056 77.8201 11.3492 76.0744 13.0485C74.3381 14.7387 73.4979 16.7169 73.4572 19.1315C73.4165 21.5096 74.1807 23.576 75.8382 25.3469C77.4988 27.1211 79.4393 28.0018 81.8016 28.0797L81.8088 28.0799ZM139.006 32.8503H133.34V16.4854C133.34 14.7716 132.825 13.339 131.863 12.1782C130.944 11.0692 129.72 10.5009 128.183 10.5009C126.556 10.5009 125.182 11.0187 123.975 12.0395C122.855 13.0235 122.305 14.2324 122.305 15.7404V32.8503H116.593V15.7404C116.593 14.2323 116.044 13.0277 114.885 12.045L114.878 12.0395L114.872 12.0339C113.717 11.022 112.348 10.5009 110.716 10.5009C109.188 10.5009 108.005 11.0624 107.08 12.1782C106.128 13.3283 105.649 14.7126 105.649 16.4854V32.8503H99.982V16.8798C99.982 13.5727 100.943 10.7563 103.014 8.63892C104.924 6.63542 107.43 5.53234 110.449 5.29495C112.499 5.12695 114.383 5.47502 116.066 6.35621C117.341 7.02351 118.466 7.97841 119.449 9.1892C120.433 7.97841 121.558 7.02351 122.832 6.35621C124.515 5.47502 126.399 5.12695 128.449 5.29495C131.473 5.53271 133.973 6.63787 135.924 8.63355C137.991 10.7441 139.006 13.5575 139.006 16.8798V32.8503ZM177.281 23.3901V25.2498C177.281 25.6794 177.543 26.3073 178.412 27.1529C179.197 27.9169 179.959 28.197 180.683 28.1677L180.689 28.1674L180.694 28.1673C181.944 28.1292 182.786 27.7972 183.402 27.1967C183.925 26.6881 184.224 25.9607 184.264 24.9143C184.281 24.0603 184.043 23.4142 183.603 22.9006C183.146 22.368 182.4 21.896 181.263 21.5397L181.26 21.5387L178.251 20.6206C176.514 20.0893 175.109 19.2181 174.123 17.9718C173.138 16.7252 172.635 15.1833 172.56 13.417C172.458 11.1983 173.248 9.25485 174.849 7.69578L174.855 7.69002L174.861 7.68435C176.48 6.15794 178.431 5.3049 180.722 5.205C182.769 5.1037 184.638 5.77772 186.296 7.0964C188.035 8.44311 189.004 10.1438 189.162 12.2016L189.163 12.2098L189.274 14.0505H183.499V12.4537C183.499 11.9534 183.251 11.5032 182.768 11.1468C182.276 10.7835 181.566 10.5472 180.785 10.5447C179.374 10.5824 178.257 11.6252 178.226 12.9591L178.225 12.9849L178.223 13.0107C178.174 13.6607 178.347 14.1577 178.708 14.5736C179.092 15.0156 179.752 15.4367 180.791 15.7739L183.766 16.7393L183.77 16.7406C185.626 17.3586 187.127 18.2991 188.196 19.5946C189.267 20.8931 189.847 22.4809 189.973 24.2989C190.178 26.864 189.227 29.1302 187.216 30.9902L187.211 30.9949L187.206 30.9996C185.206 32.8007 182.858 33.6543 180.216 33.5059L180.214 33.5058L180.211 33.5056C177.764 33.3568 175.718 32.3532 174.062 30.6434L174.057 30.6377L174.051 30.6319C172.426 28.902 171.614 26.8116 171.614 24.4172V23.3901H177.281Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <div class="bot">
+                    <p>Empower your eCommerce venture with Hongo - Effortlessly import<br> your desired demo, design, customize, and launch your online store with visual editing,<br> no coding hassles!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row hdt-spacing-15 empower_grid hdt-ratio--adapt_image">
+              <div class="col col-12 col-md-6">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        One Click Import Demo
+                      </h3>
+                      <p class="empower_des">Display variations like product color, size, etc as swatches, no need for additional apps.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 872/524;">
+                      <img loading="lazy" src="./assets/images/empower/1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        One Click Update Theme
+                      </h3>
+                      <p class="empower_des">Display variations like product color, size, etc as swatches, no need for additional apps.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 871/526;">
+                      <img loading="lazy" src="./assets/images/empower/2.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Advanced Swatches
+                      </h3>
+                      <p class="empower_des">Display variations like product color, size, etc as swatches, no need for additional apps.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 577/353;">
+                      <img loading="lazy" src="./assets/images/empower/3.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Mobile-first Experience
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your conversation rate with mini cart.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 576/557;">
+                      <img loading="lazy" src="./assets/images/empower/4.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        One Click Import Blog & Page
+                      </h3>
+                      <p class="empower_des">Display variations like product color, size, etc as swatches, no need for additional apps.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 577/185;">
+                      <img loading="lazy" src="./assets/images/empower/5.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Better Cart Side
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your conversation rate with mini cart.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 577/482;">
+                      <img loading="lazy" src="./assets/images/empower/6.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4 item2">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 573/374;">
+                      <img loading="lazy" src="./assets/images/empower/7.png" alt="">
+                    </div>
+                    <div class="info text-center">
+                      <span class="empower_label2">
+                        SPEED & SEO
+                      </span>
+                      <h3 class="empower_title">
+                        Better Speed & Better SEO
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your<br> conversation rate with mini cart.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Advance Product Filter
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your conversation rate with mini cart.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 576/484;">
+                      <img loading="lazy" src="./assets/images/empower/8.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Ajax infinite loading
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your conversation rate with mini cart.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 577/259;">
+                      <img loading="lazy" src="./assets/images/empower/9.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Inactive Tab & Cart count
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 576/175;">
+                      <img loading="lazy" src="./assets/images/empower/10.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="col-inner">
+                  <div class="col-wrap">
+                    <a href="#" target="_blank" class="empower_link"></a>
+                    <div class="info">
+                      <span class="empower_label">
+                        INTEGRATE
+                      </span>
+                      <h3 class="empower_title">
+                        Built in Magemenu
+                      </h3>
+                      <p class="empower_des">Enhance your shopping cart experience and boost your sales as well as your conversation rate with mini cart.</p>
+                    </div>
+                    <div class="img hdt-ratio" style="--aspect-ratioapt: 576/424;">
+                      <img loading="lazy" src="./assets/images/empower/11.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
       <!-- place footer here -->
     </footer>
+    <div class="cursor d-none">
+      <div class="cursor--small"></div>
+      <div class="cursor--large"></div>
+      <div class="cursor--text">
+        <div class="text">GO HERE! GO HERE! GO HERE! GO HERE!</div>
+      </div>
+    </div>
+    <div id="cursor" class="cursor">
+    </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -696,8 +1016,11 @@
     ></script>
     <!-- JQUERY -->
     <script src="./assets/lib/jquery.min.js" defer></script>
+    <!-- CIRCLE TYPE  -->
+    <script src="./assets/lib/circletype.min.js"></script>
     <!-- ISOTOPE filter/masonry/... -->
     <script src="./assets/lib/isotope.pkgd.min.js" defer></script>
+    <script src="./assets/lib/packery-mode.pkgd.min.js" defer></script>
     <!-- JS main -->
     <script src="./index.js" defer></script>
   </body>

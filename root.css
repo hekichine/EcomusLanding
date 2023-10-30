@@ -29,6 +29,9 @@ body {
   line-height: 1.5; /* 175% */
   background: var(--body-bg);
 }
+section{
+  overflow: hidden;
+}
 a {
   color: var(--link-color);
   transition: all 0.25s ease-in-out;
@@ -484,4 +487,5 @@ picture {
     rgba(53, 52, 124, 0) 91.91%
   );
   filter: blur(150px);
+  display: none;
 }

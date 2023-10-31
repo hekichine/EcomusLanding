@@ -843,6 +843,12 @@ header {
 .shopify_app .splider .splide__slide{
   padding-inline-start: 35px;
 }
+.shopify_app .shopify_app_svg{
+  position: absolute;
+  top: 0;right: 0;
+  transform: translateY(-60%) translateX(50%);
+  z-index: -2;
+}
 @media (min-width: 768px) {
   .banner .banner_demo {
     position: relative;

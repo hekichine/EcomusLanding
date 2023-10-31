@@ -33,7 +33,7 @@ html {
   height: 100%;
 }
 section {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 a {
   color: var(--link-color);

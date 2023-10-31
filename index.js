@@ -252,6 +252,10 @@ const app = {
       layoutMode: "packery",
       itemSelector: ".col",
     });
+    $(".grid2").isotope({
+      layoutMode: "packery",
+      itemSelector: ".col",
+    });
   },
   splider:()=>{
     imagesLoaded( document.querySelector('.splide'), function( instance ) {

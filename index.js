@@ -318,7 +318,7 @@ const app = {
     
           // Called when the page is changed.
           onPageChanged( newPage, prevPage ) {
-            console.log("Splide slider " + prevPage + '->' + newPage );
+            // console.log("Splide slider " + prevPage + '->' + newPage );
           }
         };
       };
@@ -326,6 +326,12 @@ const app = {
       new Splide( '.splide' ).mount( { AutoScroll } );
     } );
     
+  },
+  table:()=>{
+     $('#table_viewmore').on('click',function(){
+      $('#total_wrap').addClass('view-more-active')
+     })
+
   },
   start: () => {
     console.log("App start ...");
@@ -339,6 +345,7 @@ const app = {
     app.filter();
     app.empower_masonry();
     app.splider();
+    app.table();
   },
 };
 

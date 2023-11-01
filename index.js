@@ -246,6 +246,10 @@ const app = {
       $("[filter-tabs]").find("button.is-active").removeClass("is-active");
       $(this).addClass("is-active");
     });
+    $('#tabs_demo').on('click','button',function(){
+      $("#tabs_demo").find("button.is-active").removeClass("is-active");
+      $(this).addClass("is-active");
+    })
   },
   empower_masonry: () => {
     $(".empower_grid").isotope({

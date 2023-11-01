@@ -12,7 +12,7 @@ header {
   left: 0;
   right: 0;
   transition: 0.15s linear;
-  z-index: 1;
+  z-index: 888;
 }
 
 .hdt-nav-up {
@@ -69,7 +69,7 @@ header {
 }
 
 .hdt-menu_nav.open {
-  z-index: 2;
+  z-index: 999;
 }
 
 .hdt-menu_nav.open .overlay {

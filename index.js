@@ -338,7 +338,7 @@ const app = {
 
   },
   galaxy: () => {
-    let number_of_star = 250;
+    let number_of_star = 200;
 
     let random_number = function (min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;

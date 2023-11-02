@@ -1,10 +1,10 @@
 const app = {
   header_sticky: () => {
     // Hide header on scroll down
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = $("header").outerHeight();
+    let didScroll;
+    let lastScrollTop = 0;
+    let delta = 5;
+    let navbarHeight = $("header").outerHeight();
 
     $(window).scroll(function (event) {
       didScroll = true;
@@ -18,7 +18,7 @@ const app = {
     }, 250);
 
     function hasScrolled() {
-      var st = $(this).scrollTop();
+      let st = $(this).scrollTop();
 
       // Make scroll more than delta
       if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -237,7 +237,7 @@ const app = {
       filter: "*",
     });
     $("[filter-tabs]").on("click", "button", function () {
-      var filterValue = $(this).attr("data-filter");
+      let filterValue = $(this).attr("data-filter");
       $grid.isotope({ filter: filterValue });
     });
   },
@@ -246,7 +246,7 @@ const app = {
       $("[filter-tabs]").find("button.is-active").removeClass("is-active");
       $(this).addClass("is-active");
     });
-    $('#tabs_demo').on('click','button',function(){
+    $('#tabs_demo').on('click', 'button', function () {
       $("#tabs_demo").find("button.is-active").removeClass("is-active");
       $(this).addClass("is-active");
     })
@@ -261,80 +261,104 @@ const app = {
       itemSelector: ".col",
     });
   },
-  splider:()=>{
-    imagesLoaded( document.querySelector('.splide'), function( instance ) {
+  splider: () => {
+    imagesLoaded(document.querySelector('.splide'), function (instance) {
       // Create the AutoScroll extension.
-      const AutoScroll = function ( Splide, Components ) {
-        const Track      = Components.Track;
+      const AutoScroll = function (Splide, Components) {
+        const Track = Components.Track;
         const pxPerFrame = 3;
-    
+
         let paused = true;
-        let page   = 0;
-    
+        let page = 0;
+
         return {
           mount() {
-            this.update = this.update.bind( this );
-    
-            Splide.on( 'mouseenter', () => {
+            this.update = this.update.bind(this);
+
+            Splide.on('mouseenter', () => {
               this.pause();
-            }, Splide.root );
-    
-            Splide.on( 'mouseleave', () => {
+            }, Splide.root);
+
+            Splide.on('mouseleave', () => {
               this.play();
-            }, Splide.root );
+            }, Splide.root);
           },
-    
+
           // Start scroll after load.
           mounted() {
-            setTimeout( this.play.bind( this ), 1000 );
+            setTimeout(this.play.bind(this), 1000);
           },
-    
+
           // Start scroll.
           play() {
-            if ( paused ) {
+            if (paused) {
               paused = false;
               Components.Elements.list.style.transition = '';
-              requestAnimationFrame( this.update );
+              requestAnimationFrame(this.update);
             }
           },
-    
+
           // Pause scroll.
           pause() {
             paused = true;
           },
-    
+
           // Update the slider position on every frame.
           update() {
-            Track.translate( Track.position - pxPerFrame );
+            Track.translate(Track.position - pxPerFrame);
             Track.shift();
-    
-            const currentPage = Track.toIndex( Track.position );
-    
-            if ( page !== currentPage ) {
-              this.onPageChanged( currentPage, page );
+
+            const currentPage = Track.toIndex(Track.position);
+
+            if (page !== currentPage) {
+              this.onPageChanged(currentPage, page);
               page = currentPage;
             }
-    
-            if ( ! paused ) {
-              requestAnimationFrame( this.update );
+
+            if (!paused) {
+              requestAnimationFrame(this.update);
             }
           },
-    
+
           // Called when the page is changed.
-          onPageChanged( newPage, prevPage ) {
+          onPageChanged(newPage, prevPage) {
             // console.log("Splide slider " + prevPage + '->' + newPage );
           }
         };
       };
-    
-      new Splide( '.splide' ).mount( { AutoScroll } );
-    } );
-    
+
+      new Splide('.splide').mount({ AutoScroll });
+    });
+
   },
-  table:()=>{
-     $('#table_viewmore').on('click',function(){
+  table: () => {
+    $('#table_viewmore').on('click', function () {
       $('#total_wrap').addClass('view-more-active')
-     })
+    })
+
+  },
+  galaxy: () => {
+    let number_of_star = 300;
+
+    let random_number = function (min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    let createStars = function () {
+      let star_rotation = 'move_right;';
+      for (let i = 0; i < number_of_star; i++) {
+        rot = (star_rotation == 'move_right;' ? 'move_left;' : 'move_right;');
+        let star_top = random_number(0, document.documentElement.clientHeight);
+        let star_left = random_number(0, document.documentElement.clientWidth);
+        let star_radius = 1;
+        let star_duration = random_number(6, 10);
+
+        document.getElementById('galaxy_eff').innerHTML += "<div class='star' style='top: " + star_top + "px; left: " + star_left + "px; width: " + star_radius + "px; height: " + star_radius + "px; " +
+          "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;'></div>";
+      }
+    };
+
+    createStars();
 
   },
   start: () => {
@@ -350,6 +374,7 @@ const app = {
     app.empower_masonry();
     app.splider();
     app.table();
+    app.galaxy();
   },
 };
 

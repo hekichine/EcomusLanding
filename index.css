@@ -169,7 +169,7 @@ header {
   bottom: -20px;
   left: 0;
   right: 0;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .banner .revolu {
@@ -201,8 +201,7 @@ header {
 
 .banner .banner_demo {
   width: fit-content;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 auto;
 }
 
 .banner .banner_demo-img-wrap {
@@ -246,7 +245,7 @@ header {
 .banner .banner_demo-1 {
   position: absolute;
   width: fit-content;
-  right: -100px;
+  right: 0;
   top: 167px;
   border-radius: 20px;
   background-color: #1b1b1b;
@@ -304,6 +303,7 @@ header {
   border-radius: 79px;
   border: 2px solid #fff;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .banner .product_popup img {
@@ -332,8 +332,11 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  /* 150% */
   margin-bottom: 15px;
+}
+
+.banner .product_popup .pr_title br {
+  display: block !important;
 }
 
 .banner .product_popup .times {
@@ -360,7 +363,7 @@ header {
 .banner .banner_demo-2 {
   position: absolute;
   bottom: -75px;
-  left: -100px;
+  left: 0px;
 }
 
 /* ooff2 */
@@ -372,7 +375,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 71px;
+  gap: 10px;
   margin-bottom: 49px;
 }
 
@@ -478,7 +481,7 @@ header {
 }
 
 .features .section-inner {
-  margin-bottom: 83px;
+  margin-bottom: 30px;
 }
 
 /* demos */
@@ -645,6 +648,7 @@ header {
 .empower .col-left {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 
 .empower .col-left .top {
@@ -671,9 +675,28 @@ header {
   /* 150% */
 }
 
+.empower .empower_earth {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.empower .empower_earth svg:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.empower .empower_earth svg:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .empower .col-right .top {
   display: flex;
   gap: 62px;
+  align-items: center;
 }
 
 .empower .col-right .top .empower-circle {
@@ -713,7 +736,7 @@ header {
 }
 
 .empower .tophead {
-  margin-bottom: 115px;
+  margin-bottom: 60px;
 }
 
 .empower_grid .col-wrap {
@@ -947,7 +970,7 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 0;
   z-index: -1;
   pointer-events: none;
 }
@@ -1339,6 +1362,7 @@ header {
 .tabs_demo .section-inner {
   padding-top: 107px;
   padding-bottom: 115px;
+  margin-bottom: 0;
 }
 
 .tabs_demo .title .gradient {
@@ -1405,15 +1429,6 @@ header {
   position: relative;
 }
 
-.tabs_inner .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.tabs_inner .row {
-  margin-left: 0;
-  margin-right: 0;
-}
 
 @media (min-width: 768px) {
   .banner .banner_demo {
@@ -1425,7 +1440,7 @@ header {
   }
 
   .empower .section-inner {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .shopify_app .title {
@@ -1438,6 +1453,10 @@ header {
 
   .grid_layout2 .info {
     padding: 36px 32px 30px 32px;
+  }
+
+  .banner .banner_demo-2 {
+    left: -30px;
   }
 }
 
@@ -1483,6 +1502,7 @@ header {
   .shopify_app .des {
     margin-bottom: 44px;
   }
+
 }
 
 @media (min-width: 1440px) {
@@ -1490,13 +1510,61 @@ header {
     padding: 32px 0;
   }
 
+  .banner .banner_svg_bg {
+    max-width: 730px;
+  }
+
+  .banner .banner_demo-1 {
+    right: -50px;
+  }
+
+  .ooff2 .list-check {
+    gap: 71px;
+  }
+
+
+  .features .section-inner {
+    margin-bottom: 83px;
+  }
+
+  .empower .tophead {
+    margin-bottom: 115px;
+  }
+
+  .shopify_app .splider {
+    bottom: 100px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .banner .banner_demo-1 {
+    right: -100px;
+  }
+
+  .banner .banner_demo-2 {
+    left: -100px;
+  }
+
   .banner .banner_demo {
     margin-left: 13%;
     margin-right: 0;
   }
 
-  .banner .banner_svg_bg {
-    max-width: 730px;
+  .banner .revolutions svg {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .empower .col-right {
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .empower .col-left {
+    justify-content: center;
+
   }
 }
 
@@ -1575,11 +1643,149 @@ header {
     align-items: center;
     justify-content: center;
   }
+
+  .banner .banner_svg_bg {
+    display: none;
+  }
+
+  .banner .section-inner {
+    padding-top: 200px;
+  }
+
+  .banner .banner_demo {
+    max-width: 90%;
+  }
+
+  .banner .banner_demo-1 {
+    right: -35px;
+    top: 70px;
+  }
+
+  .banner .card-shoes {
+    max-width: 250px;
+    overflow: hidden;
+  }
+
+  .empower_grid .item2 .empower_title {
+    font-size: 24px;
+  }
+
+  .empower_grid .item2 .empower_des br {
+    display: none;
+  }
+
+  .empower_grid .item2 .empower_des {
+    margin-bottom: 24px;
+  }
+
+  .shopify_app .des br {
+    display: none;
+  }
+
+  .grid_layout2 .section-inner {
+    padding-top: 80px;
+  }
+
+  .hdt-table .tophead {
+    padding-top: 70px;
+  }
+
+  .tabs_demo .section-inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .galaxy_eff {
+    width: 100%;
+  }
+
+  .features .col_wrap br {
+    display: none;
+  }
+
+  .features .info_wrap {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .features .ossk2 {
+    align-items: center;
+  }
+
+  .features .col_wrap {
+    padding-left: 35px;
+  }
+
+  .features .title_wrap svg {
+    right: 0;
+    transform: translate(50%, -100%)
+  }
+
+  .section-inner br {
+    display: none;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .shopify_app br {
     display: none;
+  }
+
+  .ooff2 .list-check {
+    border: none;
+    padding: 0;
+  }
+
+  .shopify_app .under-line {
+    display: none;
+  }
+
+  .shopify_app .icon {
+    display: none;
+  }
+
+  .banner .revolutions svg {
+    display: none;
+  }
+
+  .shopify_app .splider {
+    position: unset;
+  }
+
+  .hdt-table .d-inner {
+    padding: 10px 15px;
+  }
+
+  .hdt-table .dgroup {
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .features .title_wrap svg {
+    display: none;
+  }
+
+  .banner .banner_demo-1 {
+    display: none;
+  }
+
+  .features .title_wrap .hdt-fz7 {
+    font-size: 24px;
+  }
+
+  .features .col_wrap {
+    padding: 25px;
+  }
+
+  .empower .empower_earth {
+    display: none;
+  }
+
+  .empower .svg_wrap {
+    text-align: center;
   }
 }
 

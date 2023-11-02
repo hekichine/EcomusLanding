@@ -79,13 +79,14 @@ const app = {
     });
   },
   cursor: () => {
-    const cursor = document.getElementById("cursor");
-
-    document.addEventListener("mousemove", (e) => {
-      // console.log(e.clientX,e.clientY);
-      cursor.style.top = e.clientY + `px`;
-      cursor.style.left = e.clientX + `px`;
-    });
+    $(window).on('load', function () {
+      document.addEventListener("mousemove", (e) => {
+        // console.log(e.clientX,e.clientY);
+        // $('#cursor').style.top = e.clientY + `px`;
+        // $('#cursor').style.left = e.clientX + `px`;
+        $('#cursor').css({ 'top': `${e.clientY}px`, 'left': `${e.clientX}px` })
+      });
+    })
   },
   cursor2: () => {
     const cursorOuter = document.querySelector(".cursor--large");
@@ -362,6 +363,16 @@ const app = {
     createStars();
 
   },
+  text_circle: () => {
+    const str = "highconverting";
+    const text = $('#text-circle');
+    console.log(text);
+    $(window).on('load', function () {
+      for (let i = 0; i < str.length; i++) {
+        text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
+      }
+    })
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
@@ -376,6 +387,7 @@ const app = {
     app.splider();
     app.table();
     app.galaxy();
+    app.text_circle();
   },
 };
 

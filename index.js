@@ -338,7 +338,7 @@ const app = {
 
   },
   galaxy: () => {
-    let number_of_star = 500;
+    let number_of_star = 250;
 
     let random_number = function (min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -348,8 +348,8 @@ const app = {
       let star_rotation = 'move_right;';
       for (let i = 0; i < number_of_star; i++) {
         rot = (star_rotation == 'move_right;' ? 'move_left;' : 'move_right;');
-        let star_top = random_number(0, document.documentElement.clientHeight);
-        let star_left = random_number(0, document.documentElement.clientWidth);
+        let star_top = random_number(0, 300);
+        let star_left = random_number(0, 1000);
         let star_radius = 1;
         let star_duration = random_number(3, 6);
         let randomColor = Math.floor(Math.random() * 16777215).toString(16);

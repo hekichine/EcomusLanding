@@ -338,7 +338,7 @@ const app = {
 
   },
   galaxy: () => {
-    let number_of_star = 300;
+    let number_of_star = 500;
 
     let random_number = function (min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -351,10 +351,11 @@ const app = {
         let star_top = random_number(0, document.documentElement.clientHeight);
         let star_left = random_number(0, document.documentElement.clientWidth);
         let star_radius = 1;
-        let star_duration = random_number(6, 10);
+        let star_duration = random_number(3, 6);
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
         document.getElementById('galaxy_eff').innerHTML += "<div class='star' style='top: " + star_top + "px; left: " + star_left + "px; width: " + star_radius + "px; height: " + star_radius + "px; " +
-          "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;'></div>";
+          "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;background-color:#" + randomColor + "'></div>";
       }
     };
 

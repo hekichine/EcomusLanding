@@ -611,6 +611,7 @@ picture {
   border-radius: 100%;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  z-index: -1;
 }
 
 .galaxy_eff {
@@ -622,6 +623,7 @@ picture {
   left: 0;
   transform: rotate(45deg);
   pointer-events: none;
+  z-index: -1;
 }
 
 .galaxy_eff_svg {
@@ -631,6 +633,7 @@ picture {
   right: 0;
   overflow: hidden;
   pointer-events: none;
+  z-index: -1;
 }
 
 @keyframes move_right {

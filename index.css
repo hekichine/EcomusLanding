@@ -1801,6 +1801,10 @@ header {
   .grid_layout2 .section-inner {
     padding-top: 50px;
   }
+
+  .banner .section-inner {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 625px) {

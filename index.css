@@ -1639,7 +1639,7 @@ header {
   .hdt-nav_button {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 15px;
     bottom: 0;
     align-items: center;
     justify-content: center;
@@ -1697,7 +1697,7 @@ header {
   }
 
   .galaxy_eff {
-    width: 100%;
+    width: 95%;
   }
 
   .features .col_wrap br {
@@ -1787,6 +1787,19 @@ header {
 
   .empower .svg_wrap {
     text-align: center;
+    width: 100%;
+  }
+
+  .banner .banner_demo-2 {
+    bottom: 20px;
+  }
+
+  .demos .section-inner {
+    margin-bottom: 50px;
+  }
+
+  .grid_layout2 .section-inner {
+    padding-top: 50px;
   }
 }
 

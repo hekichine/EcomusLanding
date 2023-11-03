@@ -670,3 +670,12 @@ picture {
     transform: rotate(0deg);
   }
 }
+
+/* scroll nap */
+.scroll-snap {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}

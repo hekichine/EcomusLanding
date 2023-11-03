@@ -1374,7 +1374,7 @@ header {
 }
 
 .tabs_demo .title {
-  margin-bottom: 20px;
+  margin-bottom: 29px;
 }
 
 .tabs_demo .tabs_group button {
@@ -1430,6 +1430,20 @@ header {
   position: relative;
 }
 
+.tabs_shop .slide_wrap {
+  padding: 2px !important;
+}
+
+.tabs_shop .img_wrap {
+  margin-bottom: 27px;
+}
+
+.tabs_shop .info a {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
 @media (min-width: 768px) {
   .banner .banner_demo {
@@ -1504,6 +1518,7 @@ header {
     margin-bottom: 44px;
   }
 
+
 }
 
 @media (min-width: 1440px) {
@@ -1569,7 +1584,7 @@ header {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .hdt-menu_nav {
     position: fixed;
     top: 0;
@@ -1764,7 +1779,15 @@ header {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .tabs_demo .tabs_group {
+    margin-bottom: 30px;
+  }
+
+  .tabs_demo .tabs_inner .col-inner {
+    padding: 20px 15px;
+  }
+
   .features .title_wrap svg {
     display: none;
   }

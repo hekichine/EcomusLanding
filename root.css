@@ -341,20 +341,28 @@ a {
 }
 
 /*  3. Grid spacing */
-.hdt-spacing-15 {
+.hdt-spacing-15,
+.hdt-spacing-15 .container,
+.hdt-spacing-15 .row {
   --bs-gutter-x: 15px;
   --bs-gutter-y: 15px;
 }
 
 @media (min-width: 768px) {
-  .md\:hdt-spacing-30 {
+
+  .md\:hdt-spacing-30,
+  .md\:hdt-spacing-30 .container,
+  .md\:hdt-spacing-30 .row {
     --bs-gutter-x: 30px;
     --bs-gutter-y: 30px;
   }
 }
 
 @media (min-width: 1780px) {
-  .lg\:hdt-spacing-41 {
+
+  .md\:hdt-spacing-41,
+  .md\:hdt-spacing-41 .container,
+  .md\:hdt-spacing-41 .row {
     --bs-gutter-x: 41px;
     --bs-gutter-y: 36px;
   }
@@ -441,6 +449,19 @@ picture {
   height: 0;
   display: block !important;
   padding-bottom: var(--ratio-percent);
+}
+
+.hdt-ratio img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hdt-ratio--adapt_image .hdt-ratio {

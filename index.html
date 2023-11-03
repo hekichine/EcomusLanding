@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>Ecomus</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/Favicon.svg">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -11,13 +13,14 @@
     />
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
       defer
-    />
+    /> -->
+    <link rel="stylesheet" href="./assets/lib/bootstrap.min.css" defer>
     <!-- SPLIDE CSS -->
     <link rel="stylesheet" href="./assets/lib/splide.min.css" defer>
     <link rel="stylesheet" href="./fonts.css" defer>
@@ -967,7 +970,7 @@
                     </svg>
                   </div>
                   <div class="bot">
-                    <p>Empower your eCommerce venture with Hongo - Effortlessly import<br> your desired demo, design, customize, and launch your online store with visual editing,<br> no coding hassles!</p>
+                    <p>Empower your eCommerce venture with Hongo - Effortlessly import<br> your desired demo, design, customize, and launch your online store with visual editing, no coding hassles!</p>
                   </div>
                 </div>
               </div>
@@ -1243,7 +1246,7 @@
             "autoWidth": true,
             "arrows": false,
             "interval": 0,
-            "speed": 2000,
+            "speed": 3000,
             "pagination": false,
             "padding": 10
         }'>
@@ -1713,7 +1716,7 @@
       </section>
       <section class="tabs_demo demos">
         <div class="section-inner">
-          <h1 class="title text-center" style="background-color: #fff;"><span class="gradient">UPDATE RESPONSIVE + FIX CONTAINER - ROW - COL (đang bị thừa spacing do custom spacing item)</span></h1>
+          
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -1727,34 +1730,42 @@
             </div>
           </div>
             <div class="tabs_inner">
-              <div class="tabs_shop container-fluid">
-                <div class="row hdt-spacing-15 md:hdt-spacing-30 hdt-ratio--adapt_image">
-                  <div class="col col-12 col-md-6 col-xl-4">
-                    <div class="col-inner">
-                      <div class="dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <div class="img_wrap position-relative">
-                       <div class="preview_wrap">
-                        <div class="preview_btn">
-                          <a class="hdt-btn hdt-btn-outline hdt-btn-hover-icon" href="#" target="_blank">Demo <svg class="hdt-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                            <path d="M0.861539 8L0 7.13846L5.90769 1.23077H0.615385V0H8V7.38462H6.76923V2.09231L0.861539 8Z" fill="white"></path>
-                          </svg></a>
-                          <a class="hdt-btn hdt-btn-outline hdt-btn-hover-icon" href="#" target="_blank">EC Demo<svg class="hdt-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                            <path d="M0.861539 8L0 7.13846L5.90769 1.23077H0.615385V0H8V7.38462H6.76923V2.09231L0.861539 8Z" fill="white"></path>
-                          </svg></a>
-                        </div>
-                       </div>
-                       <div class="hdt-ratio" style="--aspect-ratioapt: 375/397;">
-                        <img loading="lazy" src="./assets/images/demo_grid/9.jpeg" alt="Fashion 01">
-                      </div>
-                      </div>
-                      <div class="info">
-                        <a href="#" target="_blank">Home Main</a>
-                        <span class="hdt-badge hdt-badge-1">Free</span>
-                      </div>
+              <div class="tabs_shop">
+                <div class="hdt-ratio--adapt_image">
+                  <div id="tabs_shop_splide" class="tabs_shop_splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide tabs-item">
+                         <div class="slide_wrap">
+                          <div class="col-inner">
+                            <div class="dots">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                            <div class="img_wrap position-relative">
+                             <div class="preview_wrap">
+                              <div class="preview_btn">
+                                <a class="hdt-btn hdt-btn-outline hdt-btn-hover-icon" href="#" target="_blank">Demo <svg class="hdt-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                  <path d="M0.861539 8L0 7.13846L5.90769 1.23077H0.615385V0H8V7.38462H6.76923V2.09231L0.861539 8Z" fill="white"></path>
+                                </svg></a>
+                                <a class="hdt-btn hdt-btn-outline hdt-btn-hover-icon" href="#" target="_blank">EC Demo<svg class="hdt-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                  <path d="M0.861539 8L0 7.13846L5.90769 1.23077H0.615385V0H8V7.38462H6.76923V2.09231L0.861539 8Z" fill="white"></path>
+                                </svg></a>
+                              </div>
+                             </div>
+                             <div class="hdt-ratio" style="--aspect-ratioapt: 543/397;">
+                              <img loading="lazy" src="./assets/images/demo_grid/9.jpeg" alt="Fashion 01">
+                            </div>
+                            </div>
+                            <div class="info justify-content-center">
+                              <a href="#" target="_blank">Media slider 2 columns</a>
+                            </div>
+                          </div>
+                         </div>
+                        </li>
+
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -1766,11 +1777,12 @@
     </main>
     <footer>
       <!-- place footer here -->
+      <h1><span class="gradient">UPDATE BACK TO TOP</span></h1>
     </footer>
     <!-- <div id="cursor" class="cursor"></div> -->
 
     <!-- Bootstrap JavaScript Libraries -->
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
@@ -1782,7 +1794,9 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
       defer
-    ></script>
+    ></script> -->
+    <script src="./assets/lib/popper.min.js" defer></script>
+    <script src="./assets/lib/bootstrap.min.js" defer></script>
     <!-- JQUERY -->
     <script src="./assets/lib/jquery.min.js" defer></script>
     <!-- CIRCLE TYPE  -->
@@ -1791,8 +1805,8 @@
     <script src="./assets/lib/isotope.pkgd.min.js" defer></script>
     <script src="./assets/lib/packery-mode.pkgd.min.js" defer></script>
     <!-- SPLIDER JS -->
-    <script src="./assets/lib/imagesloaded.pkgd.min.js"></script>
-    <script src="./assets/lib/splide.min.js"></script>
+    <script src="./assets/lib/imagesloaded.pkgd.min.js" defer></script>
+    <script src="./assets/lib/splide.min.js" defer></script>
     <!-- JS main -->
     <script src="./index.js" defer></script>
   </body>

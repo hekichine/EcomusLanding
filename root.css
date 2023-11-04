@@ -29,6 +29,7 @@ body {
   line-height: 1.5;
   /* 175% */
   background: var(--body-bg);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -742,4 +743,40 @@ picture {
     opacity: 1;
     margin-top: 0;
   }
+}
+
+/*  back to top */
+back-to-top {
+  display: inline-block;
+  background-color: var(--link-color-active);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+back-to-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+back-to-top:active {
+  background-color: #555;
+}
+
+back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }

@@ -460,6 +460,23 @@ const app = {
       }
     })
   },
+  back_to_top: () => {
+    let btn = $('back-to-top');
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function () {
+      $('html, body').animate({ scrollTop: 0 }, '0');
+    });
+
+
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
@@ -476,6 +493,7 @@ const app = {
     app.galaxy();
     app.text_circle();
     app.tabs_shop();
+    app.back_to_top()
   },
 };
 

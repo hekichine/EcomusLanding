@@ -1465,6 +1465,18 @@ header {
   pointer-events: auto;
 }
 
+.testi .container-xl {
+  max-width: 1470px;
+}
+
+.testi .gx-15 {
+  --bs-gutter-x: 15px;
+}
+
+.testi .gy-15 {
+  --bs-gutter-y: 15px;
+}
+
 @media (min-width: 768px) {
   .banner .banner_demo {
     position: relative;
@@ -1536,6 +1548,14 @@ header {
 
   .shopify_app .des {
     margin-bottom: 44px;
+  }
+
+  .testi .gx-lg-30 {
+    --bs-gutter-x: 30px;
+  }
+
+  .testi .gy-lx-30 {
+    --bs-gutter-y: 30px;
   }
 
 

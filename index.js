@@ -335,7 +335,45 @@ const app = {
   tabs_shop: () => {
     document.addEventListener('DOMContentLoaded', function () {
 
-      new Splide('#tabs_shop_splide', {
+      new Splide('#tabs_shop_splide-1', {
+        type: 'loop',
+        perPage: 3,
+        autoplay: true,
+        interval: 4000,
+        flickMaxPages: 1,
+        updateOnMove: true,
+        pagination: false,
+        arrows: false,
+        padding: '10%',
+        gap: '30px',
+        // throttle: 300,
+        breakpoints: {
+          2000: {
+            perPage: 2,
+            padding: '19%'
+          },
+          1440: {
+            perPage: 2,
+            padding: '10%'
+          },
+          1024: {
+            gap: '15px',
+            perPage: 2,
+            padding: '5%'
+          },
+          768: {
+            padding: '1%',
+            perPage: 2,
+            gap: '15px',
+          },
+          525: {
+            perPage: 1,
+            gap: '15px',
+
+          }
+        }
+      }).mount();
+      new Splide('#tabs_shop_splide-2', {
         type: 'loop',
         perPage: 3,
         autoplay: true,
@@ -374,7 +412,12 @@ const app = {
         }
       }).mount();
     });
-
+    $('#tabs_demo').on('click', 'button', function () {
+      $('#tabs_demo').find('button.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.tabs_demo').find('.tabs_shop_splide.control-active').removeClass('control-active')
+      $(this.getAttribute('aria-controls')).addClass('control-active')
+    })
   },
   table: () => {
     $('#table_viewmore').on('click', function () {
@@ -410,7 +453,7 @@ const app = {
   text_circle: () => {
     const str = "highconverting";
     const text = $('#text-circle');
-    console.log(text);
+    // console.log(text);
     $(window).on('load', function () {
       for (let i = 0; i < str.length; i++) {
         text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);

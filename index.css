@@ -1432,6 +1432,8 @@ header {
 
 .tabs_shop .slide_wrap {
   padding: 2px !important;
+  animation: tabsEffect .6s ease;
+  transition: all 1s ease;
 }
 
 .tabs_shop .img_wrap {
@@ -1443,7 +1445,29 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-transform: capitalize;
 }
+
+.tabs_demo .tabs_shop_splide {
+  opacity: 0;
+  position: absolute;
+  transition: all 1s ease;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.tabs_demo .tabs_shop_splide.control-active {
+  opacity: 1;
+  position: unset;
+  pointer-events: auto;
+}
+
+
+
+
 
 @media (min-width: 768px) {
   .banner .banner_demo {

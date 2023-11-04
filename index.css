@@ -1432,8 +1432,8 @@ header {
 
 .tabs_shop .slide_wrap {
   padding: 2px !important;
-  animation: tabsEffect .6s ease;
-  transition: all 1s ease;
+  /* animation: tabsEffect .6s ease;
+  transition: all 1s ease; */
 }
 
 .tabs_shop .img_wrap {
@@ -1464,10 +1464,6 @@ header {
   position: unset;
   pointer-events: auto;
 }
-
-
-
-
 
 @media (min-width: 768px) {
   .banner .banner_demo {

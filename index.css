@@ -2418,7 +2418,6 @@ header {
     max-width: 100%;
     width: 100%;
     scroll-snap-type: x mandatory;
-    justify-content: center;
   }
 
   .my_vid .video_wrap .video-item {

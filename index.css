@@ -1848,8 +1848,17 @@ header {
   left: 0;
   border-radius: inherit;
   background-color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  transition: .25s ease-in;
 }
 
+.my_vid .video_wrap .video-item.is-hover .poster::before {
+  opacity: 0;
+}
+
+.my_vid .video_wrap .video-item.is-active .poster::before {
+  opacity: 0;
+}
 
 .my_vid .video-item .poster {
   position: relative;
@@ -1868,6 +1877,7 @@ header {
 
 .my_vid video {
   height: 100%;
+  object-position: center center;
 }
 
 .video-item .btn-popup {
@@ -1881,15 +1891,21 @@ header {
   background: rgba(97, 97, 97, 0.20);
   backdrop-filter: blur(5px);
   height: 40px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   transform: translateX(-50px);
   transition: .35s ease;
   opacity: 0;
+  visibility: hidden;
   pointer-events: auto;
 }
 
 .video-item.is-hover .btn-popup {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible
 }
 
 .video-item .video-info {
@@ -1914,6 +1930,7 @@ header {
   transform: translateY(50px);
   transition: .35s linear;
   opacity: 0;
+  visibility: hidden;
 }
 
 .video-info h5 {
@@ -1946,6 +1963,7 @@ header {
 .video-item.is-hover .video-info :where(a, h5, p) {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 
 .video-item.is-hover .video-info a {
@@ -2413,6 +2431,25 @@ header {
     margin-bottom: 30px;
   }
 
+  .my_vid .video_wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-item .video-info :where(a, h5, p) {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .video-item .video-info {
+    height: auto;
+  }
+
+  .video-item .btn-popup {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
   .my_vid .video_wrap {
     overflow-x: auto;
     max-width: 100%;
@@ -2569,6 +2606,29 @@ header {
 @media (max-width: 625px) {
   .mb_screen .mb_view .view_port {
     border-radius: 20px;
+  }
+
+  .video-info a {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  .my_vid .tophead {
+    padding: 0 15px;
+  }
+
+  .video-item .btn-popup {
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .video-item .popup {
+    top: 15px;
+    left: 15px;
+  }
+
+  .my_vid .layout_wrap {
+    padding: 20px 5px;
   }
 
   .testi .col-inner {

@@ -2145,6 +2145,11 @@ header {
 }
 
 @media (max-width: 768px) {
+  .splide-2 .splide__slide svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .b_ecomus .des {
     font-size: 14px;
     line-height: normal;

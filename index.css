@@ -2356,6 +2356,10 @@ header {
 }
 
 @media (max-width: 525px) {
+  .grid_layout2 .section-inner {
+    padding-top: 30px;
+  }
+
   .banner .product_popup {
     width: 250px;
     gap: 10px;

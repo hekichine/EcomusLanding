@@ -612,6 +612,22 @@ const app = {
 
 
   },
+  video_popup: () => {
+    $(document).ready(function () {
+      $('.popup_youtube').magnificPopup({
+        disableOn: 768,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+      });
+      if (window.innerWidth <= 768) {
+        $('.popup_youtube').attr('target', '_blank')
+      }
+    })
+
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
@@ -628,7 +644,8 @@ const app = {
     app.galaxy();
     app.text_circle();
     app.tabs_shop();
-    app.back_to_top()
+    app.back_to_top();
+    app.video_popup();
   },
 };
 

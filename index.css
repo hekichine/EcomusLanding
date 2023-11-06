@@ -1504,7 +1504,7 @@ header {
 }
 
 /* mobile screen mb_screen */
-.mb_screen .section-inner {
+.mb_screen {
   padding-top: 133px;
   padding-bottom: 10px;
 }
@@ -1729,6 +1729,101 @@ header {
   display: flex;
   flex-direction: column;
   gap: 34px;
+}
+
+.b_ecomus .splide3 {
+  pointer-events: none;
+  position: relative;
+}
+
+.b_ecomus .splide3::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
+  z-index: 2;
+}
+
+.b_ecomus .b_ecomus_svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-25%);
+  z-index: -1;
+  max-width: 100%;
+}
+
+/* my video */
+.my_vid .section-inner {
+  padding: 109px 80px 40px 80px;
+  position: relative;
+}
+
+.my_vid .my_vid_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.my_vid .gradient {
+  background: linear-gradient(90deg, #FF9C8D 24.18%, #D655A5 50.09%, #6053CB 75.46%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.my_vid .title {
+  margin-bottom: 25px;
+}
+
+.my_vid .des {
+  color: #C7C7C7;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 45px;
+}
+
+.my_vid .layout_wrap {
+  padding: 56px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.my_vid .layout_wrap::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #ff9c8d, #6053cb, #04050e00);
+  z-index: -3;
+}
+
+.my_vid .layout_wrap::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background: #04050E;
+  z-index: -2;
+  border-radius: inherit;
+}
+
+.my_vid .video {
+  background-color: #fff;
+  height: 30px;
 }
 
 @media (min-width: 769px) {
@@ -2145,6 +2240,18 @@ header {
 }
 
 @media (max-width: 768px) {
+  .b_ecomus .notify {
+    gap: 7px;
+  }
+
+  .b_ecomus .col-right .col-inner {
+    padding: 15px;
+  }
+
+  .splide-2 .splide__slide span {
+    gap: 25px;
+  }
+
   .splide-2 .splide__slide svg {
     width: 16px;
     height: 16px;

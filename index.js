@@ -652,14 +652,17 @@ const app = {
     });
 
     const video_on_mobile = () => {
-      let index = 0;
-      $('#section_video').on('click', 'video', function () {
+      $('#section_video').on('touchstart', '.video-trigger-mobile', function () {
         // let current = ;
         $('.video-item').find('video').trigger('pause');
         $('.video-item.is-hover').removeClass('is-hover');
-        $(this).parents('.video-item').addClass('is-hover')
-        $(this).trigger('play');
-        $(this).prop('muted', false);
+        let id = $(this).data('trigger');
+        $(id).addClass('is-hover');
+        $(id).find('video').trigger('play');
+        $(id).find('video').prop('muted', false);
+        //   $(this).parents('.video-item').addClass('is-hover')
+        //   $(this).parents('.video-item video').trigger('play');
+        //   $(this).parents('.video-item video').prop('muted', false);
       })
     }
 

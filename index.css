@@ -2004,6 +2004,10 @@ header {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 } */
+.my_vid .video-item .hdt-full-width-link {
+  display: none;
+}
+
 @media (min-width: 769px) {
   .my_vid .video_wrap .video-item.is-hover {
     flex: 3;
@@ -2453,6 +2457,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .my_vid .video-item .hdt-full-width-link {
+    display: block;
+  }
+
   .my_vid .des {
     margin-bottom: 30px;
   }
@@ -2746,6 +2754,7 @@ header {
 }
 
 @media (max-width: 525px) {
+
   .grid_layout2 .section-inner {
     padding-top: 30px;
   }
@@ -2785,5 +2794,16 @@ header {
 
   .hdt-table .hdt-des {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 425px) {
+  .my_vid .video_wrap .video-item {
+    flex: 1 0 250px;
+  }
+
+  .my_vid .video-item .poster {
+    height: 300px;
+    max-height: 300px;
   }
 }

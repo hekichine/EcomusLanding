@@ -651,7 +651,7 @@ const app = {
             video_on_mobile();
           } else {
             console.log("pause");
-            $('#section_video').find('video').trigger('pause')
+            $('#section_video').find('video').prop('muted', true)
 
           }
         }

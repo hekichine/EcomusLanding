@@ -630,25 +630,32 @@ const app = {
           }
         },
       });
-      if (window.innerWidth <= 768) {
-        $('.popup_youtube').attr('target', '_blank');
-      }
-      // active video when hover
-      if (window.innerWidth > 768) {
-        $('#section_video').on('mouseover', 'video', function () {
-          $('.video-item').find('video').trigger('pause');
-          // $('.video-item').find('.poster_img').css('display', 'block');
-          $('.video-item.is-hover').removeClass('is-hover');
-          $(this).parents('.video-item').addClass('is-hover');
-          // $(this).next('.poster_img').css('display', 'none');
-          $(this).trigger('play');
-          $(this).prop('muted', false);
+      $(window).on('resize load scroll', function () {
+        if (window.innerWidth <= 768) {
+          $('.popup_youtube').attr('target', '_blank');
+        }
+        // active video when hover
+        if (window.innerWidth > 768) {
+          $('#section_video').on('mouseover', 'video', function () {
+            $('.video-item').find('video').trigger('pause');
+            // $('.video-item').find('.poster_img').css('display', 'block');
+            $('.video-item.is-hover').removeClass('is-hover');
+            $(this).parents('.video-item').addClass('is-hover');
+            // $(this).next('.poster_img').css('display', 'none');
+            $(this).trigger('play');
+            $(this).prop('muted', false);
+          });
+        } else {
+          if ($('#section_video').isInViewport()) {
+            console.log("Can play");
+            video_on_mobile();
+          } else {
+            console.log("pause");
+            $('#section_video').find('video').trigger('pause')
 
-        });
-      } else {
-
-        video_on_mobile();
-      }
+          }
+        }
+      })
     });
 
     const video_on_mobile = () => {
@@ -665,6 +672,13 @@ const app = {
         //   $(this).parents('.video-item video').prop('muted', false);
       })
     }
+    $.fn.isInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
 
   },
 

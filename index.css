@@ -1997,6 +1997,13 @@ header {
   object-position: center center;
 }
 
+/* .my_vid .video_wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+} */
 @media (min-width: 769px) {
   .my_vid .video_wrap .video-item.is-hover {
     flex: 3;
@@ -2470,16 +2477,22 @@ header {
     visibility: visible;
   }
 
+
   .my_vid .video_wrap {
     overflow-x: auto;
     max-width: 100%;
     width: 100%;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
 
   .my_vid .video_wrap .video-item {
-    flex: 1 0 75%;
+    flex: 1 0 330px;
     scroll-snap-align: center;
+  }
+
+  .my_vid .section-inner {
+    padding: 40px 5px;
   }
 
   .b_ecomus .notify {

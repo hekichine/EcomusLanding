@@ -646,18 +646,26 @@ const app = {
 
         });
       } else {
-        $('#section_video').on('touchstart', 'video', function () {
-          $('.video-item').find('video').trigger('pause');
-          $('.video-item.is-hover').removeClass('is-hover');
-          $(this).parents('.video-item').addClass('is-hover');
-          $(this).trigger('play');
-          $(this).prop('muted', false);
-        })
+
+        video_on_mobile();
       }
     });
 
+    const video_on_mobile = () => {
+      let index = 0;
+      $('#section_video').on('click', 'video', function () {
+        // let current = ;
+        $('.video-item').find('video').trigger('pause');
+        $('.video-item.is-hover').removeClass('is-hover');
+        $(this).parents('.video-item').addClass('is-hover')
+        $(this).trigger('play');
+        $(this).prop('muted', false);
+      })
+    }
 
   },
+
+
   start: () => {
     console.log("App start ...");
     app.header_sticky();

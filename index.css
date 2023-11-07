@@ -1847,9 +1847,10 @@ header {
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   pointer-events: none;
   transition: .25s ease-in;
+  z-index: 2;
 }
 
 .my_vid .video_wrap .video-item.is-hover .poster::before {
@@ -1976,6 +1977,24 @@ header {
 
 .video-item.is-hover .video-info p {
   transition-delay: .95s;
+}
+
+.video-item .poster_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.video-item .poster_img img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 @media (min-width: 769px) {
@@ -2438,6 +2457,7 @@ header {
   .video-item .video-info :where(a, h5, p) {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 
   .video-item .video-info {

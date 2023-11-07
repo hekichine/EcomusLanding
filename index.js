@@ -620,20 +620,39 @@ const app = {
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-        fixedContentPos: false
+        fixedContentPos: false,
+        callbacks: {
+          open: function () {
+            $('.video-item').find('video').trigger('pause');
+          },
+          close: function () {
+            $('.video-item.is-hover').find('video').trigger('play');
+          }
+        },
       });
       if (window.innerWidth <= 768) {
-        $('.popup_youtube').attr('target', '_blank')
+        $('.popup_youtube').attr('target', '_blank');
       }
       // active video when hover
       if (window.innerWidth > 768) {
         $('#section_video').on('mouseover', 'video', function () {
-          // console.log("Check", $(this).parent('.video-item'));
+          $('.video-item').find('video').trigger('pause');
+          // $('.video-item').find('.poster_img').css('display', 'block');
+          $('.video-item.is-hover').removeClass('is-hover');
+          $(this).parents('.video-item').addClass('is-hover');
+          // $(this).next('.poster_img').css('display', 'none');
+          $(this).trigger('play');
+          $(this).prop('muted', false);
+
+        });
+      } else {
+        $('#section_video').on('touchstart', 'video', function () {
           $('.video-item').find('video').trigger('pause');
           $('.video-item.is-hover').removeClass('is-hover');
           $(this).parents('.video-item').addClass('is-hover');
           $(this).trigger('play');
-        });
+          $(this).prop('muted', false);
+        })
       }
     });
 

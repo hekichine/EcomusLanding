@@ -636,15 +636,23 @@ const app = {
         }
         // active video when hover
         if (window.innerWidth > 768) {
-          $('#section_video').on('mouseover', 'video', function () {
-            $('.video-item').find('video').trigger('pause');
-            // $('.video-item').find('.poster_img').css('display', 'block');
-            $('.video-item.is-hover').removeClass('is-hover');
-            $(this).parents('.video-item').addClass('is-hover');
-            // $(this).next('.poster_img').css('display', 'none');
-            $(this).trigger('play');
-            $(this).prop('muted', false);
-          });
+          if ($('#section_video').isInViewport()) {
+            // console.log("Can play");
+            $('#section_video').on('mouseover', 'video', function () {
+              $('.video-item').find('video').trigger('pause');
+              // $('.video-item').find('.poster_img').css('display', 'block');
+              $('.video-item.is-hover').removeClass('is-hover');
+              $(this).parents('.video-item').addClass('is-hover');
+              // $(this).next('.poster_img').css('display', 'none');
+              $(this).trigger('play');
+              $(this).prop('muted', false);
+            });
+
+          } else {
+            // console.log("pause");
+            $('#section_video').find('video').prop('muted', true)
+
+          }
         } else {
           if ($('#section_video').isInViewport()) {
             console.log("Can play");

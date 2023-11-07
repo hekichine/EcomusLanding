@@ -662,9 +662,9 @@ const app = {
         }
       })
     });
-    document.addEventListener('DOMContentLoaded', () => {
-      window.click()
-    })
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   window.click()
+    // })
     const video_on_mobile = () => {
       $('#section_video').on('touchstart', '.video-trigger-mobile', function () {
         // let current = ;

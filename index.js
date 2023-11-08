@@ -728,7 +728,12 @@ const app = {
       }
     });
   },
-
+  swatch_color: () => {
+    $('.swatch_color').on('click', 'button', function () {
+      $(this).parents().find('button.is-selected').removeClass('is-selected');
+      $(this).addClass('is-selected');
+    })
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
@@ -748,6 +753,7 @@ const app = {
     app.back_to_top();
     app.video_popup();
     app.counter_number();
+    app.swatch_color();
   },
 };
 

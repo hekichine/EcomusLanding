@@ -652,6 +652,123 @@ header {
   gap: 40px;
 }
 
+.empower .section-inner {
+  background: none;
+}
+
+.empower .col-inner .text_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.empower .swatch_size {
+  position: absolute;
+  top: 28%;
+  right: 6%;
+
+
+}
+
+.empower .swatch_size .size_list,
+.empower .swatch_color .color_list {
+  display: flex;
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.empower .swatch_size .size_wrap {
+  display: flex;
+  gap: 10px;
+
+}
+
+.empower .size_wrap span {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+}
+
+.empower .swatch_color {
+  position: absolute;
+  bottom: 15%;
+  left: 6%;
+}
+
+.empower .swatch_color .color_list {
+  padding: 9px 25px 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  gap: 10px;
+}
+
+.empower .color_list .color_wrap {
+  display: flex;
+  gap: 18px;
+}
+
+.empower .color_list button {
+  outline: none;
+  border: none;
+  background-color: var(--bg-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  transition: .35s ease-in-out;
+  position: relative;
+}
+
+
+
+.color_list button:hover::before {
+  transform: translateY(-100%);
+}
+
+.empower .color_list button.is-selected {
+  border: 2px solid var(--link-color-active);
+}
+
+.empower .color_select img {
+  display: none;
+}
+
+.empower .color_select img.is-selected {
+  display: block;
+}
+
+.empower .col-inner .text_bg .gradient {
+  background: linear-gradient(91deg, #76F5BC 1.61%, #221DF3 53.61%, #EBEEF9 95.8%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .empower .col-left .top {
   display: flex;
   gap: 8px;

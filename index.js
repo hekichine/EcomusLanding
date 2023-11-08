@@ -632,7 +632,7 @@ const app = {
           }
         },
       });
-      $(window).on('resize load scroll', function () {
+      $(window).on('resize load', function () {
         if (window.innerWidth <= 768) {
           $('.popup_youtube').attr('target', '_blank');
         }
@@ -646,10 +646,14 @@ const app = {
             // $(this).next('.poster_img').css('display', 'none');
             $(this).trigger('play');
             $(this).prop('muted', false);
+
           });
         } else {
           video_on_mobile();
         }
+
+      })
+      $(window).on('scroll', function () {
         if ($('#section_video').isInViewport()) {
           // console.log("Can play");
           // play  when in viewport

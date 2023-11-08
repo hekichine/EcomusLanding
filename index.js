@@ -662,9 +662,6 @@ const app = {
         }
       })
     });
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   window.click()
-    // })
     const video_on_mobile = () => {
       $('#section_video').on('touchstart', '.video-trigger-mobile', function () {
         // let current = ;
@@ -688,7 +685,49 @@ const app = {
     };
 
   },
+  counter_number: () => {
+    // cau truc
+    // 
+    // <counter>
+    //   <div counter-value data-count="400">0</div>
+    // </counter>
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    let a = 0;
+    $(window).scroll(function () {
+      var oTop = $('counter').offset().top - window.innerHeight;
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('[counter-value]').each(function () {
+          var $this = $(this),
+            countTo = $this.data('count');
+          $({
+            countNum: $this.text()
+          }).animate({
+            countNum: countTo
+          },
+            {
+              duration: $this.data('duration'),
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
 
+            });
+        });
+        a = 1;
+      }
+    });
+  },
 
   start: () => {
     console.log("App start ...");
@@ -708,6 +747,7 @@ const app = {
     app.tabs_shop();
     app.back_to_top();
     app.video_popup();
+    app.counter_number();
   },
 };
 

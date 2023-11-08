@@ -503,7 +503,7 @@ header {
   margin-bottom: 24px;
 }
 
-.demos .demos_count h3 span {
+.demos .demos_count h3 span.sub_count {
   position: absolute;
   background: linear-gradient(106deg,
       #ff9c8d 6.05%,
@@ -1754,7 +1754,7 @@ header {
   margin-top: 6px;
   width: 16px;
   height: 16px;
-  flex: 1 0 auto;
+
 }
 
 .b_ecomus .section-inner {
@@ -2233,6 +2233,10 @@ header {
   .b_ecomus br {
     display: none;
   }
+
+  .b_ecomus .notify svg {
+    flex: 1 0 auto;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2511,6 +2515,8 @@ header {
 }
 
 @media (max-width: 768px) {
+
+
   .my_vid .video-item .hdt-full-width-link {
     display: block;
   }

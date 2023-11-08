@@ -2126,13 +2126,6 @@ header {
     margin-bottom: 44px;
   }
 
-  .testi .gx-lg-30 {
-    --bs-gutter-x: 30px;
-  }
-
-  .testi .gy-lx-30 {
-    --bs-gutter-y: 30px;
-  }
 
 
 }
@@ -2185,6 +2178,14 @@ header {
   .banner .revolutions svg {
     margin-left: 200px;
   }
+
+  .testi .gx-xxl-30 {
+    --bs-gutter-x: 30px;
+  }
+
+  .testi .gy-xxl-30 {
+    --bs-gutter-y: 30px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -2203,6 +2204,10 @@ header {
     margin-top: 30px;
     align-items: center;
     text-align: center;
+  }
+
+  .banner .banner_demo {
+    width: 95%;
   }
 
   .empower .col-left {

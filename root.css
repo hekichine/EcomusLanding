@@ -816,3 +816,8 @@ back-to-top.show {
     background-position: 0% 50%;
   }
 }
+
+img,
+video {
+  content-visibility: auto;
+}

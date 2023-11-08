@@ -1734,7 +1734,7 @@ header {
 .mb_screen .mb_view .view_sc {
   position: relative;
   overflow: hidden;
-  pointer-events: none;
+  /* pointer-events: none; */
   user-select: none;
 }
 

@@ -550,8 +550,10 @@ const app = {
     $('#tabs_demo').on('click', 'button', function () {
       $('#tabs_demo').find('button.is-active').removeClass('is-active');
       $(this).addClass('is-active');
-      $('.tabs_demo').find('.tabs_shop_splide.control-active').removeClass('control-active')
-      $(this.getAttribute('aria-controls')).addClass('control-active')
+      $('.tabs_demo').find('.tabs_shop_splide.control-active').removeClass('control-active');
+      let id = $(this).attr('aria-controls');
+      // console.log(id);
+      $(`#${id}`).addClass('control-active')
     })
   },
   table: () => {

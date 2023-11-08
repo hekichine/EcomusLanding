@@ -561,11 +561,13 @@ header {
   background: rgba(255, 255, 255, 0.2);
   z-index: -1;
   border-radius: inherit;
-  transition: all 0.35s ease-in;
+  transition: all 5s ease-in;
 }
 
 .demos .col-inner:hover::before {
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
+  animation: bghover 15s linear infinite;
+  background-size: 400% 400%;
 }
 
 .demos .img_wrap:hover .preview_wrap {

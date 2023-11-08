@@ -645,7 +645,7 @@ const app = {
             $(this).parents('.video-item').addClass('is-hover');
             // $(this).next('.poster_img').css('display', 'none');
             $(this).trigger('play');
-            $(this).prop('muted', false);
+            // $(this).prop('muted', false);
           });
         } else {
           video_on_mobile();
@@ -663,7 +663,7 @@ const app = {
         } else {
           // console.log("pause");
           // pause when isn't in viewport
-          $('#section_video').find('video').prop('muted', true)
+          // $('#section_video').find('video').prop('muted', true)
 
         }
       })

@@ -646,20 +646,20 @@ const app = {
             // $(this).next('.poster_img').css('display', 'none');
             $(this).trigger('play');
             $(this).prop('muted', false);
-
           });
         } else {
           video_on_mobile();
         }
 
       })
-      $(window).on('scroll', function () {
+      $(window).on('resize load scroll', function () {
         if ($('#section_video').isInViewport()) {
           // console.log("Can play");
           // play  when in viewport
           // $('#section_video').find('.video-item.is-hover video').trigger('play');
           // muted = false in viewport
           // $('#section_video').find('.video-item.is-hover video').prop('muted', false);
+          // console.log("Play");
         } else {
           // console.log("pause");
           // pause when isn't in viewport

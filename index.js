@@ -652,21 +652,21 @@ const app = {
         }
 
       })
-      $(window).on('resize load scroll', function () {
-        if ($('#section_video').isInViewport()) {
-          // console.log("Can play");
-          // play  when in viewport
-          // $('#section_video').find('.video-item.is-hover video').trigger('play');
-          // muted = false in viewport
-          // $('#section_video').find('.video-item.is-hover video').prop('muted', false);
-          // console.log("Play");
-        } else {
-          // console.log("pause");
-          // pause when isn't in viewport
-          // $('#section_video').find('video').prop('muted', true)
+      // $(window).on('resize load scroll', function () {
+      //   if ($('#section_video').isInViewport()) {
+      //     // console.log("Can play");
+      //     // play  when in viewport
+      //     // $('#section_video').find('.video-item.is-hover video').trigger('play');
+      //     // muted = false in viewport
+      //     // $('#section_video').find('.video-item.is-hover video').prop('muted', false);
+      //     // console.log("Play");
+      //   } else {
+      //     // console.log("pause");
+      //     // pause when isn't in viewport
+      //     // $('#section_video').find('video').prop('muted', true)
 
-        }
-      })
+      //   }
+      // })
     });
     const video_on_mobile = () => {
       $('#section_video').on('touchstart', '.video-trigger-mobile', function () {
@@ -676,7 +676,7 @@ const app = {
         let id = $(this).data('trigger');
         $(id).addClass('is-hover');
         $(id).find('video').trigger('play');
-        $(id).find('video').prop('muted', false);
+        // $(id).find('video').prop('muted', false);
         //   $(this).parents('.video-item').addClass('is-hover')
         //   $(this).parents('.video-item video').trigger('play');
         //   $(this).parents('.video-item video').prop('muted', false);

@@ -757,7 +757,7 @@ const app = {
     app.text_circle();
     app.tabs_shop();
     app.back_to_top();
-    app.video_popup();
+    // app.video_popup();
     app.counter_number();
     app.swatch_color();
   },

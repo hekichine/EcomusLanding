@@ -543,7 +543,6 @@ const app = {
         //   let id = $(this).data('trigger');
         //   $(id).addClass('is-hover');
         //   $(id).find('video').trigger('play');
-
         // })
       }
     }

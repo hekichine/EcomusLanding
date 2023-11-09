@@ -537,7 +537,7 @@ const app = {
 
         });
       } else {
-        $('#section_video').on('click', '.video-trigger-mobile', function () {
+        $('#section_video').on('mouseover', '.video-trigger-mobile', function () {
           $('.video-item').find('video').trigger('pause');
           $('.video-item.is-hover').removeClass('is-hover');
           let id = $(this).data('trigger');

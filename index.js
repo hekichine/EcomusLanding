@@ -267,213 +267,74 @@ const app = {
     })
   },
   splider: () => {
+    const splides = [
+      {
+        id: ".splide",
+        options: {
+          easing: "linear",
+          type: "loop",
+          pauseOnHover: true,
+          autoplay: true,
+          autoWidth: true,
+          arrows: false,
+          interval: 0,
+          speed: 3000,
+          pagination: false,
+          padding: 10,
+        }
+      },
+      {
+        id: ".splide2",
+        options: {
+          easing: "linear",
+          type: "loop",
+          pauseOnHover: true,
+          autoplay: true,
+          autoWidth: true,
+          arrows: false,
+          interval: 0,
+          speed: 3000,
+          pagination: false,
+          gap: "45px",
+          breakpoints: {
+            768: {
+              gap: "25px"
+            }
+          }
+        }
+      },
+      {
+        id: ".splide3",
+        options: {
+          easing: "linear",
+          type: "loop",
+          pauseOnHover: false,
+          autoplay: true,
+          autoWidth: true,
+          arrows: false,
+          interval: 0,
+          speed: 10000,
+          pagination: false,
+          gap: "34px",
+          breakpoints: {
+            1024: {
+              perPage: 2,
+              gap: "15px",
+              autoWidth: false
+            }
+          }
+        }
+      }
+    ]
     $(document).on('DOMContentLoaded', function () {
-      $('.splide').imagesLoaded(function (instance) {
-        // Create the AutoScroll extension.
-        const AutoScroll = function (Splide, Components) {
-          const Track = Components.Track;
-          const pxPerFrame = 3;
-
-          let paused = true;
-          let page = 0;
-
-          return {
-            mount() {
-              this.update = this.update.bind(this);
-
-              Splide.on('mouseenter', () => {
-                this.pause();
-              }, Splide.root);
-
-              Splide.on('mouseleave', () => {
-                this.play();
-              }, Splide.root);
-            },
-
-            // Start scroll after load.
-            mounted() {
-              setTimeout(this.play.bind(this), 1000);
-            },
-
-            // Start scroll.
-            play() {
-              if (paused) {
-                paused = false;
-                Components.Elements.list.style.transition = '';
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Pause scroll.
-            pause() {
-              paused = true;
-            },
-
-            // Update the slider position on every frame.
-            update() {
-              Track.translate(Track.position - pxPerFrame);
-              Track.shift();
-
-              const currentPage = Track.toIndex(Track.position);
-
-              if (page !== currentPage) {
-                this.onPageChanged(currentPage, page);
-                page = currentPage;
-              }
-
-              if (!paused) {
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Called when the page is changed.
-            onPageChanged(newPage, prevPage) {
-              // console.log("Splide slider " + prevPage + '->' + newPage );
-            }
-          };
-        };
-
-        new Splide('.splide').mount({ AutoScroll });
-      });
-      $('.splide2').imagesLoaded(function (instance) {
-        // Create the AutoScroll extension.
-        const AutoScroll = function (Splide, Components) {
-          const Track = Components.Track;
-          const pxPerFrame = 3;
-
-          let paused = true;
-          let page = 0;
-
-          return {
-            mount() {
-              this.update = this.update.bind(this);
-
-              Splide.on('mouseenter', () => {
-                this.pause();
-              }, Splide.root);
-
-              Splide.on('mouseleave', () => {
-                this.play();
-              }, Splide.root);
-            },
-
-            // Start scroll after load.
-            mounted() {
-              setTimeout(this.play.bind(this), 1000);
-            },
-
-            // Start scroll.
-            play() {
-              if (paused) {
-                paused = false;
-                Components.Elements.list.style.transition = '';
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Pause scroll.
-            pause() {
-              paused = true;
-            },
-
-            // Update the slider position on every frame.
-            update() {
-              Track.translate(Track.position - pxPerFrame);
-              Track.shift();
-
-              const currentPage = Track.toIndex(Track.position);
-
-              if (page !== currentPage) {
-                this.onPageChanged(currentPage, page);
-                page = currentPage;
-              }
-
-              if (!paused) {
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Called when the page is changed.
-            onPageChanged(newPage, prevPage) {
-              // console.log("Splide slider " + prevPage + '->' + newPage );
-            }
-          };
-        };
-
-        new Splide('.splide2').mount({ AutoScroll });
-      });
-      $('.splide3').imagesLoaded(function (instance) {
-        // Create the AutoScroll extension.
-        const AutoScroll = function (Splide, Components) {
-          const Track = Components.Track;
-          const pxPerFrame = 3;
-
-          let paused = true;
-          let page = 0;
-
-          return {
-            mount() {
-              this.update = this.update.bind(this);
-
-              Splide.on('mouseenter', () => {
-                this.pause();
-              }, Splide.root);
-
-              Splide.on('mouseleave', () => {
-                this.play();
-              }, Splide.root);
-            },
-
-            // Start scroll after load.
-            mounted() {
-              setTimeout(this.play.bind(this), 1000);
-            },
-
-            // Start scroll.
-            play() {
-              if (paused) {
-                paused = false;
-                Components.Elements.list.style.transition = '';
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Pause scroll.
-            pause() {
-              paused = true;
-            },
-
-            // Update the slider position on every frame.
-            update() {
-              Track.translate(Track.position - pxPerFrame);
-              Track.shift();
-
-              const currentPage = Track.toIndex(Track.position);
-
-              if (page !== currentPage) {
-                this.onPageChanged(currentPage, page);
-                page = currentPage;
-              }
-
-              if (!paused) {
-                requestAnimationFrame(this.update);
-              }
-            },
-
-            // Called when the page is changed.
-            onPageChanged(newPage, prevPage) {
-              // console.log("Splide slider " + prevPage + '->' + newPage );
-            }
-          };
-        };
-
-        new Splide('.splide3').mount({ AutoScroll });
-      });
+      splides.map(item => {
+        // console.log(item.options);
+        new Splide(`${item.id}`, item.options).mount();
+      })
     })
   },
   tabs_shop: () => {
     $(document).on('DOMContentLoaded', function () {
-
       new Splide('#tabs_shop_splide-1', {
         type: 'loop',
         perPage: 3,
@@ -594,7 +455,6 @@ const app = {
       }
     };
     $(document).on('DOMContentLoaded', function () {
-
       createStars();
     })
 
@@ -603,7 +463,7 @@ const app = {
     const str = "highconverting";
     const text = $('#text-circle');
     // console.log(text);
-    $(window).on('load', function () {
+    $(document).on('DOMContentLoaded', function () {
       for (let i = 0; i < str.length; i++) {
         text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
       }

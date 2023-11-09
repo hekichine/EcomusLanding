@@ -2640,7 +2640,6 @@ header {
 
 @media (max-width: 768px) {
 
-
   .my_vid .video-item .hdt-full-width-link {
     display: block;
   }
@@ -2829,6 +2828,10 @@ header {
 @media (max-width: 625px) {
   .mb_screen .mb_view .view_port {
     border-radius: 20px;
+  }
+
+  .ooff2 .list-check {
+    justify-content: flex-start;
   }
 
   .video-info a {

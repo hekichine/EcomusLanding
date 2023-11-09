@@ -754,14 +754,14 @@ header {
 .empower .color_list button.is-selected {
   border: 2px solid var(--link-color-active);
 }
-
+/* 
 .empower .color_select img {
   display: none;
 }
 
 .empower .color_select img.is-selected {
   display: block;
-}
+} */
 
 .empower .col-inner .text_bg .gradient {
   background: linear-gradient(91deg, #76F5BC 1.61%, #221DF3 53.61%, #EBEEF9 95.8%);

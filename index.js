@@ -690,7 +690,7 @@ const app = {
       // })
     });
     const video_on_mobile = () => {
-      $('#section_video').on('touchstart', '.video-trigger-mobile', function () {
+      $('#section_video').on('click', '.video-trigger-mobile', function () {
         // let current = ;
         $('.video-item').find('video').trigger('pause');
         $('.video-item.is-hover').removeClass('is-hover');

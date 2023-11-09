@@ -630,7 +630,33 @@ const app = {
 
   },
   video_popup: () => {
-    $(document).ready(function () {
+
+    const video = () => {
+      // add target_blank a tag
+      if (window.innerWidth <= 768) {
+        $('.popup_youtube').attr('target', '_blank');
+      }
+      // active video when hover
+      if (window.innerWidth > 768) {
+        $('#section_video').on('mouseover', 'video', function () {
+          $('.video-item').find('video').trigger('pause');
+          $('.video-item.is-hover').removeClass('is-hover');
+          $(this).parents('.video-item').addClass('is-hover');
+          $(this).trigger('play');
+
+        });
+      } else {
+        $('#section_video').on('click', '.video-trigger-mobile', function () {
+          $('.video-item').find('video').trigger('pause');
+          $('.video-item.is-hover').removeClass('is-hover');
+          let id = $(this).data('trigger');
+          $(id).addClass('is-hover');
+          $(id).find('video').trigger('play');
+
+        })
+      }
+    }
+    $(document).on('DOMContentLoaded', function () {
       $('.popup_youtube').magnificPopup({
         disableOn: 768,
         type: 'iframe',
@@ -647,70 +673,8 @@ const app = {
           }
         },
       });
-      $(window).on('resize', function () {
-        video();
-      })
-      $(window).on('load', function () {
-        video();
-      })
-      const video = () => {
-        // add target_blank a tag
-        if (window.innerWidth <= 768) {
-          $('.popup_youtube').attr('target', '_blank');
-        }
-        // active video when hover
-        if (window.innerWidth > 768) {
-          $('#section_video').on('mouseover', 'video', function () {
-            $('.video-item').find('video').trigger('pause');
-            // $('.video-item').find('.poster_img').css('display', 'block');
-            $('.video-item.is-hover').removeClass('is-hover');
-            $(this).parents('.video-item').addClass('is-hover');
-            // $(this).next('.poster_img').css('display', 'none');
-            $(this).trigger('play');
-            // $(this).prop('muted', false);
-          });
-        } else {
-          video_on_mobile();
-        }
-      }
-      // $(window).on('resize load scroll', function () {
-      //   if ($('#section_video').isInViewport()) {
-      //     // console.log("Can play");
-      //     // play  when in viewport
-      //     // $('#section_video').find('.video-item.is-hover video').trigger('play');
-      //     // muted = false in viewport
-      //     // $('#section_video').find('.video-item.is-hover video').prop('muted', false);
-      //     // console.log("Play");
-      //   } else {
-      //     // console.log("pause");
-      //     // pause when isn't in viewport
-      //     // $('#section_video').find('video').prop('muted', true)
-
-      //   }
-      // })
+      video();
     });
-    const video_on_mobile = () => {
-      $('#section_video').on('click', '.video-trigger-mobile', function () {
-        // let current = ;
-        $('.video-item').find('video').trigger('pause');
-        $('.video-item.is-hover').removeClass('is-hover');
-        let id = $(this).data('trigger');
-        $(id).addClass('is-hover');
-        $(id).find('video').trigger('play');
-        // $(id).find('video').prop('muted', false);
-        //   $(this).parents('.video-item').addClass('is-hover')
-        //   $(this).parents('.video-item video').trigger('play');
-        //   $(this).parents('.video-item video').prop('muted', false);
-      })
-    }
-    $.fn.isInViewport = function () {
-      var elementTop = $(this).offset().top;
-      var elementBottom = elementTop + $(this).outerHeight();
-      var viewportTop = $(window).scrollTop();
-      var viewportBottom = viewportTop + $(window).height();
-      return elementBottom > viewportTop && elementTop < viewportBottom;
-    };
-
   },
   counter_number: () => {
     // cau truc
@@ -719,13 +683,7 @@ const app = {
     //   <div counter-value data-count="400">0</div>
     // </counter>
     // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
+
     let a = 0;
     $(window).scroll(function () {
       var oTop = $('counter').offset().top - window.innerHeight;

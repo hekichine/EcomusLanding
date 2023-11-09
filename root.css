@@ -748,7 +748,7 @@ video {
   background: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .scroll-snap {
     justify-content: flex-start !important;
   }

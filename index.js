@@ -331,6 +331,37 @@ const app = {
         // console.log(item.options);
         new Splide(`${item.id}`, item.options).mount();
       })
+      new Splide('#grid_layout_slider', {
+        easing: "linear",
+        type: "loop",
+        pauseOnHover: true,
+        autoplay: true,
+        autoWidth: true,
+        arrows: false,
+        interval: 2500,
+        // speed: 3000,
+        pagination: false,
+        gap: "15px",
+        breakpoints: {
+          1366: {
+            perPage: 3,
+            autoWidth: false,
+          },
+          1024: {
+            perPage: 3, 
+            autoWidth: false,
+          },
+          768: {
+            perPage: 3, 
+            autoWidth: false,
+            gap:'5px'
+          },
+          525:{
+            perPage: 2,
+            autoWidth: false,
+          }
+        }
+      }).mount();
     })
   },
   tabs_shop: () => {

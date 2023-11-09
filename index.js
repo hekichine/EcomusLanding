@@ -288,12 +288,12 @@ const app = {
         options: {
           easing: "linear",
           type: "loop",
-          pauseOnHover: true,
+          pauseOnHover: false,
           autoplay: true,
           autoWidth: true,
           arrows: false,
           interval: 0,
-          speed: 3000,
+          speed: 10000,
           pagination: false,
           gap: "45px",
           breakpoints: {
@@ -308,12 +308,12 @@ const app = {
         options: {
           easing: "linear",
           type: "loop",
-          pauseOnHover: false,
+          pauseOnHover: true,
           autoplay: true,
           autoWidth: true,
           arrows: false,
           interval: 0,
-          speed: 10000,
+          speed: 3000,
           pagination: false,
           gap: "34px",
           breakpoints: {

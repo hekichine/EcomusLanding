@@ -1891,7 +1891,7 @@ header {
 }
 
 .b_ecomus .splide3 {
-  pointer-events: none;
+  /* pointer-events: none; */
   position: relative;
 }
 
@@ -1904,6 +1904,7 @@ header {
   left: 0;
   background: linear-gradient(0deg, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .b_ecomus .b_ecomus_svg {

@@ -816,8 +816,13 @@ back-to-top.show {
     background-position: 0% 50%;
   }
 }
-
+.splide__slide{
+  cursor: grab;
+}
 /* img,
 video {
   content-visibility: auto;
 } */
+img{
+  user-select: none;
+}

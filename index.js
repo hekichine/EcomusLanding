@@ -232,15 +232,17 @@ const app = {
     }
   },
   filter: () => {
-    let $grid = $("#isotope").isotope({
-      itemSelector: ".isotope-item",
-      layoutMode: "fitRows",
-      filter: "*",
-    });
-    $("[filter-tabs]").on("click", "button", function () {
-      let filterValue = $(this).attr("data-filter");
-      $grid.isotope({ filter: filterValue });
-    });
+    $(document).on('DOMContentLoaded', function () {
+      let $grid = $("#isotope").isotope({
+        itemSelector: ".isotope-item",
+        layoutMode: "fitRows",
+        filter: "*",
+      });
+      $("[filter-tabs]").on("click", "button", function () {
+        let filterValue = $(this).attr("data-filter");
+        $grid.isotope({ filter: filterValue });
+      });
+    })
   },
   tabs: () => {
     $("[filter-tabs]").on("click", "button", function () {
@@ -253,17 +255,19 @@ const app = {
     })
   },
   empower_masonry: () => {
-    $(".empower_grid").isotope({
-      layoutMode: "packery",
-      itemSelector: ".col",
-    });
-    $(".grid2").isotope({
-      layoutMode: "packery",
-      itemSelector: ".col",
-    });
+    $(document).on('DOMContentLoaded', function () {
+      $(".empower_grid").isotope({
+        layoutMode: "packery",
+        itemSelector: ".col",
+      });
+      $(".grid2").isotope({
+        layoutMode: "packery",
+        itemSelector: ".col",
+      });
+    })
   },
   splider: () => {
-    document.addEventListener('DOMContentLoaded', function () {
+    $(document).on('DOMContentLoaded', function () {
       $('.splide').imagesLoaded(function (instance) {
         // Create the AutoScroll extension.
         const AutoScroll = function (Splide, Components) {
@@ -468,7 +472,7 @@ const app = {
     })
   },
   tabs_shop: () => {
-    document.addEventListener('DOMContentLoaded', function () {
+    $(document).on('DOMContentLoaded', function () {
 
       new Splide('#tabs_shop_splide-1', {
         type: 'loop',
@@ -547,18 +551,24 @@ const app = {
         }
       }).mount();
     });
-    $('#tabs_demo').on('click', 'button', function () {
-      $('#tabs_demo').find('button.is-active').removeClass('is-active');
-      $(this).addClass('is-active');
-      $('.tabs_demo').find('.tabs_shop_splide.control-active').removeClass('control-active');
-      let id = $(this).attr('aria-controls');
-      // console.log(id);
-      $(`#${id}`).addClass('control-active')
+    $(document).on('DOMContentLoaded', function () {
+
+      $('#tabs_demo').on('click', 'button', function () {
+        $('#tabs_demo').find('button.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('.tabs_demo').find('.tabs_shop_splide.control-active').removeClass('control-active');
+        let id = $(this).attr('aria-controls');
+        // console.log(id);
+        $(`#${id}`).addClass('control-active')
+      })
     })
   },
   table: () => {
-    $('#table_viewmore').on('click', function () {
-      $('#total_wrap').addClass('view-more-active')
+    $(document).on('DOMContentLoaded', function () {
+
+      $('#table_viewmore').on('click', function () {
+        $('#total_wrap').addClass('view-more-active')
+      })
     })
 
   },
@@ -583,8 +593,10 @@ const app = {
           "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;background-color:#" + randomColor + "'></div>";
       }
     };
+    $(document).on('DOMContentLoaded', function () {
 
-    createStars();
+      createStars();
+    })
 
   },
   text_circle: () => {
@@ -600,7 +612,7 @@ const app = {
   back_to_top: () => {
     let btn = $('back-to-top');
 
-    $(window).scroll(function () {
+    $(window).on('scroll', function () {
       if ($(window).scrollTop() > 300) {
         btn.addClass('show');
       } else {
@@ -608,9 +620,12 @@ const app = {
       }
     });
 
-    btn.on('click', function () {
-      $('html, body').animate({ scrollTop: 0 }, '0');
-    });
+    $(document).on('DOMContentLoaded', function () {
+
+      btn.on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, '0');
+      });
+    })
 
 
   },
@@ -632,7 +647,14 @@ const app = {
           }
         },
       });
-      $(window).on('resize load', function () {
+      $(window).on('resize', function () {
+        video();
+      })
+      $(window).on('load', function () {
+        video();
+      })
+      const video = () => {
+        // add target_blank a tag
         if (window.innerWidth <= 768) {
           $('.popup_youtube').attr('target', '_blank');
         }
@@ -650,8 +672,7 @@ const app = {
         } else {
           video_on_mobile();
         }
-
-      })
+      }
       // $(window).on('resize load scroll', function () {
       //   if ($('#section_video').isInViewport()) {
       //     // console.log("Can play");
@@ -735,9 +756,11 @@ const app = {
     });
   },
   swatch_color: () => {
-    $('.swatch_color').on('click', 'button', function () {
-      $(this).parents().find('button.is-selected').removeClass('is-selected');
-      $(this).addClass('is-selected');
+    $(document).on('DOMContentLoaded', function () {
+      $('.swatch_color').on('click', 'button', function () {
+        $(this).parents().find('button.is-selected').removeClass('is-selected');
+        $(this).addClass('is-selected');
+      })
     })
   },
   start: () => {
@@ -757,7 +780,7 @@ const app = {
     app.text_circle();
     app.tabs_shop();
     app.back_to_top();
-    // app.video_popup();
+    app.video_popup();
     app.counter_number();
     app.swatch_color();
   },

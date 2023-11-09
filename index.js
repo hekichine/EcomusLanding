@@ -524,9 +524,9 @@ const app = {
 
     const video = () => {
       // add target_blank a tag
-      if (window.innerWidth <= 768) {
-        $('.popup_youtube').attr('target', '_blank');
-      }
+      // if (window.innerWidth <= 768) {
+      //   $('.popup_youtube').attr('target', '_blank');
+      // }
       // active video when hover
       if (window.innerWidth > 768) {
         $('#section_video').on('mouseover', 'video', function () {
@@ -537,19 +537,19 @@ const app = {
 
         });
       } else {
-        $('#section_video').on('mouseover', '.video-trigger-mobile', function () {
-          $('.video-item').find('video').trigger('pause');
-          $('.video-item.is-hover').removeClass('is-hover');
-          let id = $(this).data('trigger');
-          $(id).addClass('is-hover');
-          $(id).find('video').trigger('play');
+        // $('#section_video').on('mouseover', '.video-trigger-mobile', function () {
+        //   $('.video-item').find('video').trigger('pause');
+        //   $('.video-item.is-hover').removeClass('is-hover');
+        //   let id = $(this).data('trigger');
+        //   $(id).addClass('is-hover');
+        //   $(id).find('video').trigger('play');
 
-        })
+        // })
       }
     }
     $(document).on('DOMContentLoaded', function () {
       $('.popup_youtube').magnificPopup({
-        disableOn: 768,
+        // disableOn: 768,
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,

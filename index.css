@@ -2202,15 +2202,15 @@ header {
 }
 
 .video-item.is-hover .video-info a {
-  transition-delay: .55s;
+  transition-delay: .1s;
 }
 
 .video-item.is-hover .video-info h5 {
-  transition-delay: .75s;
+  transition-delay: .35s;
 }
 
 .video-item.is-hover .video-info p {
-  transition-delay: .95s;
+  transition-delay: .55s;
 }
 
 .video-item .poster_img {

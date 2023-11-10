@@ -611,6 +611,19 @@ const app = {
       })
     })
   },
+  reveal:()=>{
+    const reveal= ()=>{
+      let reveals = document.querySelectorAll('[reveal]');
+      console.log(reveals);
+      if(reveals){
+        console.log("Reveal is working");
+      }else{
+        console.log("Reveal is not working because not find the item ");
+      }
+    }
+    $(window).on('scroll', reveal())
+    
+  },
   start: () => {
     console.log("App start ...");
     app.header_sticky();
@@ -631,6 +644,7 @@ const app = {
     app.video_popup();
     app.counter_number();
     app.swatch_color();
+    app.reveal();
   },
 };
 

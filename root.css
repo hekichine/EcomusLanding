@@ -765,7 +765,6 @@ video {
 
 /*  back to top */
 back-to-top {
-  display: inline-block;
   background-color: var(--link-color-active);
   width: 40px;
   height: 40px;

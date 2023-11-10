@@ -523,7 +523,6 @@ const app = {
 
         });
       } else {
-        console.log(config);
         if(config.video.disable_mobile){
           console.log("Disable video on mobile");
           $('#section_video').addClass('disable_mobile');

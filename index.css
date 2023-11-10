@@ -2130,7 +2130,8 @@ header {
   font-weight: 600;
   line-height: normal;
   transform: translateX(-50px);
-  transition: .35s ease;
+  transition: color .2s linear, transform .7s ease-in-out;
+  will-change: color, transform;
   opacity: 0;
   visibility: hidden;
   pointer-events: auto;
@@ -2140,7 +2141,6 @@ header {
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
-  transition-delay: .35s;
 }
 
 .video-item .video-info {

@@ -618,6 +618,7 @@ const app = {
         console.log("Reveal is working");
       } else {
         console.log("Reveal is not working because not find the item ");
+        return;
       }
       $(window).on('scroll', function () {
         reveals.forEach((el) => {

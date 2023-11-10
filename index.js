@@ -671,7 +671,7 @@ const app = {
     app.empower_masonry();
     app.splider();
     app.table();
-    // app.galaxy();
+    app.galaxy();
     app.text_circle();
     app.tabs_shop();
     app.back_to_top();

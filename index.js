@@ -600,6 +600,13 @@ const app = {
       })
   },
   reveal: (config) => {
+    // structor
+    // <div>
+    //  <div reveal>
+    //    code html
+    //  </div>
+    // </div> 
+    
     const reveal = (config) => {
       if(!config.reveal.enable){
         return
@@ -612,15 +619,19 @@ const app = {
         return;
       }
       $(window).on('scroll', function () {
+
         reveals.forEach((el) => {
           const windowHeight = window.innerHeight;
           const revealTop = el.getBoundingClientRect().top;
           const elHeight = $(this).height();
           const revealPoint = 150;
+          // position & speed 
           const posPoint = 20;
+          // attr parent
           el.parentElement.style.perspective = '700px';
           el.parentElement.style.transformStyle= 'preserve-3d';
           el.parentElement.style.perspectiveOrigin = '100% 0%';
+          // attr node
           el.style.transformOrigin = '50% 0';
           el.style.translate = 'none';
           el.style.rotate = 'none';

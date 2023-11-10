@@ -232,7 +232,6 @@ const app = {
     }
   },
   filter: () => {
-    $(document).on('DOMContentLoaded', function () {
       let $grid = $("#isotope").isotope({
         itemSelector: ".isotope-item",
         layoutMode: "fitRows",
@@ -242,7 +241,7 @@ const app = {
         let filterValue = $(this).attr("data-filter");
         $grid.isotope({ filter: filterValue });
       });
-    })
+
   },
   tabs: () => {
     $("[filter-tabs]").on("click", "button", function () {
@@ -255,7 +254,7 @@ const app = {
     })
   },
   empower_masonry: () => {
-    $(document).on('DOMContentLoaded', function () {
+   
       $(".empower_grid").isotope({
         layoutMode: "packery",
         itemSelector: ".col",
@@ -264,7 +263,7 @@ const app = {
         layoutMode: "packery",
         itemSelector: ".col",
       });
-    })
+
   },
   splider: () => {
     const splides = [
@@ -326,7 +325,6 @@ const app = {
         }
       }
     ]
-    $(document).on('DOMContentLoaded', function () {
       splides.map(item => {
         // console.log(item.options);
         new Splide(`${item.id}`, item.options).mount();
@@ -362,10 +360,9 @@ const app = {
           }
         }
       }).mount();
-    })
   },
   tabs_shop: () => {
-    $(document).on('DOMContentLoaded', function () {
+    
       new Splide('#tabs_shop_splide-1', {
         type: 'loop',
         perPage: 3,
@@ -442,8 +439,8 @@ const app = {
           }
         }
       }).mount();
-    });
-    $(document).on('DOMContentLoaded', function () {
+
+    
 
       $('#tabs_demo').on('click', 'button', function () {
         $('#tabs_demo').find('button.is-active').removeClass('is-active');
@@ -453,15 +450,15 @@ const app = {
         // console.log(id);
         $(`#${id}`).addClass('control-active')
       })
-    })
+
   },
   table: () => {
-    $(document).on('DOMContentLoaded', function () {
+   
 
       $('#table_viewmore').on('click', function () {
         $('#total_wrap').addClass('view-more-active')
       })
-    })
+
 
   },
   galaxy: () => {
@@ -485,20 +482,15 @@ const app = {
           "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;background-color:#" + randomColor + "'></div>";
       }
     };
-    $(document).on('DOMContentLoaded', function () {
-      createStars();
-    })
-
+    createStars();
   },
   text_circle: () => {
     const str = "highconverting";
     const text = $('#text-circle');
     // console.log(text);
-    $(document).on('DOMContentLoaded', function () {
-      for (let i = 0; i < str.length; i++) {
-        text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
-      }
-    })
+    for (let i = 0; i < str.length; i++) {
+      text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
+    }
   },
   back_to_top: () => {
     let btn = $('back-to-top');
@@ -510,15 +502,9 @@ const app = {
         btn.removeClass('show');
       }
     });
-
-    $(document).on('DOMContentLoaded', function () {
-
       btn.on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, '0');
       });
-    })
-
-
   },
   video_popup: (config) => {
 
@@ -552,7 +538,7 @@ const app = {
         })
       }
     }
-    $(document).on('DOMContentLoaded', function () {
+   
       $('.popup_youtube').magnificPopup({
         // disableOn: 768,
         type: 'iframe',
@@ -570,7 +556,6 @@ const app = {
         // },
       });
       video(config);
-    });
   },
   counter_number: () => {
     // cau truc
@@ -610,12 +595,10 @@ const app = {
     });
   },
   swatch_color: () => {
-    $(document).on('DOMContentLoaded', function () {
       $('.swatch_color').on('click', 'button', function () {
         $(this).parents().find('button.is-selected').removeClass('is-selected');
         $(this).addClass('is-selected');
       })
-    })
   },
   reveal: (config) => {
     const reveal = (config) => {

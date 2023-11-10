@@ -348,15 +348,15 @@ const app = {
             autoWidth: false,
           },
           1024: {
-            perPage: 3, 
+            perPage: 3,
             autoWidth: false,
           },
           768: {
-            perPage: 3, 
+            perPage: 3,
             autoWidth: false,
-            gap:'5px'
+            gap: '5px'
           },
-          525:{
+          525: {
             perPage: 2,
             autoWidth: false,
           }
@@ -611,18 +611,52 @@ const app = {
       })
     })
   },
-  reveal:()=>{
-    const reveal= ()=>{
+  reveal: () => {
+    const reveal = () => {
       let reveals = document.querySelectorAll('[reveal]');
-      console.log(reveals);
-      if(reveals){
+      if (reveals) {
         console.log("Reveal is working");
-      }else{
+      } else {
         console.log("Reveal is not working because not find the item ");
       }
+      $(window).on('scroll', function () {
+        reveals.forEach((el) => {
+          const windowHeight = window.innerHeight;
+          const revealTop = el.getBoundingClientRect().top;
+          const elHeight = $(this).height();
+          const revealPoint = 150;
+          const posPoint = 40;
+          el.parentElement.style.perspective = '700px';
+          el.parentElement.style.transformStyle= 'preserve-3d';
+          el.parentElement.style.perspectiveOrigin = '100% 0%';
+          el.style.transformOrigin = '50% 0';
+          el.style.translate = 'none';
+          el.style.rotate = 'none';
+          el.style.scale = 'none';
+          el.style.transition = 'all .35s ease';
+          // console.log(revealTop > windowHeight - revealPoint);
+          if(revealTop > windowHeight - revealPoint){
+            el.style.opacity = '0';
+            el.style.transform = `rotateX(-${posPoint}deg)`
+          }
+          if (revealTop < windowHeight - revealPoint) {
+            if(revealTop > -50){
+              let schemas = Math.abs(1 - revealTop / elHeight);
+              let opacity = Math.min((Math.abs(1 - (revealTop - 350) / elHeight)), 1);
+              let rotate =  Math.min((posPoint * schemas - (posPoint - 10)),0)
+              el.style.opacity = `${opacity}`;
+              el.style.transform = `translate3d(0px,0px,0px) rotateX(${rotate}deg)`
+            }
+            else{
+              el.style.transform = `translate(0,0)`
+            }
+          }
+          
+        })
+      })
     }
-    $(window).on('scroll', reveal())
-    
+    reveal()
+
   },
   start: () => {
     console.log("App start ...");

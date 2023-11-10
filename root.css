@@ -618,9 +618,9 @@ video {
 .galaxy_eff {
   position: absolute;
   height: 300px;
-  width: 1000px;
+  width: 750px;
   overflow: hidden;
-  top: 20%;
+  top: 15%;
   left: 0;
   transform: rotate(45deg);
   pointer-events: none;
@@ -631,7 +631,6 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: -1;

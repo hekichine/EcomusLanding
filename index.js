@@ -656,7 +656,7 @@ const app = {
         disable_mobile: true
       },
       reveal:{
-        enable: false
+        enable: true
       }
     }
     console.log("App start ...");

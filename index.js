@@ -520,9 +520,9 @@ const app = {
 
 
   },
-  video_popup: () => {
+  video_popup: (config) => {
 
-    const video = () => {
+    const video = (config) => {
       // add target_blank a tag
       // if (window.innerWidth <= 768) {
       //   $('.popup_youtube').attr('target', '_blank');
@@ -537,6 +537,12 @@ const app = {
 
         });
       } else {
+        console.log(config);
+        if(config.video.disable_mobile){
+          console.log("Disable video on mobile");
+          $('#section_video').addClass('disable_mobile');
+          return;
+        }
         $('#section_video').on('mouseover', '.video-trigger-mobile', function () {
           $('.video-item').find('video').trigger('pause');
           $('.video-item.is-hover').removeClass('is-hover');
@@ -563,7 +569,7 @@ const app = {
         //   }
         // },
       });
-      video();
+      video(config);
     });
   },
   counter_number: () => {
@@ -611,8 +617,11 @@ const app = {
       })
     })
   },
-  reveal: () => {
-    const reveal = () => {
+  reveal: (config) => {
+    const reveal = (config) => {
+      if(!config.reveal.enable){
+        return
+      }
       let reveals = document.querySelectorAll('[reveal]');
       if (reveals) {
         console.log("Reveal is working");
@@ -656,10 +665,18 @@ const app = {
         })
       })
     }
-    reveal()
+    reveal(config)
 
   },
   start: () => {
+    const config={
+      video:{
+        disable_mobile: true
+      },
+      reveal:{
+        enable: true
+      }
+    }
     console.log("App start ...");
     app.header_sticky();
     app.header_change_bg();
@@ -676,11 +693,12 @@ const app = {
     app.text_circle();
     app.tabs_shop();
     app.back_to_top();
-    app.video_popup();
+    app.video_popup(config);
     app.counter_number();
     app.swatch_color();
-    app.reveal();
+    app.reveal(config);
   },
 };
 
 app.start();
+

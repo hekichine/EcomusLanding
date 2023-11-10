@@ -2085,6 +2085,9 @@ header {
   transition: .25s ease-in;
   z-index: 2;
 }
+.my_vid .video_wrap.disable_mobile .video-item .poster::before{
+  display: none;
+}
 
 .my_vid .video_wrap .video-item.is-hover .poster::before {
   opacity: 0;
@@ -2756,6 +2759,13 @@ header {
 }
 
 @media (max-width: 768px) {
+  .my_vid .video_wrap.disable_mobile .video-item .poster{
+    max-height: unset;
+    height: unset;
+  }
+  .banner .banner_demo-img-wrap::after{
+    top: -11px;
+  }
   .grid_layout2 .title {
     font-size: 18px;
     line-height: normal;

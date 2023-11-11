@@ -66,7 +66,13 @@ ol {
 .under-line {
   text-decoration: underline;
 }
-
+.boxed{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 
 @media (min-width: 1440px) {
@@ -112,8 +118,8 @@ a {
   font-size: 60px;
 }
 
-.hdt-fz2 {
-  font-size: 50px;
+.hdt-fz2,.hdt-fz15 {
+  font-size: 40px;
 }
 
 .hdt-fz3 {
@@ -149,7 +155,7 @@ a {
     font-size: 100px;
   }
 
-  .hdt-fz2 {
+  .hdt-fz2,.hdt-fz15 {
     font-size: 80px;
   }
 
@@ -184,6 +190,11 @@ a {
   body {
     font-size: 16px;
   }
+  .boxed{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  
 }
 
 @media (min-width: 1200px) {
@@ -191,7 +202,7 @@ a {
     font-size: 120px;
   }
 
-  .hdt-fz2 {
+  .hdt-fz2,.hdt-fz15 {
     font-size: 90px;
   }
 
@@ -222,13 +233,42 @@ a {
   .hdt-fz9 {
     font-size: 20px;
   }
+  .boxed{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  
+}
+@media (min-width: 1366px){
+  .boxed{
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+  }
+  
 }
 
+@media (min-width: 1440px){
+  .boxed{
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+  
+}
+@media (min-width: 1600px) {
+  .boxed{
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+  
+  
+}
 @media (min-width: 1780px) {
   .hdt-fz1 {
     font-size: 200px;
   }
-
+  .hdt-fz15{
+    font-size: 130px;
+  }
   .hdt-fz2 {
     font-size: 120px;
   }
@@ -678,6 +718,28 @@ video {
   left: 0;
   bottom: 0;
 }
+#payment_circle span {
+  position: absolute;
+  left: 45%;
+  top: -50%;
+  transform-origin: 0 95px;
+  color: #FFF;
+  font-size: 13.431px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#payment_circle {
+  /* animation: circle 8s linear infinite; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: rotate(290deg);
+}
 
 @keyframes circle {
   0% {
@@ -821,3 +883,6 @@ img{
   user-select: none;
 }
 
+.background-none.section-inner{
+  background-image: none;
+}

@@ -113,7 +113,9 @@ header {
   z-index: 1;
   pointer-events: none;
   max-width: 35%;
+  overflow: hidden;
 }
+
 
 .banner .button-label {
   font-size: 16px;
@@ -241,6 +243,7 @@ header {
 
 .banner .card-shoes {
   max-width: 339px;
+  overflow: hidden;
 }
 
 .banner .banner_demo-1 {
@@ -565,7 +568,8 @@ header {
   border-radius: inherit;
   transition: all 5s ease-in;
 }
-.demos .col-inner::after{
+
+.demos .col-inner::after {
   position: absolute;
   content: "";
   top: -2px;
@@ -1708,9 +1712,6 @@ header {
   pointer-events: auto;
 }
 
-.testi .container-xl {
-  max-width: 1470px;
-}
 
 .testi .gx-15 {
   --bs-gutter-x: 15px;
@@ -1874,7 +1875,6 @@ header {
 
 .b_ecomus .tophead {
   display: flex;
-  padding: 0 80px;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -2044,7 +2044,8 @@ header {
   padding: 56px;
   border-radius: 40px;
   overflow: hidden;
-  position: relative;  max-width: 1760px;
+  position: relative;
+  max-width: 1760px;
   margin: 0 auto;
 }
 
@@ -2328,7 +2329,7 @@ header {
   margin-bottom: 35px;
 }
 
-.ecomposer .input_wrap input{
+.ecomposer .input_wrap input {
   background-color: transparent;
   border: none;
   outline: none;
@@ -2342,10 +2343,12 @@ header {
   flex: 1 0 auto;
   height: 100%;
 }
-.ecomposer .input_wrap input::placeholder{
-    color: rgba(255, 255, 255, 0.30);
+
+.ecomposer .input_wrap input::placeholder {
+  color: rgba(255, 255, 255, 0.30);
 }
-.ecomposer .ecomposer_bg{
+
+.ecomposer .ecomposer_bg {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2355,6 +2358,153 @@ header {
   z-index: -1;
 }
 
+/* solution */
+.solution .section-inner {
+  padding: 0 80px;
+}
+
+.solution .content_wrap {
+  padding: 79px 133px 88px;
+  border-radius: 20px;
+  background-color: #16171C;
+  max-width: 1760px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.solution .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.solution .box {
+  display: flex;
+  gap: 30px;
+}
+
+.solution .content .item-icon .item-inner {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(117.63% 154.08% at -5.51% -4.72%, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
+  backdrop-filter: blur(15px);
+  display: flex;
+  width: 280px;
+  padding: 74px 33px 48px;
+  height: 100%;
+  flex-direction: column;
+  gap: 43px;
+  align-items: center;
+
+}
+
+.solution .item .title {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.solution .item-icon .des {
+  color: #7C7C7C;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 136.364% */
+  text-align: center;
+}
+
+.solution {
+  margin-bottom: 64px;
+}
+
+/* payment */
+.payment .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+}
+.payment .text-rotate{position: absolute;
+top: 0;left: 0;right: 0;
+bottom: 0;}
+
+.payment .title {
+  color: #FFF;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  margin-bottom: 7px;
+}
+.payment .line{
+  height: 1px;
+  background-color: #fff;
+}
+.payment .line1{
+  width: 117px;
+}
+.payment .line2{
+  width: 70px;
+  margin-top: 9px;
+}
+.payment .line3{
+  width: 43px;
+  margin-top: 9px;
+}
+/* pucharse */
+.pucharse .section-inner{
+  padding: 18px 15px 80px;
+  position: relative;
+}
+.pucharse br{
+  display: block !important;
+}
+.pucharse .gradient{
+  background: linear-gradient(91deg, #76F5BC 26.28%, #221DF3 53.63%, #EBEEF9 75.81%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.pucharse .hdt-btn{
+  margin-top: 48px;
+  margin-bottom: 0;
+  height: 50px;
+}
+/* footer */
+.footer-inner{
+  position: relative;
+}
+.footer-inner .boxed{ 
+  display: flex;
+  justify-content: space-between;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  align-items: center;
+  position: relative;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.footer-inner::before{
+  position: absolute; top: 0;left: 0;right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.20);
+  content: "";
+}
+.footer-inner .policy{
+  display: flex;
+  gap: 20px;
+}
 @media (min-width: 769px) {
   .my_vid .video_wrap .video-item.is-hover {
     flex: 3;
@@ -2436,6 +2586,8 @@ header {
 
 }
 
+@media (min-width: 1200px) {}
+
 @media(min-width: 1200px) and (max-width: 1440px) {
   .empower .col-inner .text_bg .gradient {
     font-size: 60px;
@@ -2474,6 +2626,10 @@ header {
 }
 
 @media (min-width: 1700px) {
+  .testi .container-xl {
+    max-width: 1470px;
+  }
+
   .banner .banner_demo-1 {
     right: -100px;
   }
@@ -2499,15 +2655,28 @@ header {
     --bs-gutter-y: 30px;
   }
 }
-@media (min-width: 2000px){
-  .banner .banner_demo{
+
+@media (min-width: 2000px) {
+  .banner .banner_demo {
     margin-left: auto;
     margin-right: auto;
   }
 }
+
 @media (max-width: 1600px) {
-  .b_ecomus .tophead {
+  .solution .section-inner {
     padding: 0 40px;
+  }
+
+  .solution .content {
+    justify-content: center;
+  }
+
+  .solution .content_wrap {
+    padding: 40px;
+  }
+
+  .b_ecomus .tophead {
     margin-bottom: 40px;
   }
 
@@ -2618,9 +2787,27 @@ header {
 
 
 @media (max-width: 1024px) {
-  .ecomposer .section-inner{
+  .solution {
+    margin-bottom: 40px;
+  }
+
+  .solution .box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .solution .content .item-icon .item-inner {
+    margin: 0 auto;
+  }
+
+  .solution .content .item-icon {
+    flex: 1 0 auto;
+  }
+
+  .ecomposer .section-inner {
     padding: 70px 15px;
   }
+
   .b_ecomus .splide3 .splide_inner {
     gap: 15px;
   }
@@ -2795,6 +2982,7 @@ header {
 }
 
 @media (max-width: 992px) {
+
   .empower .swatch_size {
     top: 10%;
   }
@@ -2890,9 +3078,65 @@ header {
 }
 
 @media (max-width: 768px) {
-  .ecomposer .section-inner{
+  back-to-top{
+    width: 30px;height: 30px;right: 15px;bottom: 15px;
+  }
+  .pucharse .hdt-btn{
+    height: 42px;
+    margin-top: 30px;
+  }
+  .pucharse .section-inner{
+    padding-bottom: 30px;
+  }
+  .footer-inner .boxed{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .solution {
+    margin-bottom: 30px;
+  }
+
+  .ecomposer .ecomposer_bg {
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .solution .box {
+    gap: 15px;
+  }
+
+  .solution .item svg {
+    width: 70px;
+  }
+
+  .solution .item .title {
+    margin-top: 10px;
+  }
+
+  .solution .item-icon .des {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .solution .content .item-icon .item-inner {
+    width: 250px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .solution .content .item-icon .item-inner svg {
+    width: 50px;
+  }
+
+  .solution .content_wrap {
+    padding: 30px;
+  }
+
+  .ecomposer .section-inner {
     padding: 50px 15px;
   }
+
   .my_vid .video_wrap.disable_mobile .video-item .poster {
     max-height: unset;
     height: unset;
@@ -3115,24 +3359,43 @@ header {
   .tabs_demo .section-inner {
     margin-bottom: 0;
   }
-  .ecomposer .hdt-btn{
+
+  .ecomposer .hdt-btn {
     height: 42px;
     padding: 0 25px;
   }
 }
 
 @media (max-width: 625px) {
-  
-  .ecomposer .des,.ecomposer .input_wrap{
+  .footer-inner .boxed{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px ;
+    font-size: 14px;
+    line-height: normal;
+  }
+  .footer-inner .logo{
+    order: -9999;
+  }
+  .solution .section-inner {
+    padding: 0 15px;
+  }
+
+  .ecomposer .des,
+  .ecomposer .input_wrap {
     margin-bottom: 20px;
   }
-  .ecomposer .section-inner{
+
+  .ecomposer .section-inner {
     padding: 40px 15px;
     padding-top: 30px;
   }
-  .ecomposer .input_wrap{
+
+  .ecomposer .input_wrap {
     height: 42px;
   }
+
   .grid_layout2 .show__wrap.hdt-ratio::before {
     padding-bottom: 250px;
   }
@@ -3254,13 +3517,15 @@ header {
 }
 
 @media (max-width: 525px) {
-  .ecomposer .input_wrap{
+  .ecomposer .input_wrap {
     padding-right: 25px;
   }
-  .ecomposer .input_wrap input{
+
+  .ecomposer .input_wrap input {
     padding-left: 25px;
     padding-right: 10px;
   }
+
   .grid_layout2 .section-inner {
     padding-top: 30px;
   }

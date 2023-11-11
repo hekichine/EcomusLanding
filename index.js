@@ -491,6 +491,14 @@ const app = {
     for (let i = 0; i < str.length; i++) {
       text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
     }
+
+
+    const str2 = "one-time payment";
+    const text2 = $('#payment_circle');
+    // console.log(text);
+    for (let i = 0; i < str2.length; i++) {
+      text2.append(`<span style="transform:rotate(${9 * i}deg)">${str2[i]}</span>`);
+    }
   },
   back_to_top: () => {
     let btn = $('back-to-top');

@@ -264,8 +264,8 @@ a {
 
 @media (min-width: 1600px) {
   .boxed {
-    padding-left: 80px !important;
-    padding-right: 80px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 
 

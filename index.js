@@ -681,51 +681,15 @@ const app = {
         title: parent.find('.title').text(),
         des: parent.find('.des').text(),
         data_img: parent.find('img').data('src'),
-        data_slide: parent.find('.show__wrap').html(),
       }
      
       popup_html.find('.title').text(p_obj.title);
       popup_html.find('.des').text(p_obj.des);
 
-     
-      if(p_obj.data_slide){
-        popup_html.find('.hdt-ratio').replaceWith(p_obj.data_slide);
-        new Splide('popup .splider_wrap', {
-          easing: "linear",
-          type: "loop",
-          pauseOnHover: true, 
-          autoplay: true,
-          autoWidth: true,
-          arrows: false,
-          interval: 2000,
-          // speed: 5000,
-          pagination: false,
-          breakpoints: {
-            1366: {
-              perPage: 3,
-              autoWidth: false,
-            },
-            1024: {
-              perPage: 3,
-              autoWidth: false,
-            },
-            768: {
-              perPage: 3,
-              autoWidth: false,
-            },
-            525: {
-              perPage: 2,
-              autoWidth: true,
-            }
-          }
-        }).mount();
-
-      }
       if(p_obj.data_img){
         popup_html.find('img').attr('src',p_obj.data_img);
       }
       openPopup();
-      p_obj = null;
     })
     const openPopup=()=>{
       $('popup').css('display','block');

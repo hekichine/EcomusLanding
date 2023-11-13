@@ -173,7 +173,7 @@ header {
   bottom: -20px;
   left: 0;
   right: 0;
-  margin-left: 100px;
+  margin-left: 0;
 }
 
 .banner .revolu {
@@ -966,7 +966,7 @@ header {
   font-weight: 400;
   line-height: 24px;
   /* 150% */
-  margin-bottom: 50px;
+  margin-bottom: 27px;
 }
 
 .empower_grid .item2 .col-wrap {
@@ -2586,7 +2586,7 @@ background-clip: text;
   }
 
   .banner .revolutions svg {
-    margin-left: 200px;
+    margin-left: 50px;
   }
 
   .testi .gx-xxl-30 {

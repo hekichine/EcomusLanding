@@ -706,6 +706,7 @@ header {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+
 }
 
 .empower .swatch_size .size_wrap {
@@ -735,6 +736,8 @@ header {
   position: absolute;
   bottom: 15%;
   left: 6%;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 .empower .swatch_color .color_list {

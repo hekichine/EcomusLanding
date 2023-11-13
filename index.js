@@ -714,7 +714,7 @@ const app = {
             },
             525: {
               perPage: 2,
-              autoWidth: false,
+              autoWidth: true,
             }
           }
         }).mount();

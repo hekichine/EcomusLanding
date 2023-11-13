@@ -1074,6 +1074,9 @@ popup .slide_grid .splide__slide{
   background-color: #000;
 }
 @media (max-width: 1150px){
+  [name="grid_popup"] span{
+    opacity: 1;
+  }
   popup .content_inner{
     max-width: 70vw;
     max-height: 85vh;

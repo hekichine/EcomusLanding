@@ -669,6 +669,90 @@ const app = {
     reveal(config)
 
   },
+  popup:()=>{
+    $('[name="grid_popup"]').on('click',function(e){
+
+      e.preventDefault();
+
+      const parent = $(this).parent();
+      const popup_html = $('popup');
+      let p_obj = {
+        title: parent.find('.title').text(),
+        des: parent.find('.des').text(),
+        data_img: parent.find('img').data('src'),
+        data_slide: parent.find('.show__wrap').html(),
+      }
+     
+      popup_html.find('.title').text(p_obj.title);
+      popup_html.find('.des').text(p_obj.des);
+
+     
+      if(p_obj.data_slide){
+        popup_html.find('.hdt-ratio').replaceWith(p_obj.data_slide);
+        new Splide('popup .splider_wrap', {
+          easing: "linear",
+          type: "loop",
+          pauseOnHover: true, 
+          autoplay: true,
+          autoWidth: true,
+          arrows: false,
+          interval: 2000,
+          // speed: 5000,
+          pagination: false,
+          breakpoints: {
+            1366: {
+              perPage: 3,
+              autoWidth: false,
+            },
+            1024: {
+              perPage: 3,
+              autoWidth: false,
+            },
+            768: {
+              perPage: 3,
+              autoWidth: false,
+            },
+            525: {
+              perPage: 2,
+              autoWidth: false,
+            }
+          }
+        }).mount();
+
+      }
+      if(p_obj.data_img){
+        popup_html.find('img').attr('src',p_obj.data_img);
+      }
+      openPopup();
+      p_obj = null;
+    })
+    const openPopup=()=>{
+      $('popup').css('display','block');
+    }
+    const closePopup=()=>{
+      $('popup').css('display','none');
+      $('popup .content_inner').html(popup_original);
+    }
+    //  close popup 
+    $('popup .popup-close,popup .overlay').on('click',function(){
+      closePopup();
+    })
+    const popup_original = ` <div class="img_wrap">
+          <div class="hdt-ratio" style="--aspect-ratioapt: 872/503;">
+            <img src="./assets/images/b_ecomus/10.png" alt="">
+          </div>
+        </div>
+        <h3 class="title">Optimize your Shop Store for millions of mobile shoppers</h3>
+        <p class="des">Creating custom layouts for your online store is easier than ever with flex sections. We leverage CSS Flexbox, which allows for more
+          multi-directional responsive layouts, and easy content alignment within sections of your store. Now you can simply drag and drop, re-size, group, and edit for a store that’s uniquely yours.</p>
+        <div class="group-btn">
+          <a href="#" target="_blank" class="hdt-btn-hover-icon docs">How to use it
+            <svg class="hdt-icon" viewBox="0 0 24 24" focusable="false" width="16" height="16"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg>
+          </a>
+          <a href="#" class="buy" target="_blank">Buy theme - $19</a>
+        </div>`
+
+  },
   start: () => {
     const config={
       video:{
@@ -698,6 +782,7 @@ const app = {
     app.counter_number();
     app.swatch_color();
     app.reveal(config);
+    app.popup();
   },
 };
 

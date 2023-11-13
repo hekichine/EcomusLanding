@@ -640,7 +640,7 @@ const app = {
           el.parentElement.style.transformStyle= 'preserve-3d';
           el.parentElement.style.perspectiveOrigin = '100% 0%';
           // attr node
-          el.style.transformOrigin = '50% 0';
+          el.style.webkitTransformOrigin = '50% 0';
           el.style.translate = 'none';
           el.style.rotate = 'none';
           el.style.scale = 'none';

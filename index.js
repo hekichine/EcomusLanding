@@ -626,7 +626,7 @@ const app = {
         console.log("Reveal is not working because not find the item ");
         return;
       }
-      if(window > 525){
+      if(window.innerWidth > 525){
         $(window).on('scroll', function () {
           reveals.forEach((el) => {
             const windowHeight = window.innerHeight;

@@ -644,12 +644,12 @@ const app = {
           el.style.translate = 'none';
           el.style.rotate = 'none';
           el.style.scale = 'none';
-          el.style.transition = 'all .35s ease';
+          // el.style.transition = 'all .35s ease';
           el.style.webkitTransition = 'all .35s ease';
           // console.log(revealTop > windowHeight - revealPoint);
           if(revealTop > windowHeight - revealPoint){
             el.style.opacity = '0';
-            el.style.transform = `rotateX(-${posPoint}deg)`
+            // el.style.transform = `rotateX(-${posPoint}deg)`
             el.style.webkitTransform = `rotateX(-${posPoint}deg)`
           }
           if (revealTop < windowHeight - revealPoint) {
@@ -658,11 +658,11 @@ const app = {
               let opacity = Math.min((Math.abs(1 - (revealTop - 350) / elHeight)), 1);
               let rotate =  Math.min((posPoint * schemas - (posPoint - 10)),0)
               el.style.opacity = `${opacity}`;
-              el.style.transform = `translate3d(0px,0px,0px) rotateX(${rotate}deg)`
+              // el.style.transform = `translate3d(0px,0px,0px) rotateX(${rotate}deg)`
               el.style.webkitTransform = `translate3d(0px,0px,0px) rotateX(${rotate}deg)`
             }
             else{
-              el.style.transform = `translate(0,0)`
+              // el.style.transform = `translate(0,0)`
               el.style.webkitTransform = `translate(0,0)`
             }
           }

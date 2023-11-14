@@ -54,7 +54,9 @@ ol {
 
 /*  container width */
 
-
+.z-2{
+  z-index: 2;
+}
 .hdt-s-text {
   color: var(--text-accent);
 }

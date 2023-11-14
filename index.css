@@ -1039,7 +1039,9 @@ header {
   line-height: 24px;
   /* 150% */
 }
-
+.shopify_app .des ul{
+  list-style:disc;padding-left: 1rem;
+}
 .shopify_app .hdt-btn {
   height: 42px;
 }
@@ -1514,7 +1516,6 @@ header {
 }
 
 .hdt-table .total {
-  gap: 100px;
   margin-top: 57px;
 }
 
@@ -1541,13 +1542,22 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: radial-gradient(106.13% 139.77% at 2.35% 0%, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
   backdrop-filter: blur(15px);
-  padding: 30px;
+  padding: 15px 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 266px;
+  color: #FFF;  
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
 }
-
+.hdt-table .total .item .sub{
+  font-size: 16px;
+  font-weight: 400;
+}
 /* tabs demo */
 .tabs_demo .section-inner {
   padding-top: 107px;
@@ -1716,7 +1726,7 @@ header {
   bottom: 0;
   left: 0;
   z-index: -1;
-  transform: translateY(-250%);
+  transform: translateY(-185%);
 }
 
 .mb_screen .gradient {
@@ -2563,7 +2573,7 @@ background-clip: text;
   }
 
   .shopify_app .splider {
-    bottom: 100px;
+    bottom: 70px;
   }
 }
 
@@ -2608,6 +2618,17 @@ background-clip: text;
 @media (max-width: 1600px) {
   .solution .section-inner {
     padding: 0 40px;
+  }
+  .hdt-table .total .item {
+    font-size: 20px;
+    width: 245px;
+  }
+  .hdt-table .total .item br{
+    display: block !important;
+  }
+  .hdt-table .total{
+    padding: 0 20px;
+    gap: 5px;
   }
 
   .solution .content {
@@ -2731,6 +2752,12 @@ background-clip: text;
   }
 }
 @media (max-width: 1149px){
+  .hdt-table .total .item {
+    font-size: 18px;
+  }
+  .hdt-table .total .item .sub{
+    font-size: 14px;
+  }
   .hdt-table tbody{
     padding: 20px;
   }
@@ -2742,7 +2769,7 @@ background-clip: text;
     line-height: normal;
   }
   .hdt-table .total .item{
-    width: 300px;
+    width: 200px;
     padding: 15px 30px;
   }
 }
@@ -3063,17 +3090,19 @@ background-clip: text;
   .hdt-table .dgroup {
     gap: 10px;
   }
-
+  .hdt-table .total .item{
+    padding: 15px;
+  }
 }
 
 @media (max-width: 768px) {
   .hdt-table .total .item{
-    width: fit-content;
-   
+    width: 155px;
+    font-size: 14px;
+    padding: 15px;
   }
   .hdt-table .total{
     justify-content: space-around !important;
-    gap:0;
   }
   .hdt-table .button-wrap {
     margin-top: 20px;

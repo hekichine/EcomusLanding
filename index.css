@@ -2629,6 +2629,9 @@ background-clip: text;
   }
 }
 @media (max-width: 1600px) {
+  .shopify_app .icon{
+    top: 70px;
+  }
   .mb_screen .mb_view .view_item{
     flex: 1 0 50%;
   }

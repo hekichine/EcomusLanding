@@ -748,6 +748,8 @@ const app = {
     app.swatch_color();
     app.reveal(config);
     app.popup();
+    
+    new WOW().init();
   },
 };
 

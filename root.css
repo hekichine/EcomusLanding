@@ -542,6 +542,7 @@ video {
   outline: none;
   border: none;
   transition: 0.25s ease-in-out;
+  white-space: nowrap;
 }
 
 [filter-tabs] button::before {

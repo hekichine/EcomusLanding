@@ -1377,7 +1377,7 @@ header {
 
 .hdt-table thead tr {
   display: flex;
-  padding: 29px 63px 25px;
+  padding: 29px 0 25px;
 }
 
 .hdt-table thead tr th {
@@ -1410,7 +1410,7 @@ header {
   border-radius: 20px;
   background: rgba(48, 48, 48, 0.5);
   backdrop-filter: blur(5px);
-  padding: 39px 63px;
+  padding: 39px 0;
   display: block;
   color: #c7c7c7;
   font-size: 16px;
@@ -1422,7 +1422,9 @@ header {
 .hdt-table table tr {
   display: flex;
 }
-
+.hdt-table table tbody tr td:nth-child(1){
+  padding-left: 63px;
+}
 .hdt-table table tr td {
   flex: 1 0 25%;
   position: relative;
@@ -2616,6 +2618,9 @@ background-clip: text;
 }
 
 @media (max-width: 1600px) {
+  .hdt-table table tbody tr td:nth-child(1){
+    padding-left: 40px;
+  }
   .solution .section-inner {
     padding: 0 40px;
   }
@@ -2658,6 +2663,9 @@ background-clip: text;
 }
 
 @media (max-width: 1400px) {
+  .hdt-table table tbody tr td:nth-child(1){
+    padding-left: 30px;
+  }
   .shopify_app .des br {
     display: none;
   }
@@ -2752,6 +2760,9 @@ background-clip: text;
   }
 }
 @media (max-width: 1149px){
+  .hdt-table table tbody tr td:nth-child(1){
+    padding-left: 30px;
+  }
   .hdt-table .total .item {
     font-size: 18px;
   }
@@ -2759,10 +2770,10 @@ background-clip: text;
     font-size: 14px;
   }
   .hdt-table tbody{
-    padding: 20px;
+    padding: 20px 0;
   }
   .hdt-table thead tr{
-    padding: 20px;
+    padding: 20px 0;
   }
   .hdt-table thead tr th{
     font-size: 16px;
@@ -2993,6 +3004,9 @@ background-clip: text;
 }
 
 @media (max-width: 992px) {
+  .hdt-table table tbody tr td:nth-child(1){
+    padding-left: 20px;
+  }
   .hdt-table tbody{
     font-size: 14px;line-height: 1.6;
   }

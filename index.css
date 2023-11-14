@@ -694,10 +694,10 @@ header {
   position: absolute;
   top: 28%;
   right: 6%;
-
-
 }
-
+.empower .swatch_color ,.empower .swatch_size{
+  display: none !important;
+}
 .empower .swatch_size .size_list,
 .empower .swatch_color .color_list {
   display: flex;

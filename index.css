@@ -1752,13 +1752,17 @@ header {
   text-align: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 30px;
   flex-wrap: wrap;
 }
-
-.mb_screen .mb_view .view_item {
+.mb_screen .mb_view .view_item{
+  flex: 1 0 25%;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+.mb_screen .mb_view .view_item .view_inner {
   max-width: 380px;
-  margin-top: 30px;
   width: 100%;
   padding-bottom: 15px;
 }
@@ -2554,7 +2558,7 @@ background-clip: text;
   }
 
   .banner .banner_svg_bg {
-    max-width: 730px;
+    max-width: 500px;
   }
 
   .banner .banner_demo-1 {
@@ -2573,15 +2577,15 @@ background-clip: text;
   .empower .tophead {
     margin-bottom: 115px;
   }
-
-  .shopify_app .splider {
-    bottom: 70px;
-  }
 }
 
 @media (min-width: 1700px) {
   .testi .container-xl {
     max-width: 1470px;
+  }
+  .banner .banner_svg_bg{
+    max-width: 730px;
+    overflow: hidden;
   }
 
   .banner .banner_demo-1 {
@@ -2616,8 +2620,18 @@ background-clip: text;
     margin-right: auto;
   }
 }
-
+@media (max-width: 1800px){
+  .mb_screen .mb_view{
+    padding: 0 70px;
+  }
+  .mb_screen .mb_view .view_item{
+    flex: 1 0 25%;
+  }
+}
 @media (max-width: 1600px) {
+  .mb_screen .mb_view .view_item{
+    flex: 1 0 50%;
+  }
   .hdt-table table tbody tr td:nth-child(1){
     padding-left: 40px;
   }
@@ -2688,7 +2702,7 @@ background-clip: text;
     justify-content: space-evenly;
   }
 
-  .mb_screen .mb_view .view_item {
+  .mb_screen .mb_view .view_item .view_inner{
     max-width: 330px;
   }
 
@@ -3110,6 +3124,10 @@ background-clip: text;
 }
 
 @media (max-width: 768px) {
+  .mb_screen .mb_view .view_title{
+    font-size: 16px;line-height: normal;
+    margin-top: 15px;
+  }
   .hdt-table .total .item{
     width: 155px;
     font-size: 14px;
@@ -3320,7 +3338,7 @@ background-clip: text;
     border-radius: 30px;
   }
 
-  .mb_screen .mb_view .view_item {
+  .mb_screen .mb_view .view_item .view_inner{
     max-width: 250px;
   }
 
@@ -3495,10 +3513,6 @@ background-clip: text;
     height: 150px;
   }
 
-  .mb_screen .mb_view .view_item {
-    max-width: 200px;
-  }
-
   .tabs_demo .section-inner {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -3572,6 +3586,10 @@ background-clip: text;
 }
 
 @media (max-width: 525px) {
+  .mb_screen .mb_view .view_item{
+    flex: 1 0 100%;
+    padding: 0;
+  }
   .ecomposer .input_wrap {
     padding-right: 25px;
   }

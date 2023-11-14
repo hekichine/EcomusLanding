@@ -3018,6 +3018,9 @@ background-clip: text;
 }
 
 @media (max-width: 992px) {
+  .tabs{
+    justify-content: flex-start;
+  }
   .hdt-table table tbody tr td:nth-child(1){
     padding-left: 20px;
   }

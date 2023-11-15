@@ -1933,11 +1933,6 @@ header {
   margin-top: 65px;
 }
 
-.b_ecomus .section-inner {
-  padding: 84px 0 130px 0;
-  position: relative;
-}
-
 .b_ecomus .tophead {
   display: flex;
   justify-content: space-between;
@@ -1988,16 +1983,46 @@ header {
 }
 
 .b_ecomus .img_wrap {
-  max-width: 478px;
-  margin-bottom: 27px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 38px;
 }
-
+.b_ecomus .img_wrap img{
+  width: fit-content;
+  object-fit: contain;
+}
+.b_ecomus .rate{
+  display: flex;
+  margin-bottom: 34px;
+  gap: 15px;
+  align-items: center;
+}
+.b_ecomus .rate a{
+  display: inline-flex;
+padding: 14px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 100px;
+border: 1px solid rgba(255, 255, 255, 0.20);
+background: rgba(255, 255, 255, 0.20);
+backdrop-filter: blur(5px);
+font-size: 20px;font-weight: 700;
+}
+.b_ecomus .rate .text{
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+}
 .b_ecomus .col-right .col-inner {
-  padding: 43px 50px 50px 78px;
+  padding: 93px 50px 50px 77px;
   border-radius: 164px 0px 0px 0px;
   border: 1px solid rgba(255, 255, 255, 0.20);
-  background: radial-gradient(117.63% 154.08% at -5.51% -4.72%, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
-  backdrop-filter: blur(15px);
+  background: linear-gradient(45deg,#000,rgba(0,0,0,.3));
 }
 
 .b_ecomus .des {
@@ -2031,7 +2056,8 @@ header {
 }
 
 .b_ecomus .section-inner {
-  padding: 40px 0;
+  padding: 84px 0 88px 0;
+  
 }
 
 .splide-2+.line {
@@ -2388,8 +2414,7 @@ header {
   height: 56px;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.20);
-  background: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(5px);
+  background: #5B5B61;
   overflow: hidden;
   margin-bottom: 35px;
 }
@@ -2478,7 +2503,12 @@ header {
   /* 136.364% */
   text-align: center;
 }
-
+.solution .item-icon .des a{
+  color: inherit;
+}
+.solution .item-icon .des a:hover{
+  color: var(--link-color);
+}
 .solution {
   margin-bottom: 64px;
 }
@@ -2724,6 +2754,9 @@ background-clip: text;
   }
 }
 @media (max-width: 1800px){
+  .b_ecomus .tophead{
+    padding: 0 50px;
+  }
   .mb_screen .mb_view{
     padding: 0 70px;
   }
@@ -2732,6 +2765,13 @@ background-clip: text;
   }
 }
 @media (max-width: 1600px) {
+  .b_ecomus .col-right .col-inner{
+    padding: 40px;
+    border-radius: 60px 0 0 0 ;
+  }
+  .b_ecomus .img_wrap{
+    gap: 15px;
+  }
   .shopify_app .icon{
     top: 70px;
   }
@@ -2944,10 +2984,6 @@ background-clip: text;
     gap: 15px;
   }
 
-  .b_ecomus .col-right {
-    max-width: 100%;
-  }
-
   .mb_screen .mb_view .view_port {
     top: 15px;
     right: 15px;
@@ -3130,7 +3166,9 @@ background-clip: text;
 }
 
 @media (max-width: 992px) {
- 
+  .b_ecomus .col-right{
+    max-width: 90%;
+  }
   .tabs{
     justify-content: flex-start;
   }
@@ -3190,14 +3228,20 @@ background-clip: text;
 
   .b_ecomus .col-right .col-inner {
     border-radius: 40px 0 0 0;
-    padding: 25px;
+    padding: 30px;
   }
 
   .b_ecomus .hdt-btn {
     margin-top: 25px;
     height: 42px;
   }
+  .b_ecomus .rate a{
+    height: 48px;
+  }
 
+  .b_ecomus .img_wrap,.b_ecomus .rate{
+    margin-bottom: 20px;
+  }
   .mb_screen .tophead {
     margin-bottom: 30px;
   }
@@ -3254,6 +3298,10 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+
+  .b_ecomus .img_wrap{
+    justify-content: center;
+  }
   .mb_screen .mb_view .view_title{
     font-size: 16px;line-height: normal;
     margin-top: 15px;
@@ -3429,7 +3477,7 @@ background-clip: text;
   }
 
   .b_ecomus .col-right .col-inner {
-    padding: 15px;
+    padding: 25px;
   }
 
   .splide-2 .splide__slide span {
@@ -3567,7 +3615,15 @@ background-clip: text;
     padding: 0 25px;
   }
 }
-
+@media (max-width: 650px){
+  .b_ecomus .rate{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .b_ecomus .rate a{
+    flex: 1 0 100%
+  }
+}
 @media (max-width: 625px) {
   .shopify_app .col-left{
     padding-left: 5px;
@@ -3776,7 +3832,12 @@ background-clip: text;
 }
 
 @media (max-width: 425px) {
-  
+  .b_ecomus .col-right{
+    max-width: 100%;
+  }
+  .b_ecomus .col-right .col-inner{
+    padding: 15px;
+  }
   .my_vid .video_wrap .video-item {
     flex: 1 0 250px;
   }

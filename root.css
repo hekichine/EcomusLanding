@@ -871,7 +871,7 @@ back-to-top {
   border-radius: 4px;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
   transition: background-color .3s,
     opacity .5s, visibility .5s;
   opacity: 0;

@@ -587,6 +587,20 @@ video {
     transform: rotate(360);
   }
 }
+@keyframes pulsate {
+  0%{
+    transform: scale(0.1,0.1);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }50%{
+    opacity: 1;
+    filter: none;
+  }100%{
+    transform: scale(1.2,1.2);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
 
 /* cursor 2 */
 .cursor .cursor--small,

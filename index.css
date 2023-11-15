@@ -3303,7 +3303,9 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
-
+  .b_ecomus .section-inner{
+    padding: 40px 0;
+  }
   .b_ecomus .img_wrap{
     justify-content: center;
   }

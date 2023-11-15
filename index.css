@@ -1367,11 +1367,6 @@ header {
 .hdt-table .section-inner {
   position: relative;
 }
-.hdt-table .tb-w{
-  max-width: 1600px;
-  margin:  0 auto;
-}
-
 .hdt-table .svg_bg {
   position: absolute;
   left: 0;
@@ -3330,9 +3325,6 @@ background-clip: text;
     left: 15px;right: 15px;
   }
   .hdt-table .hdt-table_wrap{
-    width: fit-content;
-  }
-  .hdt-table .hdt-wrap{
     width: fit-content;
   }
   back-to-top{

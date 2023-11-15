@@ -3859,6 +3859,9 @@ background-clip: text;
 }
 
 @media (max-width: 375px) {
+  .empower_grid .banner_wrap .inner{
+    justify-content: space-around;
+  }
   .features .ossk2{
     flex-wrap: wrap;
   }

@@ -3806,4 +3806,7 @@ background-clip: text;
   .grid_layout2 .show__wrap.hdt-ratio::before {
     padding-bottom: 200px;
   }
+  .grid_layout2 .svg_bg{
+    transform: translateY(-75%);
+  }
 }

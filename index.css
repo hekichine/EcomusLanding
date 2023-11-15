@@ -1335,7 +1335,7 @@ header {
   position: absolute;
   top: 57%;
   left: 56%;
-  transform: rotateX(72deg);
+ transform: rotateX(65deg) translateX(-28px) translateY(13px) rotateY(40deg);
   margin: 0 0 0 3.5px;
 }
 .grid_layout2 .pulse::after{

@@ -2577,6 +2577,11 @@ background-clip: text;
 .footer-inner{
   position: relative;
 }
+.footer-inner .bg{
+  position: absolute;
+  bottom: 0;right: 0;
+  z-index: -1;
+}
 .footer-inner .boxed{ 
   display: flex;
   justify-content: space-between;
@@ -3854,6 +3859,9 @@ background-clip: text;
 }
 
 @media (max-width: 375px) {
+  .features .ossk2{
+    flex-wrap: wrap;
+  }
   .empower_grid .banner_wrap .text{
     font-size: 50px;
   }

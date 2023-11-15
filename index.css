@@ -2481,6 +2481,10 @@ font-size: 20px;font-weight: 700;
   flex-direction: column;
   gap: 43px;
   align-items: center;
+  transition: border-color .5s linear;
+}
+.solution .content .item-icon .item-inner:hover{
+  border-color: #fff;
 
 }
 
@@ -2553,6 +2557,7 @@ bottom: 0;}
 .pucharse .section-inner{
   padding: 18px 15px 80px;
   position: relative;
+  background-image: url('./assets/images/footer/footer_bg.png');
 }
 .pucharse br{
   display: block !important;
@@ -2575,7 +2580,7 @@ background-clip: text;
 .footer-inner .bg{
   position: absolute;
   bottom: 0;right: 0;
-  z-index: -1;
+  z-index: 0;
 }
 .footer-inner .boxed{ 
   display: flex;

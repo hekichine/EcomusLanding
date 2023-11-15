@@ -568,37 +568,38 @@ const app = {
     // cau truc
     // 
     // <counter>
-    //   <div counter-value data-count="400">0</div>
+    //   <div counter-value data-count="400" data-duration="1000">0</div>
     // </counter>
     // 
-
-    let a = 0;
     $(window).scroll(function () {
-      var oTop = $('counter').offset().top - window.innerHeight;
-      if (a == 0 && $(window).scrollTop() > oTop) {
-        $('[counter-value]').each(function () {
-          var $this = $(this),
-            countTo = $this.data('count');
-          $({
-            countNum: $this.text()
-          }).animate({
-            countNum: countTo
-          },
-            {
-              duration: $this.data('duration'),
-              easing: 'swing',
-              step: function () {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $this.text(this.countNum);
-                //alert('finished');
-              }
-
-            });
-        });
-        a = 1;
-      }
+      $('counter').each(function(){
+        var oTop = $(this).offset().top - window.innerHeight;
+        console.log("Check number counter: ",$(window).scrollTop() > oTop);
+        if ($(window).scrollTop() > oTop) {
+          // console.log($(this).find('[counter-value]'));
+          $(this).find('[counter-value]').each(function () {
+            var $this = $(this),
+              countTo = $this.data('count');
+            $({
+              countNum: $this.text()
+            }).animate({
+              countNum: countTo
+            },
+              {
+                duration: $this.data('duration'),
+                easing: 'swing',
+                step: function () {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                  $this.text(this.countNum);
+                  //alert('finished');
+                }
+  
+              });
+          });
+        }
+      })
     });
   },
   swatch_color: () => {

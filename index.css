@@ -900,7 +900,73 @@ header {
 .empower_grid .info {
   padding: 36px 32px 0 32px;
 }
+.empower_grid .banner_wrap{
+  position: absolute;
+  bottom: 30px;left: 0;right: 0;
+  padding: 0 15px;
+}
+.empower_grid .banner_wrap .inner{
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(7.13587760925293px);
+  width: 369px;
+  max-width: 100%;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  margin: 0 auto;
+  display: flex;
+  padding-left: 21px;padding-right: 16px;
+  align-items: center;
+}
+.empower_grid .banner_wrap .text{
+  color: #FFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 30.046px; /* 50% */
+  padding-right: 17px;
+}
+.empower_grid .banner_wrap .box{
+  display: flex;
+  flex-direction: column;gap: 7px;
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+.empower_grid .banner_wrap .text2{
+  color: #FFF;
+  font-size: 9.389px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.empower_grid .banner_wrap .count{
+  color: #FFF;
+  font-size: 37.557px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30.046px; /* 80% */
+}
+.empower_grid .banner_wrap .item:nth-child(2){
+ padding-left: 16px;padding-right: 16px;
+}
+.empower_grid .banner_wrap .item:nth-child(3){
+  padding-left: 25px;
+}
+.empower_grid .banner_wrap .item{
+  position: relative;
 
+}
+.empower_grid .banner_wrap .item:not(:first-child)::before{
+  position: absolute;
+  content: "";
+  top: 0;left: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #fff;
+  opacity: 0.2;
+}
+/*  */
 .empower_grid .empower_label {
   font-size: 12px;
   font-style: normal;
@@ -3027,6 +3093,7 @@ background-clip: text;
 }
 
 @media (max-width: 992px) {
+ 
   .tabs{
     justify-content: flex-start;
   }
@@ -3134,7 +3201,21 @@ background-clip: text;
     padding: 15px;
   }
 }
-
+@media (min-width: 768px ) and (max-width: 991px){
+  .empower_grid .banner_wrap .text{
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .empower_grid .banner_wrap .item:nth-child(2){
+    padding-left: 10px;padding-right: 10px;
+  }
+  .empower_grid .banner_wrap .item:nth-child(3){
+    padding-left: 15px;
+  }
+  .empower_grid .banner_wrap .inner{
+    padding-left: 5px;padding-right: 5px;
+  }
+}
 @media (max-width: 768px) {
   .mb_screen .mb_view .view_title{
     font-size: 16px;line-height: normal;
@@ -3452,6 +3533,10 @@ background-clip: text;
 }
 
 @media (max-width: 625px) {
+  .shopify_app .col-left{
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
   .footer-inner .boxed{
     flex-direction: column;
     justify-content: center;
@@ -3598,6 +3683,7 @@ background-clip: text;
 }
 
 @media (max-width: 525px) {
+  
   .mb_screen .mb_view .view_item{
     flex: 1 0 100%;
     padding: 0;
@@ -3654,6 +3740,7 @@ background-clip: text;
 }
 
 @media (max-width: 425px) {
+  
   .my_vid .video_wrap .video-item {
     flex: 1 0 250px;
   }
@@ -3670,6 +3757,21 @@ background-clip: text;
 }
 
 @media (max-width: 375px) {
+  .empower_grid .banner_wrap .text{
+    font-size: 50px;
+  }
+  .empower_grid .banner_wrap .count{
+    font-size: 25px;
+  }
+  .empower_grid .banner_wrap .inner{
+    padding-top: 7px;padding-bottom: 7px;
+  }
+  .empower_grid .banner_wrap{
+    bottom: 15px;
+  }
+  .empower_grid .banner_wrap .item:nth-child(3){
+    padding-left: 15px;
+  }
   .grid_layout2 .show__wrap.hdt-ratio::before {
     padding-bottom: 200px;
   }

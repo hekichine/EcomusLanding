@@ -41,6 +41,7 @@ main{
 a {
   color: var(--link-color);
   transition: all 0.25s ease-in-out;
+  pointer-events: auto !important;
 }
 
 a:hover {

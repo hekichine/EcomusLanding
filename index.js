@@ -559,7 +559,7 @@ const app = {
     $(window).scroll(function () {
       $('counter').each(function(){
         var oTop = $(this).offset().top - window.innerHeight;
-        console.log("Check number counter: ",$(window).scrollTop() > oTop);
+        // console.log("Check number counter: ",$(window).scrollTop() > oTop);
         if ($(window).scrollTop() > oTop) {
           // console.log($(this).find('[counter-value]'));
           $(this).find('[counter-value]').each(function () {

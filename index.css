@@ -1100,6 +1100,7 @@ line-height: normal;
 }
 
 /* shopify app */
+
 .shopify_app .col-left .title .gradient {
   background: linear-gradient(90deg,
       #ff9c8d 14.21%,
@@ -1142,11 +1143,85 @@ line-height: normal;
   line-height: 24px;
   /* 150% */
 }
-.shopify_app .des ul{
-  list-style:disc;padding-left: 1rem;
+.shopify_app .des ul li{
+  color: #C7C7C7;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 200% */
+display: flex;
+align-items: center;
+gap: 14px;
+  
+}
+.shopify_app .des2{
+  color: #FFF;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+margin-bottom: 20px;
+}
+.shopify_app .form .inner{
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: #36373E;
+  backdrop-filter: blur(5px);
+  height: 56px;
+  width: 606px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 7px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.shopify_app .form .form_input{
+  border-radius: inherit;
+  flex: 1 0 auto;
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  color: #fff;
+  padding-left: 28px;
+  font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+height: 100%;
+}
+.shopify_app .form .form_input::placeholder{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.shopify_app .form span{
+  color: #FFF;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.shopify_app .form a{
+  border-radius: 100px;
+border: none;
+background: linear-gradient(93deg, #FF9C8D 1.31%, #D655A5 50.71%, #6053CB 99.1%);
+padding: 0 19px 0 25px;
+height: 46px;
+gap: 10px;
+display: inline-flex;
+align-items: center;
+color: #FFF;
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+;
 }
 .shopify_app .hdt-btn {
-  height: 42px;
+  height: 50px;
+  border-radius: 100px;
 }
 
 .shopify_app .title {
@@ -1154,7 +1229,7 @@ line-height: normal;
 }
 
 .shopify_app .des {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .shopify_app .col-right {
@@ -1216,8 +1291,8 @@ line-height: normal;
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-50%);
-  z-index: -2;
+  transform: translateY(-50%) translateX(30%);
+  z-index: -1;
 }
 
 /* grid layout2 */
@@ -2657,9 +2732,6 @@ background-clip: text;
     margin-bottom: 30px;
   }
 
-  .shopify_app .des {
-    margin-bottom: 32px;
-  }
 
   .grid_layout2 .info {
     padding: 36px 32px 30px 32px;
@@ -2707,7 +2779,7 @@ background-clip: text;
   }
 
   .shopify_app .des {
-    margin-bottom: 44px;
+    margin-bottom: 22px;
   }
 
 
@@ -2990,6 +3062,17 @@ background-clip: text;
 }
 
 @media (max-width: 1024px) {
+  .shopify_app .form a{
+    font-size: 14px;
+    line-height: normal;
+    padding: 0 15px;
+  }
+  .shopify_app .form .form_input{
+    padding-left: 15px;
+  }
+  .shopify_app .form .inner{
+    gap: 10px;
+  }
   .hdt-table .total_wrap{
     bottom: 150px;
   }
@@ -3207,6 +3290,9 @@ background-clip: text;
 }
 
 @media (max-width: 992px) {
+  .empower .col-left .top span,.empower .col-left .bot span{
+    font-size: 75px;
+  }
   .b_ecomus .col-right{
     max-width: 90%;
   }
@@ -3337,6 +3423,9 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+  .shopify_app .form .inner{
+    margin-bottom: 20px;
+  }
   .b_ecomus .section-inner{
     padding: 40px 0;
   }
@@ -3663,6 +3752,18 @@ background-clip: text;
   }
 }
 @media (max-width: 625px) {
+  .shopify_app .form .inner{
+    gap: 10px;
+    height: 48px;
+    padding: 5px;
+  }
+  .shopify_app .form a{
+    padding: 0 15px;
+    height: 100%;
+  }
+  .shopify_app .form .form_input{
+    padding-left: 10px;
+  }
   .shopify_app .col-left{
     padding-left: 5px;
     padding-bottom: 5px;
@@ -3806,14 +3907,15 @@ background-clip: text;
   .hdt-table .total .item {
     padding: 15px;
   }
-
-  .shopify_app .des {
-    text-align: justify;
-  }
 }
 
 @media (max-width: 525px) {
-  
+  .shopify_app .form span{
+    display: none;
+  }
+  .empower .col-left .top span,.empower .col-left .bot span{
+    font-size: 50px;
+  }
   .mb_screen .mb_view .view_item{
     flex: 1 0 100%;
     padding: 0;
@@ -3870,6 +3972,13 @@ background-clip: text;
 }
 
 @media (max-width: 425px) {
+  .shopify_app .form a{
+    font-size: 12px;line-height: normal;
+    gap: 5px;padding: 0 7px;
+  }
+  .shopify_app .form .inner{
+    gap:0;
+  }
   .b_ecomus .col-right{
     max-width: 100%;
   }

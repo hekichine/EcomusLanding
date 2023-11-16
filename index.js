@@ -268,21 +268,6 @@ const app = {
   splider: () => {
     const splides = [
       {
-        id: ".splide",
-        options: {
-          easing: "linear",
-          type: "loop",
-          pauseOnHover: true,
-          autoplay: true,
-          autoWidth: true,
-          arrows: false,
-          interval: 0,
-          speed: 3000,
-          pagination: false,
-          padding: 10,
-        }
-      },
-      {
         id: ".splide2",
         options: {
           easing: "linear",

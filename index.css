@@ -57,6 +57,9 @@ header {
 
 .hdt-header .hdt-logo {
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hdt-nav_button {
@@ -2688,11 +2691,6 @@ background-clip: text;
   .hdt-nav_button {
     display: none;
   }
-
-  .close-menu {
-    display: none;
-  }
-
   .hdt-menu_nav .menu__wrap {
     display: flex;
     justify-content: space-between;
@@ -2967,6 +2965,9 @@ background-clip: text;
 }
 
 @media (max-width: 1024px) {
+  .hdt-header .hdt-logo{
+    width: 100%;
+  }
   .b_ecomus .section-inner br{
     display: block !important;
   }
@@ -3030,98 +3031,9 @@ background-clip: text;
     bottom: 15px;
     left: 15px;
   }
-
-  .hdt-menu_nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
+  .hdt-menu_nav{
+    display: none;
   }
-
-  .hdt-menu_nav .menu__wrap {
-    /* box-shadow: 0px 0px 1px 0px #fff; */
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 70vw;
-    padding: 25px;
-    bottom: 0;
-    opacity: 0;
-    transform: translateX(-100%);
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    pointer-events: auto;
-  }
-
-  .hdt-menu_nav.open .menu__wrap {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .hdt-menu_nav .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    padding: 25px;
-    transition: 0.25s linear;
-    transform: translateX(-100%);
-    transform-origin: left;
-    opacity: 0;
-    pointer-events: auto;
-  }
-
-  .hdt-menu_nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-  }
-  .hdt-menu_nav ul li{
-    position: relative;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-  }
-  .hdt-menu_nav ul a::after{
-    position: absolute;
-    content: "";
-    left: 0;right: 0;bottom: 0;
-    height: 1px;
-    background-color: var(--link-color);
-    transition: .35s ease;
-  }
-  .hdt-menu_nav ul a:hover::after{
-    background-color: var(--link-color-active);
-  }
-
-  .hdt-menu_nav.open .close-menu {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    transform: translateX(100%);
-    border: none;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hdt-nav_button {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
   .banner .banner_svg_bg {
     display: none;
   }

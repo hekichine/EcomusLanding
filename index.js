@@ -46,37 +46,22 @@ const app = {
       }
     });
   },
-  nav_on_mb: () => {
-    $(window).on("load", function () {
-      if ($(window).width() < 1025) {
-        $("[append-body]").appendTo("body");
-      } else {
-        $("[append-body]").appendTo(".hdt-nav");
-      }
-    });
-    $(window).on("resize", function () {
-      if ($(window).width() < 1025) {
-        $("[append-body]").appendTo("body");
-      } else {
-        $("[append-body]").appendTo(".hdt-nav");
-      }
-    });
-  },
   open_menu_mb: () => {
-    $(".hdt-nav_button").on("click", function () {
-      $(".hdt-menu_nav").addClass("open");
-    });
-    $(".close-menu").on("click", function () {
-      $(".hdt-menu_nav").removeClass("open");
-    });
-    $(".overlay").on("click", function () {
-      $(".hdt-menu_nav").removeClass("open");
-    });
-    $(window).on("resize", function () {
-      if ($(window).width() > 1023) {
-        $(".hdt-menu_nav").removeClass("open");
-      }
-    });
+    // open menu mobile
+    $('#open_menu_mb').on('click',function(){
+      $('sidebar_menu_mb').addClass('active')
+    })
+    // close menu mobile when click button && close menu when click overlay && click brand logo
+    $('sidebar_menu_mb .close_btn,sidebar_menu_mb .overlay,sidebar_menu_mb .brand_logo a').on('click',function(){
+      $('sidebar_menu_mb').removeClass('active')
+    })
+    //  active link when click
+    $('sidebar_menu_mb .hdt-nav_link').on('click',function(){
+      $('sidebar_menu_mb .hdt-nav_link.active').removeClass('active');
+      $(this).addClass('active');
+      $('sidebar_menu_mb').removeClass('active')
+    })
+    // 
   },
   cursor: () => {
     $(window).on('load', function () {
@@ -704,6 +689,13 @@ const app = {
         </div>`
 
   },
+  logo_cta:()=>{
+    $('.logo_cta').on('click',function(e){
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, '0');
+      console.log("done");
+    })
+  },
   start: () => {
     const config={
       video:{
@@ -716,7 +708,6 @@ const app = {
     console.log("App start ...");
     app.header_sticky();
     app.header_change_bg();
-    app.nav_on_mb();
     app.open_menu_mb();
     // app.cursor();
     // app.cursor2();
@@ -734,6 +725,7 @@ const app = {
     app.swatch_color();
     app.reveal(config);
     app.popup();
+    app.logo_cta();
     
     new WOW().init();
   },

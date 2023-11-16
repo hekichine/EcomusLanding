@@ -3317,6 +3317,9 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+  .empower_grid .item2 .title{
+    font-size: 18px;
+  }
   .b_ecomus .b_e .inner > svg{
     width: 150px;
     margin-bottom: 0;
@@ -3736,9 +3739,10 @@ background-clip: text;
   }
 
   .banner .hdt-btn {
-    height: 50px;
+    height: 42px;
 
   }
+
 
   .banner p {
     margin-bottom: 20px;

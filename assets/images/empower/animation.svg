@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 222 33" style="background: #000;will-change: transform, opacity;">
+  <defs>
+    <linearGradient id="a" x1="396" y1="-221.43" x2="396" y2="-288.43" gradientTransform="matrix(1, 0, 0, -1, -285, -256.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      g {
+        transform-origin: 50% 670%;
+        animation: circle 8s infinite;
+        transform: rotate(-50deg);
+        opacity: 0;
+      }
+      @keyframes circle {
+        0% {
+          transform: rotate(-50deg);
+          opacity: 0;
+        }
+        50% {
+          transform: rotate(24deg);
+          opacity: 1;
+        }
+        80% {
+          transform: rotate(30deg);
+          opacity: .7;
+        }
+        100% {
+          transform: rotate(50deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </defs>
+  <g>
+    <circle cx="53.25" cy="9.81" r="5.5" style="fill:#fff;fill-opacity:0.20000000298023224"/>
+    <circle cx="53.25" cy="9.81" r="3.5" style="fill:#fff"/>
+    <circle cx="53.25" cy="9.81" r="8.5" style="fill:#fff;fill-opacity:0.20000000298023224"/>  
+  </g>
+  <path d="M1,31.93H1a211.46,211.46,0,0,1,220,0h0" style="fill:none;stroke-opacity:0.30000001192092896;stroke-width:2px;stroke-dasharray:4,4;stroke:url(#a)"/>
+</svg>

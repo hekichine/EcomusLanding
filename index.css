@@ -213,6 +213,8 @@ header {
 .banner .banner_demo-img-wrap {
   position: relative;
   border-radius: 20px;
+  width: 1330px;
+  max-width: 100%;
 }
 
 .banner_demo-img-wrap img {
@@ -676,6 +678,16 @@ header {
   align-items: center;
   gap: 40px;
 }
+.empower .svg_animation {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  width: 220px;
+  max-width: 70%;
+  margin: 0 auto;
+  transform: translateX(-5%);
+}
 
 .empower .section-inner {
   background: none;
@@ -798,10 +810,28 @@ header {
 
 }
 
-.empower .col-left .top {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 40px;
+.empower .col-left .top span{
+margin-bottom: 40px;
+font-family: "Astronomus";
+font-size: 110px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.empower .col-left .bot span{
+
+  font-family: "Astronomus";
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(90.04deg, #FF9C8D 18.06%, #D655A5 34.19%, #6053CB 49.98%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: var(--body-bg);
+  animation: bghover 15s linear infinite;
+  transition: all .35s linear;
+  background-size: 400% 400%;
 }
 
 .empower .col-right {
@@ -3233,9 +3263,7 @@ background-clip: text;
     width: 100%;
   }
 
-  .empower .col-left .top {
-    justify-content: center;
-  }
+
 
   .b_ecomus .col-right .col-inner {
     border-radius: 40px 0 0 0;

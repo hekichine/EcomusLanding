@@ -1508,7 +1508,10 @@ line-height: 24px; /* 150% */
 .hdt-table .heading {
   margin-bottom: 26px;
 }
-
+.hdt-table .note{
+  font-size: 14px;
+  color:#c7c7c7;
+}
 .hdt-table .hdt-des {
   gap: 11px;
   align-items: center;
@@ -1550,7 +1553,7 @@ line-height: 24px; /* 150% */
 }
 
 .hdt-table .hdt-table_wrap {
-  padding: 0 57px 55px 47px;
+  padding: 0 57px 30px 47px;
   position: relative;
   border-radius: 40px;
   margin: 0 auto;

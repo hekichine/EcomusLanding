@@ -2018,6 +2018,18 @@ line-height: 24px; /* 150% */
   display: block;
   object-fit: cover;
 }
+.mb_screen .dynamic_island{
+  position: absolute;
+  top: 3%;left: 0;right: 0;
+  width: 30%;
+  border-radius: 50px;
+  background-color: #000;
+  height: 20px;
+  margin: 0 auto;
+  z-index: 10;
+  pointer-events: none;
+}
+/*  */
 
 .splide-2 .splide__slide {
   color: #FFF;
@@ -3245,6 +3257,10 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+  .mb_screen .dynamic_island{
+    width: 40%;
+    height: 15px;
+  }
   .banner .product_popup{
     padding: 15px 10px ;
   }

@@ -1302,3 +1302,8 @@ sidebar_menu_mb .footer{
 cursor{
   z-index: 333;
 }
+@media (max-width: 1149px) {
+  cursor{
+    display: none !important;
+  }
+}

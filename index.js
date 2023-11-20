@@ -104,7 +104,7 @@ const app = {
     }
     // start glow
     glow();
-    if(window > 768){
+    if(window > 1149){
       document.addEventListener("mousemove", (e) => {
         mouse_on();
         clearTimeout(timer);

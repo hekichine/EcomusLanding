@@ -639,69 +639,6 @@ img,picture{
   }
 }
 
-/* cursor 2 */
-.cursor .cursor--small,
-.cursor .cursor--large,
-.cursor .cursor--text {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: var(--cursor-size);
-  height: var(--cursor-size);
-  mix-blend-mode: difference;
-  pointer-events: none;
-  user-select: none;
-}
-
-.cursor .cursor--text {
-  --cursor-size: fit-content;
-  font-size: 0.75rem;
-  color: #fff;
-  opacity: 0;
-}
-
-.cursor .cursor--text .text {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.cursor .cursor--small {
-  --cursor-size: 20px;
-  background: #fff;
-}
-
-.cursor .cursor--large {
-  --cursor-size: 60px;
-  border: 2px solid #fff;
-}
-
-#cursor {
-  width: 350px;
-  height: 350px;
-  position: fixed;
-  top: 300px;
-  left: 500px;
-
-  border-radius: 100%;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(-50%);
-
-  transition: all 0.25s linear;
-  animation-timing-function: 0.25s linear;
-  z-index: -1111;
-  /* z-index: 999; */
-  opacity: 0.7;
-  backdrop-filter: blur(5px);
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.8) 46.07%,
-      rgba(53, 52, 124, 0) 91.91%);
-  filter: blur(150px);
-  /* display: none; */
-}
-
 .splider span {
   color: #363636;
   z-index: 10;
@@ -1310,4 +1247,54 @@ sidebar_menu_mb  .hdt-btn{
 }
 sidebar_menu_mb .footer{
   height: 20vh;
+}
+/* cursor */
+
+.ease-linear{
+  transition-timing-function: linear;
+}
+.duration-1000 {
+  transition-duration: 1s;
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .55s;
+}
+.mix-blend-screen {
+  mix-blend-mode: screen;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-1 {
+  opacity: 1;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.z-20 {
+  z-index: 20;
+}
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.fixed {
+  position: fixed;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.cursor-glow canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  transform: translate(-50%,-50%);
 }

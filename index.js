@@ -64,157 +64,65 @@ const app = {
     // 
   },
   cursor: () => {
-    $(window).on('load', function () {
-      document.addEventListener("mousemove", (e) => {
-        // console.log(e.clientX,e.clientY);
-        // $('#cursor').style.top = e.clientY + `px`;
-        // $('#cursor').style.left = e.clientX + `px`;
-        $('#cursor').css({ 'top': `${e.clientY}px`, 'left': `${e.clientX}px` })
-      });
-    })
-  },
-  cursor2: () => {
-    const cursorOuter = document.querySelector(".cursor--large");
-    const cursorInner = document.querySelector(".cursor--small");
-    const cursorTextContainerEl = document.querySelector(".cursor--text");
-    const cursorTextEl = cursorTextContainerEl.querySelector(".text");
+    // hiden when stop moving
+    let timer;
+    const mouse_stop=()=>{
+      $('cursor').find('.cursor-glow canvas').removeClass('opacity-1');
+      $('cursor').find('.cursor-glow canvas').addClass('opacity-0');
+    }
+    const mouse_on=()=>{
+      $('cursor').find('.cursor-glow canvas').removeClass('opacity-0');
+      $('cursor').find('.cursor-glow canvas').addClass('opacity-1');
+    }
+    const glow =()=>{
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
 
-    const hoverItems = document.querySelectorAll(".cursor-hover-item");
-    const hoverEffectDuration = 0.3;
-    let isHovered = false;
-    let initialCursorHeight;
 
-    const cursorRotationDuration = 8;
+      // Create a radial gradient
+      // The inner circle is at x=110, y=90, with radius=0
+      // The outer circle is at x=100, y=100, with radius=50
+      // x, y la toa do x/y tren document
+      const gradient = ctx.createRadialGradient(800, 800, 0, 800, 800, 400);
+      // console.log(gradient);
+      // Add color stops
+      gradient.addColorStop(0,"rgba(135, 206, 250, .1)");
+      gradient.addColorStop(0.1,"rgba(135, 206, 250, .09)");
+      gradient.addColorStop(0.2,"rgba(135, 206, 250, .08)");
+      gradient.addColorStop(0.3,"rgba(135, 206, 250, .07)");
+      gradient.addColorStop(0.4,"rgba(135, 206, 250, .06)");
+      gradient.addColorStop(0.5,"rgba(135, 206, 250, .05)");
+      gradient.addColorStop(0.6,"rgba(135, 206, 250, .04)");
+      gradient.addColorStop(0.7,"rgba(135, 206, 250, .03)");
+      gradient.addColorStop(0.8,"rgba(135, 206, 250, .02)");
+      gradient.addColorStop(0.9,"rgba(135, 206, 250, .01)");
+      gradient.addColorStop(1,"transparent");
+      // Set the fill style and draw a rectangle
+      ctx.fillStyle = gradient;
+      // fillRect(x,y,z,k)
+      // x,y: toa do bat dau
+      // z,k: chieu rong / chieu cao cua filter
+      ctx.fillRect(0, 0, 1600, 1600);
+    }
+    glow();
+    document.addEventListener("mousemove", (e) => {
+      // console.log(e.clientX,e.clientY);
+      // $('#cursor').style.top = e.clientY + `px`;
+      // $('#cursor').style.left = e.clientX + `px`;
+      // console.log($('cursor'));
 
-    let circleType = new CircleType(cursorTextEl);
-    circleType.radius(50);
+      // start glow
+      mouse_on();
+      clearTimeout(timer);
+      timer=setTimeout(mouse_stop,300);
+      let x = e.clientX;
+      let y = e.clientY;
+      // console.log(x,y,width,height);
 
-    setTimeout(() => {
-      initialCursorHeight =
-        circleType.container.style.getPropertyValue("height");
-      console.log(initialCursorHeight);
-    }, 50);
-
-    hoverItems.forEach((item) => {
-      item.addEventListener("pointerenter", handlePointerEnter);
-      item.addEventListener("pointerleave", handlePointerLeave);
+      // glow(x,y,width,height);
+      $('.cursor-glow canvas').css({'top':y,'left':x})
     });
-
-    let mouse = {
-      x: -100,
-      y: -100,
-    };
-
-    document.body.addEventListener("pointermove", updateCursorPosition);
-
-    function updateCursorPosition(e) {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    }
-
-    function updateCursor() {
-      gsap.set([cursorInner, cursorTextContainerEl], {
-        x: mouse.x,
-        y: mouse.y,
-      });
-
-      gsap.to(cursorOuter, {
-        duration: 0.15,
-        x: mouse.x,
-        y: mouse.y,
-      });
-
-      if (!isHovered) {
-        gsap.to(cursorTextContainerEl, hoverEffectDuration * 0.5, {
-          opacity: 0,
-        });
-        gsap.set(cursorTextContainerEl, {
-          rotate: 0,
-        });
-      }
-
-      requestAnimationFrame(updateCursor);
-    }
-
-    updateCursor();
-
-    function handlePointerEnter(e) {
-      isHovered = true;
-
-      const target = e.currentTarget;
-      updateCursorText(target);
-
-      gsap.set([cursorTextContainerEl, cursorTextEl], {
-        height: initialCursorHeight,
-        width: initialCursorHeight,
-      });
-
-      gsap.fromTo(
-        cursorTextContainerEl,
-        {
-          rotate: 0,
-        },
-        {
-          duration: cursorRotationDuration,
-          rotate: 360,
-          ease: "none",
-          repeat: -1,
-        }
-      );
-
-      gsap.to(cursorInner, hoverEffectDuration, {
-        scale: 2,
-      });
-
-      gsap.fromTo(
-        cursorTextContainerEl,
-        hoverEffectDuration,
-        {
-          scale: 1.2,
-          opacity: 0,
-        },
-        {
-          delay: hoverEffectDuration * 0.75,
-          scale: 1,
-          opacity: 1,
-        }
-      );
-      gsap.to(cursorOuter, hoverEffectDuration, {
-        scale: 1.2,
-        opacity: 0,
-      });
-    }
-
-    function handlePointerLeave() {
-      isHovered = false;
-      gsap.to([cursorInner, cursorOuter], hoverEffectDuration, {
-        scale: 1,
-        opacity: 1,
-      });
-    }
-
-    function updateCursorText(textEl) {
-      const cursorTextRepeatTimes = textEl.getAttribute(
-        "data-cursor-text-repeat"
-      );
-      const cursorText = returnMultipleString(
-        textEl.getAttribute("data-cursor-text"),
-        cursorTextRepeatTimes
-      );
-
-      circleType.destroy();
-
-      cursorTextEl.innerHTML = cursorText;
-      circleType = new CircleType(cursorTextEl);
-    }
-
-    function returnMultipleString(string, count) {
-      let s = "";
-      for (let i = 0; i < count; i++) {
-        s += ` ${string} `;
-      }
-      return s;
-    }
+ 
   },
   filter: () => {
       let $grid = $("#isotope").isotope({
@@ -709,8 +617,6 @@ const app = {
     app.header_sticky();
     app.header_change_bg();
     app.open_menu_mb();
-    // app.cursor();
-    // app.cursor2();
     app.tabs();
     app.filter();
     app.empower_masonry();
@@ -726,6 +632,7 @@ const app = {
     app.reveal(config);
     app.popup();
     app.logo_cta();
+    app.cursor();
     
     new WOW().init();
   },

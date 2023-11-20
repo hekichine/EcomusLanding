@@ -1299,3 +1299,6 @@ sidebar_menu_mb .footer{
   transform-origin: center center;
   transform: translate(-50%,-50%);
 }
+cursor{
+  z-index: 333;
+}

@@ -86,16 +86,16 @@ const app = {
       const gradient = ctx.createRadialGradient(800, 800, 0, 800, 800, 400);
       // console.log(gradient);
       // Add color stops
-      gradient.addColorStop(0,"rgba(21,137,255, .1)");
-      gradient.addColorStop(0.1,"rgba(21,137,255, .09)");
-      gradient.addColorStop(0.2,"rgba(21,137,255, .08)");
-      gradient.addColorStop(0.3,"rgba(21,137,255, .07)");
-      gradient.addColorStop(0.4,"rgba(21,137,255, .06)");
-      gradient.addColorStop(0.5,"rgba(21,137,255, .05)");
-      gradient.addColorStop(0.6,"rgba(21,137,255, .04)");
-      gradient.addColorStop(0.7,"rgba(21,137,255, .03)");
-      gradient.addColorStop(0.8,"rgba(21,137,255, .02)");
-      gradient.addColorStop(0.9,"rgba(21,137,255, .01)");
+      gradient.addColorStop(0,"rgba(21,137,255, .11)");
+      gradient.addColorStop(0.1,"rgba(21,137,255, .10)");
+      gradient.addColorStop(0.2,"rgba(21,137,255, .09)");
+      gradient.addColorStop(0.3,"rgba(21,137,255, .08)");
+      gradient.addColorStop(0.4,"rgba(21,137,255, .07)");
+      gradient.addColorStop(0.5,"rgba(21,137,255, .06)");
+      gradient.addColorStop(0.6,"rgba(21,137,255, .05)");
+      gradient.addColorStop(0.7,"rgba(21,137,255, .04)");
+      gradient.addColorStop(0.8,"rgba(21,137,255, .03)");
+      gradient.addColorStop(0.9,"rgba(21,137,255, .02)");
       gradient.addColorStop(1,"transparent");
       // Set the fill style and draw a rectangle
       ctx.fillStyle = gradient;

@@ -1259,7 +1259,8 @@ sidebar_menu_mb .footer{
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .55s;
+  transition-duration: .8s;
+ 
 }
 .mix-blend-screen {
   mix-blend-mode: screen;

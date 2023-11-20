@@ -551,15 +551,17 @@ const app = {
       const popup_html = $('popup');
       let p_obj = {
         title: parent.find('.title').text(),
-        des: parent.find('.des').text(),
-        data_img: parent.find('img').data('src'),
+        des: parent.find('.des-hide').clone(),
+        data_img: parent.find('.img').clone(),
+        button: parent.find('.group-btn').clone()
       }
-     
+      console.log(p_obj);
       popup_html.find('.title').text(p_obj.title);
-      popup_html.find('.des').text(p_obj.des);
+      popup_html.find('.des').html(p_obj.des);
+      popup_html.find('.button_wrap').html(p_obj.button);
 
       if(p_obj.data_img){
-        popup_html.find('img').attr('src',p_obj.data_img);
+        popup_html.find('.img_wrap').html(p_obj.data_img)
       }
       openPopup();
     })
@@ -574,21 +576,10 @@ const app = {
     $('popup .popup-close,popup .overlay').on('click',function(){
       closePopup();
     })
-    const popup_original = ` <div class="img_wrap">
-          <div class="hdt-ratio" style="--aspect-ratioapt: 872/503;">
-            <img src="./assets/images/b_ecomus/10.png" alt="">
-          </div>
-        </div>
-        <h3 class="title">Optimize your Shop Store for millions of mobile shoppers</h3>
-        <p class="des">Creating custom layouts for your online store is easier than ever with flex sections. We leverage CSS Flexbox, which allows for more
-          multi-directional responsive layouts, and easy content alignment within sections of your store. Now you can simply drag and drop, re-size, group, and edit for a store that’s uniquely yours.</p>
-        <div class="group-btn">
-          <a href="#" target="_blank" class="hdt-btn-hover-icon docs">How to use it
-            <svg class="hdt-icon" viewBox="0 0 24 24" focusable="false" width="16" height="16"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg>
-          </a>
-          <a href="#" class="buy" target="_blank">Buy theme - $19</a>
-        </div>`
-
+    const popup_original = `<div class="img_wrap"></div>
+                            <h3 class="title"></h3>
+                            <div class="des"></div>
+                            <div class="button_wrap"></div>`
   },
   logo_cta:()=>{
     $('.logo_cta').on('click',function(e){

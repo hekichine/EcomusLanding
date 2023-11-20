@@ -681,7 +681,7 @@ header {
   align-items: center;
   gap: 40px;
 }
-.empower .svg_animation {
+:where(.empower,popup) .svg_animation {
   position: absolute;
   top: 15%;
   left: 0;
@@ -934,12 +934,12 @@ line-height: normal;
 .empower_grid .info {
   padding: 36px 32px 0 32px;
 }
-.empower_grid .banner_wrap{
+:where(.empower_grid .banner_wrap,popup .banner_wrap) {
   position: absolute;
   bottom: 30px;left: 0;right: 0;
   padding: 0 15px;
 }
-.empower_grid .banner_wrap .inner{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .inner{
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.21);
@@ -953,7 +953,7 @@ line-height: normal;
   padding-left: 21px;padding-right: 16px;
   align-items: center;
 }
-.empower_grid .banner_wrap .text{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .text{
   color: #FFF;
   font-style: normal;
   font-weight: 700;
@@ -961,37 +961,37 @@ line-height: normal;
   line-height: 30.046px; /* 50% */
   padding-right: 17px;
 }
-.empower_grid .banner_wrap .box{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .box{
   display: flex;
   flex-direction: column;gap: 7px;
   padding-top: 4px;
   padding-bottom: 10px;
 }
-.empower_grid .banner_wrap .text2{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .text2{
   color: #FFF;
   font-size: 9.389px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.empower_grid .banner_wrap .count{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .count{
   color: #FFF;
   font-size: 37.557px;
   font-style: normal;
   font-weight: 700;
   line-height: 30.046px; /* 80% */
 }
-.empower_grid .banner_wrap .item:nth-child(2){
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:nth-child(2){
  padding-left: 16px;padding-right: 16px;
 }
-.empower_grid .banner_wrap .item:nth-child(3){
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:nth-child(3){
   padding-left: 25px;
 }
-.empower_grid .banner_wrap .item{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .item{
   position: relative;
 
 }
-.empower_grid .banner_wrap .item:not(:first-child)::before{
+:where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:not(:first-child)::before{
   position: absolute;
   content: "";
   top: 0;left: 0;
@@ -1420,7 +1420,7 @@ line-height: 24px; /* 150% */
 .grid_layout2 .info {
   padding: 20px;
 }
-.grid_layout2 .pin{
+:where(.grid_layout2,popup) .pin{
   width: 22px;
   height: 22px;
   background-color: #fff;
@@ -1430,7 +1430,7 @@ line-height: 24px; /* 150% */
   left: 56%;
   transform: rotate(-45deg);
 }
-.grid_layout2 .pin::after{
+:where(.grid_layout2,popup) .pin::after{
   content: "";
   width: 10px;height: 10px;
   background-color: var(--link-color-active);
@@ -1438,7 +1438,7 @@ line-height: 24px; /* 150% */
   border-radius: 50%;
   margin: 6px;
 }
-.grid_layout2 .pulse{
+:where(.grid_layout2,popup) .pulse{
   background-color: var(--link-color-active);
   border-radius: 50%;
   width: 15px;height: 15px;
@@ -1448,7 +1448,7 @@ line-height: 24px; /* 150% */
  transform: rotateX(65deg) translateX(-28px) translateY(13px) rotateY(40deg);
   margin: 0 0 0 3.5px;
 }
-.grid_layout2 .pulse::after{
+:where(.grid_layout2,popup) .pulse::after{
   content: "";
   border-radius: 50%;
   width: 40px;height: 40px;
@@ -3242,17 +3242,17 @@ background-clip: text;
   }
 }
 @media (min-width: 768px ) and (max-width: 991px){
-  .empower_grid .banner_wrap .text{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .text{
     padding-right: 10px;
     padding-left: 5px;
   }
-  .empower_grid .banner_wrap .item:nth-child(2){
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:nth-child(2){
     padding-left: 10px;padding-right: 10px;
   }
-  .empower_grid .banner_wrap .item:nth-child(3){
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:nth-child(3){
     padding-left: 15px;
   }
-  .empower_grid .banner_wrap .inner{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .inner{
     padding-left: 5px;padding-right: 5px;
   }
 }
@@ -3870,25 +3870,25 @@ background-clip: text;
   .b_ecomus .title{
     font-size: 15px;
   }
-  .empower_grid .banner_wrap .inner{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .inner{
     justify-content: space-around;
   }
   .features .ossk2{
     flex-wrap: wrap;
   }
-  .empower_grid .banner_wrap .text{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .text{
     font-size: 50px;
   }
-  .empower_grid .banner_wrap .count{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .count{
     font-size: 25px;
   }
-  .empower_grid .banner_wrap .inner{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .inner{
     padding-top: 7px;padding-bottom: 7px;
   }
-  .empower_grid .banner_wrap{
+  :where(.empower_grid .banner_wrap,popup .banner_wrap) {
     bottom: 15px;
   }
-  .empower_grid .banner_wrap .item:nth-child(3){
+  :where(.empower_grid .banner_wrap,popup .banner_wrap)  .item:nth-child(3){
     padding-left: 15px;
   }
   .grid_layout2 .show__wrap.hdt-ratio::before {

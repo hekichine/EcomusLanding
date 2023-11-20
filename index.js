@@ -77,8 +77,6 @@ const app = {
     const glow =()=>{
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
-
-
       // Create a radial gradient
       // The inner circle is at x=110, y=90, with radius=0
       // The outer circle is at x=100, y=100, with radius=50
@@ -104,24 +102,19 @@ const app = {
       // z,k: chieu rong / chieu cao cua filter
       ctx.fillRect(0, 0, 1600, 1600);
     }
+    // start glow
     glow();
-    document.addEventListener("mousemove", (e) => {
-      // console.log(e.clientX,e.clientY);
-      // $('#cursor').style.top = e.clientY + `px`;
-      // $('#cursor').style.left = e.clientX + `px`;
-      // console.log($('cursor'));
-
-      // start glow
-      mouse_on();
-      clearTimeout(timer);
-      timer=setTimeout(mouse_stop,300);
-      let x = e.clientX;
-      let y = e.clientY;
-      // console.log(x,y,width,height);
-
-      // glow(x,y,width,height);
-      $('.cursor-glow canvas').css({'top':y,'left':x})
-    });
+    if(window > 768){
+      document.addEventListener("mousemove", (e) => {
+        mouse_on();
+        clearTimeout(timer);
+        timer=setTimeout(mouse_stop,300);
+        let x = e.clientX;
+        let y = e.clientY;
+  
+        $('.cursor-glow canvas').css({'top':y,'left':x})
+      });
+    }
  
   },
   filter: () => {

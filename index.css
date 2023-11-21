@@ -3889,7 +3889,10 @@ background-clip: text;
   }
   .shopify_app .form a{
     font-size: 12px;line-height: normal;
-    gap: 5px;padding: 0 7px;
+    gap: 5px;
+  }
+  .shopify_app .form a svg{
+    display: none;
   }
   .shopify_app .form .inner{
     gap:0;

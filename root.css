@@ -91,7 +91,7 @@ ol {
     max-width: var(--container-sm);
   }
 }
-@media (min-width: 1600px){
+@media (min-width: 1700px){
   .col-2xxl-4{
     flex: 0 0 auto;
     width: 33.333%;

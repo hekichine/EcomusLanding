@@ -2212,6 +2212,15 @@ line-height: 24px; /* 150% */
   background-color: #fff;
   height: 30px;
 }
+.my_vid .video-item:nth-child(1) video{
+  background:transparent url('./assets/images/video/poster3.jpg') 50% 50% / cover no-repeat;
+}
+.my_vid .video-item:nth-child(2) video{
+  background:transparent url('./assets/images/video/poster1.jpg') 50% 50% / cover no-repeat;
+}
+.my_vid .video-item:nth-child(3) video{
+  background:transparent url('./assets/images/video/poster2.jpg') 50% 50% / cover no-repeat;
+}
 
 .my_vid .video_wrap {
   display: flex;
@@ -2238,6 +2247,7 @@ line-height: 24px; /* 150% */
   pointer-events: none;
   transition: .25s ease-in;
   z-index: 2;
+  display: none;
 }
 
 .my_vid .video_wrap.disable_mobile .video-item .poster::before {

@@ -96,6 +96,10 @@ ol {
     flex: 0 0 auto;
     width: 33.333%;
   }
+  .col-2xxl-3{
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 
 @media (min-width: 1780px) {

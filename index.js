@@ -65,6 +65,7 @@ const app = {
     // 
   },
   cursor: () => {
+    console.log("Cursor glowing is active");
     // hiden when stop moving
     let timer;
     const mouse_stop=()=>{

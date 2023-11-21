@@ -3293,6 +3293,9 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+  .logo_cta img{
+    max-width: 120px;
+  }
   .video-item .btn-popup-mb{
     display: flex;
   }

@@ -1261,7 +1261,7 @@ sidebar_menu_mb.active .close_btn{
 sidebar_menu_mb .overlay{
   position: absolute;
   top: 0;right: 0;left: 0;bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .3);
   opacity: 0;
   transition: opacity .25s ease-in;
   will-change: opacity;
@@ -1270,7 +1270,7 @@ sidebar_menu_mb .overlay{
 sidebar_menu_mb .content{
   position: fixed;
   top: 0;right: 0;bottom: 0;
-  background-color: rgba(0, 0, 0,.7);
+  background-color: rgba(0, 0, 0,0.7);
   backdrop-filter: blur(15px);
   width: 300px;
   transform: translateX(100%);
@@ -1309,7 +1309,7 @@ sidebar_menu_mb .brand_logo a{
   top: 0;right: 0;bottom: 0;left: 0;
 }
 sidebar_menu_mb .brand_logo img{
-  width: 160px;
+  width: 120px;
 }
 sidebar_menu_mb .menu_list{
   margin-bottom: 20px;

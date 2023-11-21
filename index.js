@@ -163,7 +163,7 @@ const app = {
           autoWidth: true,
           arrows: false,
           interval: 0,
-          speed: 10000,
+          speed: 25000,
           pagination: false,
           gap: "45px",
           breakpoints: {
@@ -183,7 +183,7 @@ const app = {
           autoWidth: true,
           arrows: false,
           interval: 0,
-          speed: 3000,
+          speed: 7000,
           pagination: false,
           gap: "34px",
           breakpoints: {
@@ -609,7 +609,7 @@ const app = {
     app.filter();
     app.empower_masonry();
     app.splider();
-    app.table();
+    // app.table();
     app.galaxy();
     app.text_circle();
     app.tabs_shop();

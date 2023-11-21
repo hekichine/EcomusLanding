@@ -30,6 +30,7 @@ body {
   /* 175% */
   background: var(--body-bg);
   scroll-behavior: smooth;
+  letter-spacing: 0.5px;
 }
 
 html {
@@ -80,7 +81,11 @@ ol {
   margin: 0 auto;
 }
 
-
+.highlight{
+  /* border: 1px solid rgba(255, 255, 255, 0.5) !important; */
+  border: none !important; 
+  background: radial-gradient(106.13% 139.77% at 2.35% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.00) 100%) !important;
+}
 @media (min-width: 1440px) {
   .container-sm {
     max-width: var(--container-sm);

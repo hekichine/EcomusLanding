@@ -1665,25 +1665,12 @@ line-height: 24px; /* 150% */
 .hdt-table .hdt-wrap {
   position: relative;
   margin: 0 auto;
+  padding: 0 45px;
 }
 .hdt-table tbody{
   position: relative;
 }
-.hdt-table .hdt-wrap tbody::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  border-radius: 20px;
-  background: linear-gradient(180deg,
-      rgba(4, 5, 14, 0) 0%,
-      rgba(4, 5, 14, 0.5) 38.62%,
-      #04050e 71.99%);
-      
-  transition: all .35s linear;
-}
+
 
 .hdt-table .hdt-btn {
   border-radius: 100px;
@@ -2826,6 +2813,11 @@ background-clip: text;
     flex: 1 0 25%;
   }
 }
+@media (max-width: 1700px){
+  .solution .content_wrap{
+    padding: 50px;
+  }
+}
 @media (max-width: 1600px) {
   .empower .col-left .top span,.empower .col-left .bot span{
     font-size: 80px;
@@ -2878,7 +2870,11 @@ background-clip: text;
     width: 100%;
   }
 }
-
+@media (max-width: 1500px){
+  .solution .content{
+    text-align: center;
+  }
+}
 @media (max-width: 1400px) {
 
   .shopify_app .title{
@@ -2920,8 +2916,20 @@ background-clip: text;
   .hdt-table .hdt-table_wrap{
     padding: 0 30px 30px;
   }
+  .hdt-table tbody{
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hdt-table thead tr th{
+    font-size: 16px;
+    line-height: normal;
+  }
 }
 @media (max-width: 1200px) {
+  .hdt-table .hdt-wrap{
+    padding: 0 15px;
+  }
   .shopify_app .des ul{
     margin-top: 15px;
   }
@@ -2980,27 +2988,25 @@ background-clip: text;
     padding-left: 30px;
   }
   .hdt-table .total .item {
-    font-size: 18px;
+    font-size: 16px;
   }
   .hdt-table .total .item .sub{
     font-size: 14px;
   }
-  .hdt-table tbody{
-    padding: 20px 0;
-  }
+
   .hdt-table thead tr{
     padding: 20px 0;
   }
-  .hdt-table thead tr th{
-    font-size: 16px;
-    line-height: normal;
-  }
+
   .hdt-table .total .item{
-    padding: 15px 30px;
+    padding: 15px 20px;
   }
 }
 
 @media (max-width: 1024px) {
+  .hdt-table .hdt-wrap{
+    padding: 0 15px;
+  }
   .hdt-header .hdt-logo{
     width: 100%;
   }
@@ -3166,9 +3172,7 @@ background-clip: text;
   .hdt-table table tbody tr td:nth-child(1){
     padding-left: 20px;
   }
-  .hdt-table tbody{
-    font-size: 14px;line-height: 1.6;
-  }
+
   .hdt-table thead tr th:not(:last-child)::after{
     display: none;
   }
@@ -3268,6 +3272,7 @@ background-clip: text;
   }
 }
 @media (max-width: 768px) {
+ 
   .mb_screen .dynamic_island{
     width: 40%;
     height: 15px;

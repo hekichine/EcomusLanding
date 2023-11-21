@@ -1,5 +1,6 @@
 const app = {
   header_sticky: () => {
+    console.log("Header sticky is active");
     // Hide header on scroll down
     let didScroll;
     let lastScrollTop = 0;
@@ -586,6 +587,28 @@ const app = {
       console.log("done");
     })
   },
+  scrollspy:()=>{
+    let sectionIds = $('a.scrollspy_s');
+    console.log("SCrollspy is active");
+    $(document).scroll(function(){
+        sectionIds.each(function(){
+            let container = $(this).attr('href');
+            let containerOffset = $(container).offset().top;
+            let containerHeight = $(container).outerHeight();
+            let containerBottom = containerOffset + containerHeight;
+            let scrollPosition = $(document).scrollTop();
+    
+            if(scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20){
+                $(this).addClass('active');
+            } else{
+                $(this).removeClass('active');
+            }
+    
+    
+        });
+    });
+  }
+  ,
   start: () => {
     const config={
       video:{
@@ -615,7 +638,8 @@ const app = {
     app.popup();
     app.logo_cta();
     app.cursor();
-    
+    app.scrollspy();
+
     new WOW().init();
   },
 };

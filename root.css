@@ -1332,7 +1332,7 @@ sidebar_menu_mb .menu_list a{
   line-height: normal;
   transition: .25s ease-in-out;will-change: background-color, color;
 }
-sidebar_menu_mb .menu_list a.active{
+sidebar_menu_mb .menu_list .scrollspy_s.active{
   background-color: rgba(255, 255, 255, 0.4);
   color: var(--link-color-active);
 }
@@ -1343,6 +1343,10 @@ sidebar_menu_mb  .hdt-btn{
 sidebar_menu_mb .footer{
   height: 20vh;
 }
+.scrollspy_s.active{
+  color: var(--link-color-active);
+}
+
 /* cursor */
 
 .ease-linear{

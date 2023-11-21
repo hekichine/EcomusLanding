@@ -1512,8 +1512,9 @@ line-height: 24px; /* 150% */
   margin-bottom: 26px;
 }
 .hdt-table .note{
-  font-size: 14px;
+  font-size: 11px;
   color:#c7c7c7;
+  text-align: center;
 }
 .hdt-table .hdt-des {
   gap: 11px;

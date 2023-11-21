@@ -200,7 +200,7 @@ const app = {
         // console.log(item.options);
         new Splide(`${item.id}`, item.options).mount();
       })
-      new Splide('#grid_layout_slider', {
+      new Splide('.grid_layout_slider', {
         easing: "linear",
         type: "loop",
         pauseOnHover: true,
@@ -553,13 +553,13 @@ const app = {
         title: parent.find('.title').text(),
         des: parent.find('.des-hide').clone(),
         data_img: parent.find('.img').clone(),
-        button: parent.find('.group-btn').clone()
+        button: parent.find('.group-btn').clone(),
       }
       console.log(p_obj);
       popup_html.find('.title').text(p_obj.title);
       popup_html.find('.des').html(p_obj.des);
       popup_html.find('.button_wrap').html(p_obj.button);
-      popup_html.find('.img_wrap .img').html(p_obj.data_img)
+      popup_html.find('.img_wrap .img').html(p_obj.data_img)      
       openPopup();
     })
     const openPopup=()=>{

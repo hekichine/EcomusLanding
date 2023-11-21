@@ -696,7 +696,7 @@ header {
   background: none;
 }
 
-.empower .col-inner .text_bg,popup .img_wrap .text_bg {
+.empower .col-inner .text_bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -1322,6 +1322,7 @@ line-height: 24px; /* 150% */
   right: 0;
   bottom: 0;
   left: 0;
+  pointer-events: auto !important;
 
 }
 

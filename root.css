@@ -930,8 +930,8 @@ popup .content{
   pointer-events: none;
 }
 popup button.popup-close{
-  width: 35px;
-height: 35px;
+  width: 50px;
+height: 50px;
 flex-shrink: 0;
 background-color:transparent;
 color: #000;
@@ -950,7 +950,7 @@ position: relative;
 margin: auto;
 }
 popup .content_inner{
-  padding: 47px 46px 64px;
+  padding: 47px 46px;
   background-color: #fff;
   width: 40vw;
   height: 100%;
@@ -963,7 +963,8 @@ popup .content_inner{
   
 }
 popup .img_wrap{
-  background-color: var(--body-bg);
+  background: rgba(0,0,0, 0.9);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -994,6 +995,8 @@ popup .des ul{
   list-style-type: disc;
   margin-left: 1rem;
   margin-top: 10px;
+  font-size: 16px;
+  line-height: 26px;
 }
 popup .des ul + p{
   margin-top: 10px;
@@ -1001,7 +1004,7 @@ popup .des ul + p{
 popup .des p + p {
   margin-top: 10px;
 }
-popup .group-btn{
+popup .group-btn.d-none{
   display: flex !important;
   flex-wrap: wrap;
   gap: 20px;
@@ -1057,12 +1060,28 @@ popup .splider_show .slide_grid{
 popup .slide_grid .splide__slide{
   margin-right: 15px;
 }
-popup .hdt-ratio > *:not(counter,.pin,.svg_animation){
+popup .img_wrap  .img.hdt-ratio > *:not(counter,.pin,.svg_animation,.text_bg){
   position: absolute;
   width: 100%;height: 100%;
   top: 0;right: 0;left: 0;bottom: 0;
   object-fit: contain;
-  object-position: center center;
+  object-position: center center;z-index: 2;
+}
+popup .img_wrap .text_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  transform: translateY(-20%);
+}
+popup .text_bg .gradient{
+  background: linear-gradient(91deg, #76F5BC 1.61%, #221DF3 53.61%, #EBEEF9 95.8%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 popup .des .des-hide{
   display: block !important;
@@ -1075,7 +1094,17 @@ popup .wrap{
   flex-direction: column;
   gap: 34px;
 }
+popup .d-none{
+  display: block !important;
+}
 @media (max-width: 767px){
+  popup .wrap{
+    gap: 15px;
+  }
+  popup .des ul{
+    font-size: 14px;
+    line-height: 20px;
+  }
   popup .des > *{
     font-size: 14px;line-height: 20px;
     margin-bottom: 10px;
@@ -1138,9 +1167,7 @@ popup .wrap{
     top: 10px;right: 10px;
   }
   popup .content_inner{
-    max-width: 90vw;
-    min-width: 50vw;
-    max-height: 85vh;
+    width: 70vw;
     padding: 30px;
   }
   popup .title{
@@ -1152,20 +1179,16 @@ popup .wrap{
     margin-bottom: 15px;
   }
   popup button.popup-close{
-    width: 35px;height: 35px;
+    width: 40px;height: 40px;
   }
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   popup .docs{
     height: 44px;
   }
-  popup button.popup-close{
-    right: 35px;
-    top: -35px;
-  }
   popup .content_inner{
-    max-width: 90vw;
     padding: 15px;
+    width: 95vw;
   }
   popup .title{
     font-size: 20px;

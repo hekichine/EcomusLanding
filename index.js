@@ -394,6 +394,7 @@ const app = {
       // }
       // active video when hover
       if (window.innerWidth > 768) {
+        $('#video-3').addClass('is-hover')
         $('#section_video').on('mouseover', 'video', function () {
           $('.video-item').find('video').trigger('pause');
           $('.video-item.is-hover').removeClass('is-hover');

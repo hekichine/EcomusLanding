@@ -407,13 +407,6 @@ const app = {
           $('#section_video').addClass('disable_mobile');
           return;
         }
-        $('#section_video').on('mouseover', '.video-trigger-mobile', function () {
-          $('.video-item').find('video').trigger('pause');
-          $('.video-item.is-hover').removeClass('is-hover');
-          let id = $(this).data('trigger');
-          $(id).addClass('is-hover');
-          $(id).find('video').trigger('play');
-        })
       }
     }
    

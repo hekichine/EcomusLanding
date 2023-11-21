@@ -1176,7 +1176,7 @@ popup .d-none{
     font-size: 100px;
   }
   popup .content_inner{
-    width: 65vw;
+    width: 50vw;
     /* max-height: 95vh; */
     padding: 30px;
   }

@@ -559,10 +559,7 @@ const app = {
       popup_html.find('.title').text(p_obj.title);
       popup_html.find('.des').html(p_obj.des);
       popup_html.find('.button_wrap').html(p_obj.button);
-
-      if(p_obj.data_img){
-        popup_html.find('.img_wrap').html(p_obj.data_img)
-      }
+      popup_html.find('.img_wrap .img').html(p_obj.data_img)
       openPopup();
     })
     const openPopup=()=>{
@@ -576,10 +573,17 @@ const app = {
     $('popup .popup-close,popup .overlay').on('click',function(){
       closePopup();
     })
-    const popup_original = `<div class="img_wrap"></div>
-                            <h3 class="title"></h3>
-                            <div class="des"></div>
-                            <div class="button_wrap"></div>`
+    const popup_original = `<div class="wrap">
+    <div class="content_x">
+    <h3 class="title"></h3>
+    <div class="des"></div>
+    <div class="button_wrap"></div>
+    </div>  
+    <div class="img_wrap">
+    <div class="img hdt-ratio" style="--aspect-ratioapt: 928/503;">
+    </div>
+    </div>                  
+    </div>`
   },
   logo_cta:()=>{
     $('.logo_cta').on('click',function(e){

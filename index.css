@@ -696,7 +696,7 @@ header {
   background: none;
 }
 
-.empower .col-inner .text_bg {
+.empower .col-inner .text_bg,popup .img_wrap .text_bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -865,6 +865,7 @@ line-height: normal;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;height: 100%;
 }
 
 .empower .empower_earth svg:nth-child(2) {
@@ -2739,6 +2740,8 @@ background-clip: text;
 @media(min-width: 1200px) and (max-width: 1440px) {
   .empower .col-inner .text_bg .gradient {
     font-size: 60px;
+  }  :where(.empower_grid .banner_wrap,popup .banner_wrap) .count{
+    font-size: 32px;
   }
 }
 
@@ -2823,6 +2826,12 @@ background-clip: text;
   }
 }
 @media (max-width: 1600px) {
+  .empower .col-left .top span,.empower .col-left .bot span{
+    font-size: 80px;
+  }
+  .empower .empower_earth{
+    width: 150px;height: 150px;
+  }
   .shopify_app .icon{
     top: 70px;
   }
@@ -2870,6 +2879,7 @@ background-clip: text;
 }
 
 @media (max-width: 1400px) {
+
   .shopify_app .title{
     font-size: 50px;
   }

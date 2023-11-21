@@ -2844,9 +2844,7 @@ background-clip: text;
   .shopify_app .icon{
     top: 70px;
   }
-  .mb_screen .mb_view .view_item{
-    flex: 1 0 50%;
-  }
+
   .hdt-table table tbody tr td:nth-child(1){
     padding-left: 40px;
   }
@@ -2929,6 +2927,12 @@ background-clip: text;
   }
 }
 @media (max-width: 1365px){
+  .mb_screen .mb_view .view_item{
+    flex: 1 0 50%;
+  }
+  .demos .tabs{
+    margin-bottom: 15px;
+  }
   .hdt-table .hdt-table_wrap{
     padding: 0 30px 30px;
   }

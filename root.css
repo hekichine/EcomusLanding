@@ -450,11 +450,12 @@ a {
   transition: all 0.25s ease-in-out;
   z-index: 2;
 }
-.hdt-btn:not(.hdt-btn-hover-icon){
+.hdt-btn:not(.hdt-btn-style2){
   position: relative;
+  overflow: hidden;
 }
-.hdt-btn:not(.hdt-btn-hover-icon)::after{
-  background-image: linear-gradient(90deg,transparent,var(--link-color-active) / .25,transparent);
+.hdt-btn:not(.hdt-btn-style2):after{
+  background-image: linear-gradient(90deg,transparent,var(--link-color-active),transparent);
   content: "";
   left: 150%;
   position: absolute;
@@ -462,8 +463,9 @@ a {
   bottom: 0;
   transform: skew(-20deg);
   width: 200%;
+  z-index: -1;
 }
-.hdt-btn:not(.hdt-btn-hover-icon):hover::after{
+.hdt-btn:not(.hdt-btn-style2):hover::after{
   animation: shine .75s cubic-bezier(.01,.56,1,1);
 }
 @keyframes shine {

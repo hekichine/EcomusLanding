@@ -1315,7 +1315,7 @@ sidebar_menu_mb .menu_list{
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 20px;
-  height: calc(100vh - 400px);
+  /* height: calc(100vh - 400px); */
   overflow: auto;
 }
 sidebar_menu_mb .menu_list::after{

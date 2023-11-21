@@ -887,7 +887,8 @@ back-to-top {
 
 back-to-top:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: var(--link-color);
+  color: var(--link-color-active);
 }
 
 back-to-top:active {

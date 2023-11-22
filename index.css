@@ -485,7 +485,6 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .features .hdt-btn {
@@ -2913,7 +2912,9 @@ background-clip: text;
   }
 }
 @media (max-width: 1400px) {
-
+  .features .info_wrap{
+    gap: 10px;
+  }
   .shopify_app .title{
     font-size: 50px;
   }

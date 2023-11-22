@@ -1218,6 +1218,11 @@ popup .d-none{
     width: 40px;height: 40px;
   }
 }
+@media (max-width: 1023px){
+  .hdt-btn-hover-icon .hdt-icon{
+    display: none;
+  }
+}
 @media (max-width: 767px){
   popup .docs{
     height: 44px;

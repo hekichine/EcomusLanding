@@ -1099,7 +1099,7 @@ line-height: normal;
 }
 
 .empower .section-inner {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -2835,6 +2835,9 @@ background-clip: text;
   .testi .gy-xxl-30 {
     --bs-gutter-y: 30px;
   }
+  .empower .col-right .top{
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: 2000px) {
@@ -3907,6 +3910,9 @@ background-clip: text;
 }
 
 @media (max-width: 425px) {
+  :where(.empower_grid .banner_wrap,popup .banner_wrap) .count{
+    font-size: 35px;
+  }
   .b_ecomus .rate{
     gap: 10px;
   }

@@ -17,7 +17,6 @@
   --btn-color-hover: #000;
   --link-color: #fff;
   --link-color-active: #ff9c8d;
-  --link-color-active2:#6053CB;
   --gradient: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
 
@@ -465,7 +464,7 @@ a {
   overflow: hidden;
 }
 .hdt-btn:not(.hdt-btn-style2):after{
-  background-image: linear-gradient(90deg,transparent,var(--link-color-active2),transparent);
+  background-image: linear-gradient(90deg,transparent,var(--link-color-active),transparent);
   content: "";
   left: 150%;
   position: absolute;

@@ -66,6 +66,10 @@ const app = {
   },
   cursor: () => {
     console.log("Cursor glowing is active");
+    if(window.innerWidth < 1149){
+      console.log("Cursor glowing is disable on tablet & mobile");
+      return;
+    }
     // hiden when stop moving
     let timer;
     const mouse_stop=()=>{

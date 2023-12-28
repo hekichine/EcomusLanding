@@ -2077,6 +2077,7 @@ header {
 }
 
 .mb_screen .dynamic_island {
+  display: none;
   position: absolute;
   top: 3%;
   left: 0;

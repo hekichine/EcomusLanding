@@ -1613,3 +1613,7 @@ cursor {
   }
 
 }
+
+[ec-demo]{
+  display: none !important;
+}

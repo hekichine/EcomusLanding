@@ -3472,7 +3472,7 @@ header {
   }
 
   .ooff2 .list-check {
-    justify-content: flex-start;
+    justify-content: center
   }
 
   .empower .empower_earth {
@@ -3803,6 +3803,7 @@ header {
   .my_vid .video_wrap .video-item {
     flex: 1 0 450px;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .my_vid .section-inner {
@@ -4008,7 +4009,7 @@ header {
 
 
   .ooff2 .list-check {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .video-info a {

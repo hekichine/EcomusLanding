@@ -235,9 +235,6 @@ const app = {
           }
         }
       }).mount();
-
-    
-
       $('#tabs_demo').on('click', 'button', function () {
         $('#tabs_demo').find('button.is-active').removeClass('is-active');
         $(this).addClass('is-active');
@@ -246,7 +243,6 @@ const app = {
         // console.log(id);
         $(`#${id}`).addClass('control-active')
       })
-
   },
   table: () => {
    

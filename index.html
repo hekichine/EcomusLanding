@@ -97,7 +97,11 @@
     <section class="banner hdt-ratio--adapt_image">
       <div class="section-inner">
         <div class="galaxy_eff_svg">
-          <img loading="lazy" src="./assets/images/banner_star.png" alt="Banner star galaxy">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./assets/images/banner_star.png">
+            <source srcset="./assets/images/banner_star_mb.png">
+            <img loading="lazy" src="./assets/images/banner_star.png" alt="Banner star galaxy">
+          </picture>
         </div>
         <div id="galaxy_eff" class="galaxy_eff">
         </div>
@@ -170,7 +174,11 @@
         <div class="banner_demo">
           <div class="banner_demo-img-wrap">
             <div class="hdt-ratio" style="--aspect-ratioapt: 1330/747;border-radius:20px;">
-              <img loading="lazy" src="./assets/images/banner_demo.jpeg" alt="">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./assets/images/banner_demo.jpeg">
+                <source srcset="./assets/images/banner_demo_mb.jpeg" >
+                <img loading="lazy" src="./assets/images/banner_demo.jpeg" alt="Banner demo">
+              </picture>
             </div>
           </div>
           <div class="banner_demo-1 wow animated fadeInRight" data-wow-delay="0s">

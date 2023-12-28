@@ -3548,6 +3548,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  .features .feature_bg{
+    display: none;
+  }
   .my_vid .des {
     font-size: 14px;
   }

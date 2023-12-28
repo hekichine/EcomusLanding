@@ -157,87 +157,6 @@ const app = {
       });
 
   },
-  splider: () => {
-    const splides = [
-      {
-        id: ".splide2",
-        options: {
-          easing: "linear",
-          type: "loop",
-          pauseOnHover: false,
-          autoplay: true,
-          autoWidth: true,
-          arrows: false,
-          interval: 0,
-          speed: 25000,
-          pagination: false,
-          gap: "45px",
-          breakpoints: {
-            768: {
-              gap: "25px"
-            }
-          }
-        }
-      },
-      {
-        id: ".splide3",
-        options: {
-          easing: "linear",
-          type: "loop",
-          pauseOnHover: true,
-          autoplay: true,
-          autoWidth: true,
-          arrows: false,
-          interval: 0,
-          speed: 7000,
-          pagination: false,
-          gap: "34px",
-          breakpoints: {
-            1024: {
-              perPage: 2,
-              gap: "15px",
-              autoWidth: false
-            }
-          }
-        }
-      }
-    ]
-      splides.map(item => {
-        // console.log(item.options);
-        new Splide(`${item.id}`, item.options).mount();
-      })
-      new Splide('.grid_layout_slider', {
-        easing: "linear",
-        type: "loop",
-        pauseOnHover: true,
-        autoplay: true,
-        autoWidth: true,
-        arrows: false,
-        interval: 0,
-        speed: 3000,
-        pagination: false,
-        gap: "15px",
-        breakpoints: {
-          1366: {
-            perPage: 3,
-            autoWidth: false,
-          },
-          1024: {
-            perPage: 3,
-            autoWidth: false,
-          },
-          768: {
-            perPage: 3,
-            autoWidth: false,
-            gap: '5px'
-          },
-          525: {
-            perPage: 2,
-            autoWidth: false,
-          }
-        }
-      }).mount();
-  },
   tabs_shop: () => {
     
       new Splide('#tabs_shop_splide-1', {
@@ -581,6 +500,7 @@ const app = {
     </div>  
     <div class="img_wrap">
     <div class="img hdt-ratio" style="--aspect-ratioapt: 928/503;">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
     </div>
     </div>                  
     </div>`
@@ -630,7 +550,6 @@ const app = {
     app.tabs();
     app.filter();
     app.empower_masonry();
-    app.splider();
     // app.table();
     app.galaxy();
     app.text_circle();

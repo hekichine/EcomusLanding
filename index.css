@@ -1246,7 +1246,7 @@ header {
   line-height: normal;
 }
 
-.shopify_app .form a {
+.shopify_app .form .hdt-btn {
   border-radius: 100px;
   border: none;
   background: linear-gradient(93deg, #FF9C8D 1.31%, #D655A5 50.71%, #6053CB 99.1%);
@@ -3269,7 +3269,7 @@ inset: 0px 0px -2px 0px;
     padding: 20px;
   }
 
-  .shopify_app .form a {
+  .shopify_app .form .hdt-btn {
     font-size: 14px;
     line-height: normal;
     padding: 0 15px;
@@ -3950,7 +3950,7 @@ inset: 0px 0px -2px 0px;
     padding: 5px;
   }
 
-  .shopify_app .form a {
+  .shopify_app .form .hdt-btn {
     padding: 0 15px;
     height: 100%;
   }
@@ -4209,13 +4209,13 @@ inset: 0px 0px -2px 0px;
     padding-bottom: 0;
   }
 
-  .shopify_app .form a {
+  .shopify_app .form .hdt-btn {
     font-size: 12px;
     line-height: normal;
     gap: 5px;
   }
 
-  .shopify_app .form a svg {
+  .shopify_app .form .hdt-btn svg {
     display: none;
   }
 

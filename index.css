@@ -2224,10 +2224,7 @@ header {
 .b_ecomus .splide3::before {
   position: absolute;
   content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+inset: 0px 0px -2px 0px;
   background: linear-gradient(0deg, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
   z-index: 2;
   pointer-events: none;

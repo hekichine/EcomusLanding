@@ -159,14 +159,50 @@ const app = {
   },
   tabs_shop: () => {
       const tab_sl1 = new Swiper('#tabs_shop_splide-1',{
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 15,
         loop:true,
+        breakpoints:{
+          525:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          768:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1025:{
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1366:{
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        }
       })
       const tab_sl2 = new Swiper('#tabs_shop_splide-2',{
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 15,
         loop:true,
+        breakpoints:{
+          525:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          768:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1025:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1366:{
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        }
       })
       $('#tabs_demo').on('click', 'button', function () {
         $('#tabs_demo').find('button.is-active').removeClass('is-active');

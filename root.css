@@ -89,13 +89,17 @@ ol {
   border: none !important;
   background: radial-gradient(106.13% 139.77% at 2.35% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.00) 100%) !important;
 }
-.container,.container-sm{
+.container,.container-sm,.container-fluid{
   padding: 0 15px;
   max-width: 100%;
 }
 @media (min-width: 768px){
   .container,.container-sm{
     padding: 0 30px;
+    max-width: 100%;
+  }
+  .container-fluid{
+    padding: 0;
     max-width: 100%;
   }
 }

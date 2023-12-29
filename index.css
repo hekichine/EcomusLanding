@@ -1406,7 +1406,7 @@ header {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   overflow: hidden;
-  max-width: 345px;
+  width: 345px;
   margin-inline-end: 15px;
 }
 
@@ -3248,6 +3248,9 @@ header {
 }
 
 @media (max-width: 1024px) {
+  .grid_layout2 .show__wrap.hdt-ratio::before {
+    padding-bottom: 500px;
+  }
   .mb_screen .mb_view .view_port {
     border-radius: 40px;
   }
@@ -3757,7 +3760,6 @@ header {
 
   .grid_layout2 .show__wrap.hdt-ratio::before {
     padding-bottom: 413px;
-
   }
 
   .splider_show .slide_grid .minisize {
@@ -4003,10 +4005,6 @@ header {
 
   .ecomposer .input_wrap {
     height: 42px;
-  }
-
-  .grid_layout2 .show__wrap.hdt-ratio::before {
-    padding-bottom: 250px;
   }
 
   .grid_layout2 .svg_bg {
@@ -4282,9 +4280,7 @@ header {
     padding-left: 15px;
   }
 
-  .grid_layout2 .show__wrap.hdt-ratio::before {
-    padding-bottom: 200px;
-  }
+
 
   .grid_layout2 .svg_bg {
     transform: translateY(-75%);

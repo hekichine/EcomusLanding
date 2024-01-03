@@ -288,7 +288,7 @@ header {
   right: 0;
   top: 167px;
   border-radius: 20px;
-  background-color: #1b1b1b;
+  background-color: #000;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -362,7 +362,7 @@ header {
   position: relative;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
 }
 
@@ -471,7 +471,7 @@ header {
 .features .title_wrap {
   position: relative;
   width: fit-content;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .features .title_wrap svg {
@@ -491,6 +491,11 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.features .info_wrap .hdt-btn {
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .features .hdt-btn {
@@ -540,7 +545,11 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 24px;
+  margin-bottom: 0;
+}
+
+.demos .demos_count .heading {
+  margin-bottom: 12px;
 }
 
 .demos .demos_count h3 span.sub_count {
@@ -570,7 +579,7 @@ header {
   font-weight: 400;
   line-height: 24px;
   /* 150% */
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .tabs {
@@ -1271,6 +1280,14 @@ header {
   margin-bottom: 24px;
 }
 
+.shopify_app .des .title {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 .shopify_app .des {
   margin-bottom: 15px;
 }
@@ -1643,6 +1660,54 @@ header {
   border-radius: inherit;
 }
 
+.hdt-table .ww {
+  position: relative;
+}
+
+.hdt-table tbody {
+  position: relative;
+}
+
+.hdt-table tbody::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(4, 5, 14, 0.00) 0%, rgba(4, 5, 14, 0.50) 38.62%, #04050E 71.99%);
+  z-index: 1;
+  transition: opacity .25s ease-in, visibility .25s ease-in;
+}
+
+
+.hdt-table .tb_viewmore {
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(97, 97, 97, 0.20);
+  backdrop-filter: blur(5px);
+  display: inline-flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  height: 44px;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: absolute;
+  left: 50%;
+  bottom: 21%;
+  transform: translateX(-50%);
+  transition: opacity .25s ease-in, visibility .25s ease-in;
+}
+
+.hdt-table .ww.view tbody::before,.hdt-table .ww.view .tb_viewmore{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .hdt-table table {
   color: #fff;
   border-collapse: collapse;
@@ -1933,6 +1998,10 @@ header {
   opacity: 1;
   position: unset;
   pointer-events: auto;
+}
+
+.tabs_demo .tabs_shop {
+  padding: 0 15px;
 }
 
 .testi .gx-15 {
@@ -2838,6 +2907,12 @@ header {
 @media (min-width: 1200px) {}
 
 @media(min-width: 1200px) and (max-width: 1440px) {
+
+  .grid_layout2 .col:nth-child(1) .col-inner,
+  .grid_layout2 .col:nth-child(2) .col-inner {
+    max-height: 540px;
+  }
+
   .empower .col-inner .text_bg .gradient {
     font-size: 60px;
   }
@@ -2867,7 +2942,7 @@ header {
 
 
   .features .section-inner {
-    margin-bottom: 83px;
+    margin-bottom: 50px;
   }
 
   .empower .tophead {
@@ -2925,15 +3000,13 @@ header {
     margin-left: auto;
     margin-right: auto;
   }
-  .shopify_app .shopify_app_svg{
+
+  .shopify_app .shopify_app_svg {
     display: none;
   }
 }
 
-@media (max-width: 1800px) {
-
-
-}
+@media (max-width: 1800px) {}
 
 @media (max-width: 1700px) {
 
@@ -3161,6 +3234,10 @@ header {
 }
 
 @media (max-width: 1024px) {
+  .shopify_app .des .title {
+    font-size: 16px;
+  }
+
   .grid_layout2 .show__wrap.hdt-ratio::before {
     padding-bottom: 500px;
   }
@@ -3255,7 +3332,7 @@ header {
   }
 
   .banner .banner_demo-1 {
-    right: -35px;
+    right: -15px;
     top: 70px;
   }
 
@@ -3455,7 +3532,15 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .hdt-table .tb_viewmore,
+  .hdt-table tbody::before{
+    display: none;
+  }
+  .shopify_app .des .title {
+    font-size: 14px;
+  }
+
   .features .feature_bg {
     display: none;
   }

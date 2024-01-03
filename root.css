@@ -490,12 +490,12 @@ a {
   z-index: 2;
 }
 
-.hdt-btn:not(.hdt-btn-style2) {
+.light_skew_hover {
   position: relative;
   overflow: hidden;
 }
 
-.hdt-btn:not(.hdt-btn-style2):after {
+.light_skew_hover:after {
   background-image: linear-gradient(90deg, transparent, var(--link-color-active), transparent);
   content: "";
   left: 150%;
@@ -507,8 +507,26 @@ a {
   z-index: -1;
 }
 
-.hdt-btn:not(.hdt-btn-style2):hover::after {
+.light_skew_hover:hover::after {
   animation: shine .75s cubic-bezier(.01, .56, 1, 1);
+}
+
+.light_skew {
+  position: relative;
+  overflow: hidden;
+}
+
+.light_skew:after {
+  background-image: linear-gradient(90deg, transparent, var(--link-color-active), transparent);
+  content: "";
+  left: 150%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: skew(-20deg);
+  width: 200%;
+  z-index: -1;
+  animation: shine2 5s cubic-bezier(.01, .56, 1, 1) infinite;
 }
 
 @keyframes shine {
@@ -1735,6 +1753,25 @@ cursor {
   font-weight: 500;
   line-height: 1.6;
 }
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  display: none;
+}
+.swiper-button-prev,.swiper-button-next{
+  width: 46px;height: 46px;
+  border-radius: 100%;
+  background-color: #fff;
+  color:#000;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  background-color: rgba(0, 0, 0, .15);
+  opacity: 1;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg{
+  width: 7px;
+  height: 11px;
+}
+
 @media (max-width: 1149px){
   .ip14{
     margin-left: auto;margin-right: auto;
@@ -1759,5 +1796,8 @@ cursor {
   }
   .ip14{
     margin-bottom: 15px;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    width: 34px;height: 34px;
   }
 }

@@ -89,25 +89,34 @@ ol {
   border: none !important;
   background: radial-gradient(106.13% 139.77% at 2.35% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.00) 100%) !important;
 }
-.container,.container-sm,.container-fluid{
+
+.container,
+.container-sm,
+.container-fluid {
   padding: 0 15px;
   max-width: 100%;
 }
-@media (min-width: 768px){
-  .container,.container-sm{
+
+@media (min-width: 768px) {
+
+  .container,
+  .container-sm {
     padding: 0 30px;
     max-width: 100%;
   }
-  .container-fluid{
+
+  .container-fluid {
     padding: 0;
     max-width: 100%;
   }
 }
+
 @media (min-width: 1150px) {
   .container {
     max-width: 1860px;
     padding: 0 50px;
   }
+
   .container-sm {
     max-width: 1540px;
     padding: 0 50px;
@@ -119,7 +128,7 @@ ol {
     flex: 0 0 auto;
     width: 33.333%;
   }
- 
+
 
   .col-2xxl-3 {
     flex: 0 0 auto;
@@ -1338,7 +1347,7 @@ popup .d-none {
   }
 
   popup .content_inner {
-    padding:25px 15px;
+    padding: 25px 15px;
     width: 95vw;
   }
 
@@ -1599,14 +1608,17 @@ cursor {
   animation: marquee 25s linear infinite;
   pointer-events: auto;
 }
+
 .marquee__item {
   display: inline-block;
 }
-@media (min-width: 1150px){
+
+@media (min-width: 1150px) {
   .marquee:hover {
     animation-play-state: paused;
   }
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -1618,6 +1630,134 @@ cursor {
 
 }
 
-[ec-demo]{
+[ec-demo] {
   display: none !important;
+}
+
+
+/* iphone 14 */
+.mb_screen .mb_view{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.iphone {
+  /* width: fit-content; */
+  flex:  0 0 calc(25% - 30px);
+}
+
+.ip14 {
+  width: fit-content;
+  position: relative;
+  border-radius: 50px;
+  border: 4px solid #989892;
+  margin-bottom: 30px;
+}
+
+.ip14 .ip_view {
+  display: flex;
+  max-width: 380px;
+  overflow: hidden;
+  border-radius: 46px;
+  overflow: hidden;
+}
+
+.ip_ctrl {
+  position: absolute;
+  inset: -8px;
+}
+
+.ip_ctrl .ctrl_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.ip_ctrl .ctrl_right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 4px;
+}
+
+.ip_ctrl .silent {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: 5%;
+  border-radius: 1.282px;
+  border: 0.256px solid #7D7E79;
+  background: #C8C9C4;
+  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+}
+
+.ip_ctrl .vl_in {
+  position: absolute;
+  top: 23%;
+  width: 100%;
+  height: 8%;
+  border-radius: 1.282px;
+  border: 0.256px solid #7D7E79;
+  background: #C8C9C4;
+  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+}
+
+.ip_ctrl .vl_de {
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  height: 8%;
+  border-radius: 1.282px;
+  border: 0.256px solid #7D7E79;
+  background: #C8C9C4;
+  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+}
+
+.ip_ctrl .btn_power {
+  position: absolute;
+  top: 27%;
+  width: 100%;
+  height: 12%;
+  border-radius: 1.394px;
+  border: 0.256px solid #7D7E79;
+  background: #C8C9C4;
+  box-shadow: -1.394px 0px 0px 0px #DADBD6 inset, 1.394px -2.788px 0.697px 0px #DADBD6 inset, 1.394px 2.788px 0.697px 0px #41423C inset, -1.045px 0px 1.394px 0px rgba(65, 66, 60, 0.66) inset, 0px 1.423px 1.423px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ip_title {
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+}
+@media (max-width: 1149px){
+  .ip14{
+    margin-left: auto;margin-right: auto;
+  }
+  .ip14 .ip_view{
+    max-width: 300px;
+  }
+  .mb_screen .mb_view{
+    flex-wrap: wrap;
+  }
+  .iphone{
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+@media (max-width: 767px){
+
+  .iphone{
+    flex: 0 0 100%;
+  }
+  .mb_screen .mb_view{
+    gap: 15px;
+  }
+  .ip14{
+    margin-bottom: 15px;
+  }
 }

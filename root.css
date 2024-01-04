@@ -1670,6 +1670,7 @@ cursor {
   border-radius: 50px;
   border: 4px solid #464444;
   margin-bottom: 30px;
+  margin-left: auto;margin-right: auto;
 }
 
 .ip14 .ip_view {

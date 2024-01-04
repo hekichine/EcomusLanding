@@ -1030,6 +1030,9 @@ inset: -1px;
   background-color: #fff;
   opacity: 0.2;
 }
+popup counter{
+  z-index: 2;
+}
 
 /*  */
 .empower_grid .empower_label {
@@ -3534,6 +3537,7 @@ inset: -1px;
 }
 
 @media (max-width: 767px) {
+  .empower_grid .item2 .des{font-size: 15px;}
   .testi .section-inner{
     padding-top: 40px;
   }

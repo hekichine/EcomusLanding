@@ -1668,13 +1668,13 @@ cursor {
   width: fit-content;
   position: relative;
   border-radius: 50px;
-  border: 4px solid #989892;
+  border: 4px solid #464444;
   margin-bottom: 30px;
 }
 
 .ip14 .ip_view {
   display: flex;
-  max-width: 380px;
+  max-width: 320px;
   overflow: hidden;
   border-radius: 46px;
   overflow: hidden;

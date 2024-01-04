@@ -526,8 +526,8 @@ header {
   margin-bottom: 54px;
 }
 
-.features .section-inner {
-  margin-bottom: 30px;
+.demos .section-inner {
+  padding-top: 30px;
 }
 
 /* demos */
@@ -603,10 +603,7 @@ header {
 .demos .col-inner::before {
   position: absolute;
   content: "";
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+inset: -1px;
   background: rgba(255, 255, 255, 0.2);
   z-index: -1;
   border-radius: inherit;
@@ -616,10 +613,7 @@ header {
 .demos .col-inner::after {
   position: absolute;
   content: "";
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  inset: -1px;
   background: rgba(255, 255, 255, 0.2);
   z-index: -1;
   border-radius: inherit;
@@ -1897,7 +1891,6 @@ header {
 /* tabs demo */
 .tabs_demo .section-inner {
   padding-top: 107px;
-  padding-bottom: 115px;
   margin-bottom: 0;
 }
 
@@ -1933,8 +1926,13 @@ header {
 
 .tabs_demo .tabs_group button.is-active {
   color: #fff;
+  
 }
 
+/* .tabs_demo .tabs_group button:hover{
+  background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
+  color: #fff;
+} */
 .tabs_demo .tabs_group button.is-active::before {
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
@@ -2003,7 +2001,9 @@ header {
 .tabs_demo .tabs_shop {
   padding: 0 15px;
 }
-
+.testi .section-inner{
+  padding-top: 115px;
+}
 .testi .gx-15 {
   --bs-gutter-x: 15px;
 }
@@ -2941,8 +2941,8 @@ header {
   }
 
 
-  .features .section-inner {
-    margin-bottom: 50px;
+  .demos .section-inner {
+    padding-top:50px;
   }
 
   .empower .tophead {
@@ -3234,6 +3234,9 @@ header {
 }
 
 @media (max-width: 1024px) {
+  .testi .section-inner{
+    padding-top: 70px;
+  }
   .shopify_app .des .title {
     font-size: 16px;
   }
@@ -3366,9 +3369,7 @@ header {
   }
 
   .tabs_demo .section-inner {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
+    padding-top: 70px; }
 
   .galaxy_eff {
     width: 95%;
@@ -3533,6 +3534,9 @@ header {
 }
 
 @media (max-width: 767px) {
+  .testi .section-inner{
+    padding-top: 40px;
+  }
   .hdt-table .tb_viewmore,
   .hdt-table tbody::before{
     display: none;
@@ -4012,7 +4016,6 @@ header {
 
   .tabs_demo .section-inner {
     padding-top: 40px;
-    padding-bottom: 40px;
     margin-bottom: 0;
   }
 

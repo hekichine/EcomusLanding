@@ -3941,7 +3941,7 @@ popup counter{
 }
 
 @media (max-width: 650px) {
-  .demos .preview_btn a{
+  .demos .preview_btn a,.tabs_demo .tabs_group button,[filter-tabs] button{
     height: 36px;
   }
   .my_vid .video_wrap .video-item{

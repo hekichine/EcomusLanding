@@ -3941,6 +3941,9 @@ popup counter{
 }
 
 @media (max-width: 650px) {
+  .demos .preview_btn a{
+    height: 36px;
+  }
   .my_vid .video_wrap .video-item{
     flex: 1 0 350px;
   }

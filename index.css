@@ -1405,9 +1405,9 @@ popup counter{
 .splider_show .slide_grid::after {
   position: absolute;
   content: "";
-  top: 0;
+  top: -5px;
   right: 0;
-  bottom: 0;
+  bottom: -5px;
   width: 20%;
   border-radius: 0px 20px 0px 0px;
   background: linear-gradient(270deg, #1A1B1F 13.79%, rgba(26, 27, 31, 0.50) 60.34%, rgba(26, 27, 31, 0.00) 100%);
@@ -1583,6 +1583,7 @@ popup counter{
   font-size: 11px;
   color: #c7c7c7;
   text-align: center;
+  padding: 0 15px;
 }
 
 .hdt-table .hdt-des {
@@ -2001,7 +2002,7 @@ popup counter{
   pointer-events: auto;
 }
 
-.tabs_demo .tabs_shop {
+.tabs_demo .tabs_inner {
   padding: 0 15px;
 }
 .testi .section-inner{

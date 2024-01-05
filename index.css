@@ -13,7 +13,8 @@
 
 /* 1. header */
 header {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -39,7 +40,7 @@ header {
 }
 
 .hdt-header {
-  padding: 20px 0;
+  padding: 15px 0;
   transition: 0.35s linear;
   z-index: 99;
 }
@@ -103,6 +104,8 @@ header {
   position: absolute;
   width: 938px;
   height: 938px;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 100%;
   background: linear-gradient(135deg,
       #347c6b 46.07%,
@@ -529,6 +532,7 @@ header {
 
 .demos .section-inner {
   padding-top: 30px;
+  overflow-x: hidden;
 }
 
 /* demos */
@@ -1163,6 +1167,7 @@ popup counter{
 .empower .section-inner {
   margin-bottom: 50px;
   position: relative;
+  z-index: 4;
 }
 
 .empower .section-inner::before {
@@ -1398,7 +1403,7 @@ popup counter{
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-50%) translateX(30%);
+  transform: translateY(-50%);
   z-index: -1;
   pointer-events: none;
 }
@@ -2160,6 +2165,7 @@ popup counter{
 
 .splide-2 {
   pointer-events: none;
+  overflow-x: hidden;
 }
 
 .splide-2+.line {
@@ -2171,6 +2177,7 @@ popup counter{
 
 .b_ecomus .section-inner {
   padding: 132px 0 207px 0;
+  overflow-x: hidden;
 
 }
 
@@ -2987,7 +2994,7 @@ popup counter{
 
 @media (min-width: 1440px) {
   .hdt-header {
-    padding: 32px 0;
+    padding: 18.5px 0;
   }
 
   .banner .banner_svg_bg {
@@ -4025,10 +4032,6 @@ popup counter{
   }
 
   .banner .section-inner {
-    overflow: hidden;
-  }
-
-  .banner .section-inner {
     padding-top: 100px;
   }
 
@@ -4059,6 +4062,9 @@ popup counter{
 }
 
 @media (max-width: 650px) {
+  .galaxy_eff{
+    transform: none;
+  }
   .empower_grid .item9 .col-wrap{
     height: 470px;
   }

@@ -558,3 +558,45 @@ const app = {
 
 app.start();
 
+class topBar extends HTMLElement{
+  constructor(){
+    super();
+    if(window.innerWidth <767){
+      return;
+    }
+    if(JSON.parse(localStorage.getItem('topbar'))?.active == false){
+      this.style.display='none';
+      return;
+    }
+    this.slider = this.querySelector('.slider');
+    this.btn_close = this.querySelector('button.close');
+    this.initSlider();
+    this.close()
+  }
+  initSlider(){
+    
+    let self = this;
+    if(!self.slider){
+      return;
+    }
+    return new Swiper(self.slider, {
+      slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      grabCursor:true
+    })
+  }
+  close(){
+    let self = this;
+    if(!self.btn_close){
+      return;
+    }
+    self.btn_close.addEventListener('click',function(){
+      self.style.height = 0;
+      localStorage.setItem('topbar','{"active":false}')
+    })
+  }
+}
+customElements.define('topbar-custom',topBar)

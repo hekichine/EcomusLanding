@@ -1407,7 +1407,7 @@ popup counter{
   position: absolute;
   content: "";
   top: -5px;
-  right: 0;
+  right: -5px;
   bottom: -5px;
   width: 20%;
   border-radius: 0px 20px 0px 0px;
@@ -1762,7 +1762,7 @@ popup counter{
   display: flex;
 }
 
-.hdt-table table tbody tr td:nth-child(1) {
+.hdt-table table tbody tr:not(.total) td:nth-child(1) {
   padding-left: 63px;
 }
 

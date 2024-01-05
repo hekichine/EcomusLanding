@@ -239,6 +239,7 @@ header {
   width: fit-content;
   margin: 0 auto;
   z-index: 3;
+  position: relative;
 }
 
 .banner .banner_demo-img-wrap {
@@ -1891,7 +1892,10 @@ popup counter{
   font-size: 16px;
   font-weight: 400;
 }
-
+.hdt-table .total td{
+  display: flex;
+  justify-content: center;
+}
 /* tabs demo */
 .tabs_demo .section-inner {
   padding-top: 107px;
@@ -2094,6 +2098,7 @@ popup counter{
   color: #FFF;
   font-weight: 600;
   line-height: 1.2;
+  margin-right: 45px; 
 }
 
 .splide-2 .marquee__item span {
@@ -3058,9 +3063,7 @@ popup counter{
   }
 
   .hdt-table .total {
-    padding: 0 20px;
     padding-top: 15px;
-    gap: 5px;
   }
 
   .solution .content {
@@ -3238,6 +3241,13 @@ popup counter{
 }
 
 @media (max-width: 1024px) {
+  .splide-2 .marquee__item{
+    font-size: 60px;
+    margin-right: 30px;
+  }
+  .splide-2 .marquee__item span{
+    gap: 30px;
+  }
   .testi .section-inner{
     padding-top: 70px;
   }
@@ -3390,7 +3400,7 @@ popup counter{
   }
 
   .features .ossk2 {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .features .col_wrap {
@@ -3402,12 +3412,13 @@ popup counter{
     transform: translate(50%, -100%)
   }
 
-  .section-inner br {
-    display: none;
-  }
+ 
 }
 
 @media (max-width: 992px) {
+  .section-inner br {
+    display: none;
+  }
   .empower .col-inner .text_bg .gradient {
     font-size: 50px;
   }
@@ -3538,6 +3549,9 @@ popup counter{
 }
 
 @media (max-width: 767px) {
+  .features .sub{
+    margin-bottom: 30px;
+  }
   .empower_grid .item2 .des{font-size: 15px;}
   .testi .section-inner{
     padding-top: 40px;
@@ -3809,9 +3823,12 @@ popup counter{
 
 
   .splide-2 .marquee__item span {
-    gap: 25px;
+    gap: 15px;
   }
-
+  .splide-2 .marquee__item{
+    margin-right: 15px;
+    font-size: 30px;
+  }
   .splide-2 .marquee__item svg {
     width: 16px;
     height: 16px;
@@ -4161,7 +4178,8 @@ popup counter{
   }
 
   .banner .banner_demo-2 {
-    bottom: 10px;
+    bottom: -3px;
+    left: -3px;
   }
 
   .banner .section-inner {
@@ -4216,6 +4234,9 @@ popup counter{
 }
 
 @media (max-width: 375px) {
+  .features .heading{
+    font-size: 23px;
+  }
   .b_ecomus .title {
     font-size: 15px;
   }

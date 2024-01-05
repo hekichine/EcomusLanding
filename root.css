@@ -1801,6 +1801,9 @@ cursor {
   .iphone{
     flex: 0 0 calc(50% - 30px);
   }
+  .swiper-button-prev, .swiper-button-next{
+    background-color: #fff;
+  }
 }
 @media (max-width: 767px){
 

@@ -3945,6 +3945,11 @@ popup counter{
     height: 36px;
     font-size: 14px;
   }
+  .banner .button-label{
+    height: 36px;
+    align-items: center;
+    padding: 0 15px;
+  }
   .my_vid .title{
     font-size: 24px;
   }

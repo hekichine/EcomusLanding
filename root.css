@@ -1668,7 +1668,7 @@ cursor {
   width: fit-content;
   position: relative;
   border-radius: 50px;
-  border: 4px solid #464444;
+  border: 5px solid #33343e;
   margin-bottom: 30px;
   margin-left: auto;margin-right: auto;
 }
@@ -1708,9 +1708,9 @@ cursor {
   width: 100%;
   height: 5%;
   border-radius: 1.282px;
-  border: 0.256px solid #7D7E79;
-  background: #C8C9C4;
-  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+  border: 0.256px solid #33343e;
+  background: #33343e;
+  box-shadow: 0.321px 0px 0px 0px #33343e inset, -0.962px -2.564px 0.962px 0px rgba(0, 0, 0, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #33343e inset, -0.641px 0px 0px 0px #33343e inset;
 }
 
 .ip_ctrl .vl_in {
@@ -1719,9 +1719,9 @@ cursor {
   width: 100%;
   height: 8%;
   border-radius: 1.282px;
-  border: 0.256px solid #7D7E79;
-  background: #C8C9C4;
-  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+  border: 0.256px solid #33343e;
+  background: #33343e;
+  box-shadow: 0.321px 0px 0px 0px #33343e inset, -0.962px -2.564px 0.962px 0px rgba(0, 0, 0, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #33343e inset, -0.641px 0px 0px 0px #33343e inset;
 }
 
 .ip_ctrl .vl_de {
@@ -1730,9 +1730,9 @@ cursor {
   width: 100%;
   height: 8%;
   border-radius: 1.282px;
-  border: 0.256px solid #7D7E79;
-  background: #C8C9C4;
-  box-shadow: 0.321px 0px 0px 0px #DADBD6 inset, -0.962px -2.564px 0.962px 0px rgba(218, 219, 214, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #F2F3ED inset, -0.641px 0px 0px 0px #F2F3ED inset;
+  border: 0.256px solid #33343e;
+  background: #33343e;
+  box-shadow: 0.321px 0px 0px 0px #33343e inset, -0.962px -2.564px 0.962px 0px rgba(0, 0, 0, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #33343e inset, -0.641px 0px 0px 0px #33343e inset;
 }
 
 .ip_ctrl .btn_power {
@@ -1741,9 +1741,9 @@ cursor {
   width: 100%;
   height: 12%;
   border-radius: 1.394px;
-  border: 0.256px solid #7D7E79;
-  background: #C8C9C4;
-  box-shadow: -1.394px 0px 0px 0px #DADBD6 inset, 1.394px -2.788px 0.697px 0px #DADBD6 inset, 1.394px 2.788px 0.697px 0px #41423C inset, -1.045px 0px 1.394px 0px rgba(65, 66, 60, 0.66) inset, 0px 1.423px 1.423px 0px rgba(0, 0, 0, 0.25);
+  border: 0.256px solid #33343e;
+  background: #33343e;
+  box-shadow: 0.321px 0px 0px 0px #33343e inset, -0.962px -2.564px 0.962px 0px rgba(0, 0, 0, 0.20) inset, 0px 2.564px 0.321px 0px rgba(65, 66, 60, 0.30) inset, -1.282px 0px 1.282px 0px #41423C inset, 0px 1.282px 0px 0px #41423C inset, 0px -1.282px 0.641px 0px #33343e inset, -0.641px 0px 0px 0px #33343e inset;
 }
 
 .ip_title {

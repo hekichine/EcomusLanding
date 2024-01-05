@@ -3578,6 +3578,7 @@ popup counter{
 
   .my_vid .des {
     font-size: 14px;
+    line-height: 17px;
   }
 
   .banner .button-label svg {
@@ -3941,6 +3942,9 @@ popup counter{
 }
 
 @media (max-width: 650px) {
+  .empower .col-right p,.mb_screen .tophead .des{
+    font-size: 14px;
+  }
   .demos .preview_btn a,.tabs_demo .tabs_group button,[filter-tabs] button,.b_ecomus .hdt-btn_install {
     height: 36px;
     font-size: 14px;
@@ -3962,7 +3966,7 @@ popup counter{
   .b_ecomus .title {
     font-size: 24px;
   }
-  .pucharse .section-inner svg{
+  .pucharse .section-inner .tophead svg{
     width: 150px;
     margin: 0 auto;
   }
@@ -4314,6 +4318,12 @@ popup counter{
 }
 
 @media (max-width: 325px) {
+  .b_ecomus .title{
+    font-size: 12px;
+  }
+  .hdt-table .hdt-des{
+    font-size: 10px;
+  }
   .my_vid .video-item .poster{
     height: 150px;
   }

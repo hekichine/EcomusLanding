@@ -256,6 +256,7 @@ const app = {
     createStars();
   },
   text_circle: () => {
+
     const str = "highconverting";
     const text = $('#text-circle');
     // console.log(text);
@@ -263,8 +264,8 @@ const app = {
       text.append(`<span style="transform:rotate(${26 * i}deg)">${str[i]}</span>`);
     }
 
-
-    const str2 = "one-time payment";
+    // return;
+    const str2 = "one-time paiment";
     const text2 = $('#payment_circle');
     // console.log(text);
     for (let i = 0; i < str2.length; i++) {

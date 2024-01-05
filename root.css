@@ -864,7 +864,7 @@ picture {
   right: 0;
   left: 0;
   bottom: 0;
-  transform: rotate(290deg);
+  transform: rotate(290deg) translateY(-3%) translateX(2%);
 }
 
 @keyframes circle {

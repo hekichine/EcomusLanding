@@ -3129,9 +3129,11 @@ popup counter{
 
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1366px) {
 
-
+  .grid_layout2 .col:nth-child(1) .col-inner, .grid_layout2 .col:nth-child(2) .col-inner{
+    max-height: 518px;
+  }
   .demos .tabs {
     margin-bottom: 15px;
   }
@@ -3241,6 +3243,9 @@ popup counter{
 }
 
 @media (max-width: 1024px) {
+  .b_ecomus .section-inner{
+    padding: 60px;
+  }
   .splide-2 .marquee__item{
     font-size: 60px;
     margin-right: 30px;
@@ -3548,7 +3553,10 @@ popup counter{
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .my_vid .title{
+    font-size: 35px;
+  }
   .features .sub{
     margin-bottom: 30px;
   }
@@ -3812,7 +3820,7 @@ popup counter{
   }
 
   .my_vid .video_wrap .video-item {
-    flex: 1 0 450px;
+    flex: 1 0 600px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
   }
@@ -3933,6 +3941,12 @@ popup counter{
 }
 
 @media (max-width: 650px) {
+  .my_vid .video_wrap .video-item{
+    flex: 1 0 350px;
+  }
+  .my_vid .video-item .poster{
+    height: 200px;
+  }
   .b_ecomus .title {
     font-size: 24px;
   }
@@ -4227,15 +4241,21 @@ popup counter{
     padding-right: 0;
   }
 
-  .my_vid .video-item .poster {
-    height: 300px;
-    max-height: 300px;
-  }
+
 }
 
 @media (max-width: 375px) {
+  .video-info a{
+    font-size: 12px;
+  }
+  .video-info h5{
+    font-size: 12px;
+  }
   .features .heading{
     font-size: 23px;
+  }
+  .video-info p{
+    font-size: 10px;
   }
   .b_ecomus .title {
     font-size: 15px;
@@ -4282,6 +4302,9 @@ popup counter{
 }
 
 @media (max-width: 325px) {
+  .my_vid .video-item .poster{
+    height: 150px;
+  }
   .my_vid .video_wrap .video-item {
     flex: 1 0 270px;
   }

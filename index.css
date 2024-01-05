@@ -3941,8 +3941,12 @@ popup counter{
 }
 
 @media (max-width: 650px) {
-  .demos .preview_btn a,.tabs_demo .tabs_group button,[filter-tabs] button{
+  .demos .preview_btn a,.tabs_demo .tabs_group button,[filter-tabs] button,.b_ecomus .hdt-btn_install {
     height: 36px;
+    font-size: 14px;
+  }
+  .my_vid .title{
+    font-size: 24px;
   }
   .my_vid .video_wrap .video-item{
     flex: 1 0 350px;
@@ -3953,9 +3957,9 @@ popup counter{
   .b_ecomus .title {
     font-size: 24px;
   }
-
-  .b_ecomus .hdt-btn_install {
-    height: 42px;
+  .pucharse .section-inner svg{
+    width: 150px;
+    margin: 0 auto;
   }
 }
 

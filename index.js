@@ -521,6 +521,24 @@ const app = {
 
     })
   },
+  demo_open:()=>{
+    $(document).on('click','[demo_open]',function(e){
+      if($('.pass_pop').attr('clicked') == 'clicked'){
+        return;
+      }
+      e.preventDefault();
+      $('.pass_pop').addClass('open');
+      $('.pass_pop .view_more').attr('href',`${$(this).attr('href')}`)
+    })
+  },
+  password_popup:()=>{
+    $(document).on('click','.pass_pop .overlay,.pass_pop .close',function(){
+      $('.pass_pop').removeClass('open')
+    });
+    $(document).on('click','.pass_pop .view_more',function(){
+      $('.pass_pop').attr('clicked',"clicked")
+    })
+  },
   start: () => {
     const config = {
       video: {
@@ -551,7 +569,8 @@ const app = {
     app.cursor();
     app.scrollspy();
     app.table();
-
+    app.demo_open();
+    app.password_popup()
     new WOW().init();
   },
 };
@@ -582,7 +601,7 @@ class topBar extends HTMLElement{
     return new Swiper(self.slider, {
       slidesPerView: 1,
       autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
       },
       grabCursor:true

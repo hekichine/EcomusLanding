@@ -3652,6 +3652,44 @@ popup counter{
     padding: 15px;
   }
 }
+@media (max-width: 800px){
+  .empower_grid :where(.item1,.item2) .col-wrap{
+    height: 350px; 
+  }
+  .empower_grid .item3 .col-wrap{
+    height: 380px;
+  }
+  .empower_grid .item4 .col-wrap{
+    height: 520px;
+  }
+  .empower_grid .item5 .col-wrap{
+    height: 260px;
+  }
+  .empower_grid .item6 .col-wrap{
+    height: 430px;
+  }
+  .empower_grid .item7 .col-wrap{
+    height: 360px;
+  }
+  .empower_grid .item8 .col-wrap{
+    height: 350px;
+  }
+  .empower_grid .item9 .col-wrap{
+    height: 450px;
+  }
+  .empower_grid .item10 .col-wrap{
+    height: 310px;
+  }
+  .empower_grid .item12 .col-wrap{
+    height: 400px;
+  }
+  .empower_grid .item13 .col-wrap{
+    height: 400px;
+  }
+  .empower_grid .item14 .col-wrap{
+    height: 450px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   

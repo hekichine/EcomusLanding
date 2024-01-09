@@ -2165,8 +2165,10 @@ popup counter{
 }
 
 .splide-2 {
-  pointer-events: none;
   overflow-x: hidden;
+}
+.splide-2 .marquee{
+  pointer-events: none;
 }
 
 .splide-2+.line {
@@ -2279,8 +2281,10 @@ popup counter{
 }
 
 .b_ecomus .splide3 {
-  /* pointer-events: none; */
   position: relative;
+}
+.b_ecomus .splide3  .marquee{
+  pointer-events: none;
 }
 
 .b_ecomus .splide3::before {

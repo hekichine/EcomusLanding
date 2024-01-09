@@ -4101,6 +4101,21 @@ popup counter{
 }
 
 @media (max-width: 650px) {
+  .demos .preview_btn{
+    margin-bottom: 5px;
+  }
+  .tabs_demo .tabs_inner{
+    padding: 0 5px; 
+  }
+  .tabs_shop .info a{
+    font-size: 14px;
+  }
+  .tabs_demo .tabs_inner .col-inner{
+    padding: 10px;
+  }
+  .tabs_demo .tabs_inner .container-fluid{
+    padding: 0;
+  }
   .galaxy_eff{
     transform: none;
   }

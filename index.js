@@ -214,6 +214,62 @@ const app = {
         }
       }
     })
+    const tab_sl3 = new Swiper('#tabs_shop_splide-3', {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: false,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        525: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1025: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    })
+    const tab_sl4 = new Swiper('#tabs_shop_splide-4', {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: false,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        525: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1025: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    })
     $('#tabs_demo').on('click', 'button', function () {
       $('#tabs_demo').find('button.is-active').removeClass('is-active');
       $(this).addClass('is-active');

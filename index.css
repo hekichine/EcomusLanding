@@ -126,6 +126,9 @@ header {
   max-width: 35%;
   overflow: hidden;
 }
+.banner .banner_svg_bg img{
+  position: unset;
+}
 
 
 .banner .button-label {

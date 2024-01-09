@@ -667,6 +667,7 @@ inset: -1px;
   justify-content: center;
   transition: 0.35s ease-in-out;
   z-index: 2;
+  pointer-events: none;
 }
 
 .demos .preview_btn {
@@ -691,8 +692,8 @@ inset: -1px;
       #ff9c8d 2.41%,
       #d655a5 48.93%,
       #6053cb 94.5%);
+      pointer-events: auto;
 }
-
 
 .empower .col-left {
   display: flex;

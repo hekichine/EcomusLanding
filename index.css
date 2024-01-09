@@ -114,7 +114,7 @@ header {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .banner .banner_svg_bg {
@@ -122,7 +122,7 @@ header {
   top: 0;
   right: 0;
   z-index: 1;
-  pointer-events: nonex;
+  pointer-events: none;
   max-width: 35%;
   overflow: hidden;
 }
@@ -670,7 +670,7 @@ header {
   justify-content: center;
   transition: 0.35s ease-in-out;
   z-index: 2;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .demos .preview_btn {
@@ -1206,7 +1206,7 @@ popup counter {
   background-size: cover;
   transform: translateY(-10%);
   z-index: -1;
-  pointer-events: nonex;
+  pointer-events: none;
   /* filter: blur(150px); */
   /* transform: translateX(-50%) translateY(15%); */
 
@@ -1232,7 +1232,7 @@ popup counter {
 
 .shopify_app .under-line {
   position: absolute;
-  pointer-events: nonex;
+  pointer-events: none;
   color: transparent;
 }
 
@@ -1412,7 +1412,7 @@ popup counter {
   left: 0;
   right: 0;
   bottom: 0;
-  pointer-events: nonex;
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -1426,7 +1426,7 @@ popup counter {
   right: 0;
   transform: translateY(-50%);
   z-index: -1;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 /* grid layout2 */
@@ -1471,7 +1471,7 @@ popup counter {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .splider_show .splider_wrap {
@@ -1487,7 +1487,7 @@ popup counter {
   width: 20%;
   border-radius: 0px 20px 0px 0px;
   background: linear-gradient(270deg, #1A1B1F 13.79%, rgba(26, 27, 31, 0.50) 60.34%, rgba(26, 27, 31, 0.00) 100%);
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .splider_show .slide_grid .marquee__item .hdt-ratio {
@@ -1615,7 +1615,7 @@ popup counter {
   right: 0;
   bottom: 0;
   z-index: -1;
-  /* pointer-events: nonex; */
+  /* pointer-events: none; */
   max-width: 40%;
 }
 
@@ -1638,7 +1638,7 @@ popup counter {
   bottom: 0;
   transform: translateY(50%) translateX(0);
   z-index: -1;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .hdt-table .title {
@@ -1782,7 +1782,7 @@ popup counter {
 .hdt-table .ww.view .tb_viewmore {
   opacity: 0;
   visibility: hidden;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .hdt-table table {
@@ -2078,7 +2078,7 @@ popup counter {
   right: 0;
   top: 0;
   width: 100%;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .tabs_demo .tabs_shop_splide.control-active {
@@ -2196,7 +2196,7 @@ popup counter {
 }
 
 .splide-2 .marquee {
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .splide-2+.line {
@@ -2213,7 +2213,7 @@ popup counter {
 }
 
 .b_ecomus .b_e {
-  pointer-events: nonex;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -2313,7 +2313,7 @@ popup counter {
 }
 
 .b_ecomus .splide3 .marquee {
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .b_ecomus .splide3::before {
@@ -2322,7 +2322,7 @@ popup counter {
   inset: 0px 0px -2px 0px;
   background: linear-gradient(0deg, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
   z-index: 2;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 /* my video */
@@ -2336,7 +2336,7 @@ popup counter {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: nonex;
+  pointer-events: none;
   z-index: -1;
   display: none;
 }
@@ -2431,7 +2431,7 @@ popup counter {
   left: 0;
   border-radius: inherit;
   background-color: rgba(255, 255, 255, 0.7);
-  pointer-events: nonex;
+  pointer-events: none;
   transition: .25s ease-in;
   z-index: 2;
   display: none;
@@ -2461,7 +2461,7 @@ popup counter {
   position: absolute;
   top: 22px;
   left: 22px;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .my_vid video {
@@ -2583,7 +2583,7 @@ popup counter {
   right: 0;
   bottom: 0;
   left: 0;
-  pointer-events: nonex;
+  pointer-events: none;
   display: none;
 }
 
@@ -2694,7 +2694,7 @@ popup counter {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  pointer-events: nonex;
+  pointer-events: none;
   z-index: -1;
 }
 
@@ -2843,7 +2843,7 @@ popup counter {
 }
 
 .footer-inner img {
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .footer-inner .bg {
@@ -2851,7 +2851,7 @@ popup counter {
   bottom: 0;
   right: 0;
   z-index: 0;
-  pointer-events: nonex;
+  pointer-events: none;
 }
 
 .footer-inner .boxed {
@@ -3007,7 +3007,10 @@ popup counter {
 
 @media (min-width: 1366px) and (max-width: 1440px) {
   
-
+  .empower_grid .col-llg-4{
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
   .empower_grid .col:not(.item1,.item2) .col-wrap {
     height: unset !important;
   }

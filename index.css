@@ -30,7 +30,9 @@ header {
   transition: 0.15s linear;
   z-index: 888;
 }
-
+.logo_cta img{
+  width: 120px;
+}
 .logo_mb {
   display: none;
 }
@@ -77,6 +79,7 @@ header {
 }
 
 .hdt-header .hdt-logo {
+  flex: 0 0 auto;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -4992,6 +4992,10 @@ popup counter {
     max-height: unset;
     height: unset;
   } */
+
+  .banner .banner_svg_linear{
+    transform: none;
+  }
   .shopify_app .form .inner {
     gap: 10px;
     height: 48px;

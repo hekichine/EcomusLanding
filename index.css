@@ -5003,6 +5003,9 @@ popup counter {
     max-height: unset;
     height: unset;
   } */
+  .hdt-table .hdt-wrap{
+    margin-bottom: 10px;
+  }
   .hdt-table .hdt-table_wrap {
     padding: 0 15px;
   }

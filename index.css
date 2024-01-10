@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* 
   1. header
   2. main
@@ -195,8 +202,8 @@ header {
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
   -webkit-animation: bghover 15s linear infinite;
           animation: bghover 15s linear infinite;
@@ -229,8 +236,8 @@ header {
 }
 
 .banner .button-label span.eff::after {
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--link-color-active)), to(transparent));
   background-image: -o-linear-gradient(left, transparent, var(--link-color-active), transparent);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--link-color-active)), to(transparent));
   background-image: linear-gradient(90deg, transparent, var(--link-color-active), transparent);
   content: "";
   left: 150%;
@@ -330,8 +337,8 @@ header {
   right: -12px;
   bottom: -10px;
   border-radius: 29.585px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(transparent));
   background: -o-linear-gradient(top, #fff, transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(transparent));
   background: linear-gradient(to bottom, #fff, transparent);
   opacity: 0.3;
   z-index: -1;
@@ -580,8 +587,8 @@ header {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
   z-index: -1;
   border-radius: inherit;
@@ -648,15 +655,15 @@ header {
 }
 
 .features .heading .gradient {
+  background: -o-linear-gradient(left,
+      #ff9c8d 18.06%,
+      #d655a5 60.19%,
+      #6053cb 100%);
   background: -webkit-gradient(linear,
       left top, right top,
       color-stop(18.06%, #ff9c8d),
       color-stop(60.19%, #d655a5),
       to(#6053cb));
-  background: -o-linear-gradient(left,
-      #ff9c8d 18.06%,
-      #d655a5 60.19%,
-      #6053cb 100%);
   background: linear-gradient(90deg,
       #ff9c8d 18.06%,
       #d655a5 60.19%,
@@ -830,15 +837,15 @@ header {
 .demos .preview_wrap {
   position: absolute;
   inset: -2px;
+  background: -o-linear-gradient(top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.67) 51.04%,
+      #000 100%);
   background: -webkit-gradient(linear,
       left top, left bottom,
       from(rgba(0, 0, 0, 0)),
       color-stop(51.04%, rgba(0, 0, 0, 0.67)),
       to(#000));
-  background: -o-linear-gradient(top,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.67) 51.04%,
-      #000 100%);
   background: linear-gradient(180deg,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.67) 51.04%,
@@ -964,8 +971,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.49)), to(rgba(0, 0, 0, 0.00)));
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.49)), to(rgba(0, 0, 0, 0.00)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1709,8 +1716,8 @@ popup counter {
   right: 0;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: -o-linear-gradient(top, #ff9c8d, #6053cb, #04050e00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: linear-gradient(180deg, #ff9c8d, #6053cb, #04050e00);
   z-index: -3;
   border-radius: inherit;
@@ -1812,8 +1819,8 @@ popup counter {
   bottom: -5px;
   width: 20%;
   border-radius: 0px 20px 0px 0px;
-  background: -webkit-gradient(linear, right top, left top, color-stop(13.79%, #1A1B1F), color-stop(60.34%, rgba(26, 27, 31, 0.50)), to(rgba(26, 27, 31, 0.00)));
   background: -o-linear-gradient(right, #1A1B1F 13.79%, rgba(26, 27, 31, 0.50) 60.34%, rgba(26, 27, 31, 0.00) 100%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(13.79%, #1A1B1F), color-stop(60.34%, rgba(26, 27, 31, 0.50)), to(rgba(26, 27, 31, 0.00)));
   background: linear-gradient(270deg, #1A1B1F 13.79%, rgba(26, 27, 31, 0.50) 60.34%, rgba(26, 27, 31, 0.00) 100%);
   pointer-events: none;
 }
@@ -2089,8 +2096,8 @@ popup counter {
   border-radius: 40px;
   -webkit-backdrop-filter: blur(21px);
           backdrop-filter: blur(21px);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: -o-linear-gradient(top, #ff9c8d, #6053cb, #04050e00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: linear-gradient(180deg, #ff9c8d, #6053cb, #04050e00);
   z-index: -3;
 }
@@ -2120,8 +2127,8 @@ popup counter {
   content: "";
   inset: 0;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 5, 14, 0.00)), color-stop(38.62%, rgba(4, 5, 14, 0.50)), color-stop(71.99%, #04050E));
   background: -o-linear-gradient(top, rgba(4, 5, 14, 0.00) 0%, rgba(4, 5, 14, 0.50) 38.62%, #04050E 71.99%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 5, 14, 0.00)), color-stop(38.62%, rgba(4, 5, 14, 0.50)), color-stop(71.99%, #04050E));
   background: linear-gradient(180deg, rgba(4, 5, 14, 0.00) 0%, rgba(4, 5, 14, 0.50) 38.62%, #04050E 71.99%);
   z-index: 1;
   -webkit-transition: opacity .25s ease-in, visibility .25s ease-in;
@@ -2207,15 +2214,15 @@ popup counter {
   height: 1px;
   top: 50%;
   right: 0;
+  background: -o-linear-gradient(left,
+      #ff9c8d 0%,
+      #d655a5 50.49%,
+      #6053cb 99.94%);
   background: -webkit-gradient(linear,
       left top, right top,
       from(#ff9c8d),
       color-stop(50.49%, #d655a5),
       color-stop(99.94%, #6053cb));
-  background: -o-linear-gradient(left,
-      #ff9c8d 0%,
-      #d655a5 50.49%,
-      #6053cb 99.94%);
   background: linear-gradient(90deg,
       #ff9c8d 0%,
       #d655a5 50.49%,
@@ -2419,8 +2426,8 @@ popup counter {
 }
 
 .tabs_demo .title .gradient {
-  background: -webkit-gradient(linear, left top, right top, color-stop(22.6%, #FF9C8D), color-stop(51.31%, #D655A5), color-stop(79.43%, #6053CB));
   background: -o-linear-gradient(left, #FF9C8D 22.6%, #D655A5 51.31%, #6053CB 79.43%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(22.6%, #FF9C8D), color-stop(51.31%, #D655A5), color-stop(79.43%, #6053CB));
   background: linear-gradient(90deg, #FF9C8D 22.6%, #D655A5 51.31%, #6053CB 79.43%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2469,8 +2476,8 @@ popup counter {
   color: #fff;
 } */
 .tabs_demo .tabs_group button.is-active::before {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
 
@@ -2575,8 +2582,8 @@ popup counter {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1A1B1F), to(rgba(26, 27, 31, 0.00)));
   background: -o-linear-gradient(top, #1A1B1F 0%, rgba(26, 27, 31, 0.00) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A1B1F), to(rgba(26, 27, 31, 0.00)));
   background: linear-gradient(180deg, #1A1B1F 0%, rgba(26, 27, 31, 0.00) 100%);
   padding: 55px 15px 30px 15px;
   text-align: center;
@@ -2630,8 +2637,8 @@ popup counter {
 }
 
 .mb_screen .gradient {
-  background: -webkit-gradient(linear, left top, right top, color-stop(29.33%, #FF9C8D), color-stop(50.37%, #D655A5), color-stop(70.98%, #6053CB));
   background: -o-linear-gradient(left, #FF9C8D 29.33%, #D655A5 50.37%, #6053CB 70.98%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(29.33%, #FF9C8D), color-stop(50.37%, #D655A5), color-stop(70.98%, #6053CB));
   background: linear-gradient(90deg, #FF9C8D 29.33%, #D655A5 50.37%, #6053CB 70.98%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2824,8 +2831,8 @@ popup counter {
   position: absolute;
   content: "";
   inset: 0px 0px -2px 0px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#04050E), color-stop(56.25%, rgba(4, 5, 14, 0.50)), to(rgba(4, 5, 14, 0.00)));
   background: -o-linear-gradient(bottom, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#04050E), color-stop(56.25%, rgba(4, 5, 14, 0.50)), to(rgba(4, 5, 14, 0.00)));
   background: linear-gradient(0deg, #04050E 0%, rgba(4, 5, 14, 0.50) 56.25%, rgba(4, 5, 14, 0.00) 100%);
   z-index: 2;
   pointer-events: none;
@@ -2848,8 +2855,8 @@ popup counter {
 }
 
 .my_vid .gradient {
-  background: -webkit-gradient(linear, left top, right top, color-stop(24.18%, #FF9C8D), color-stop(50.09%, #D655A5), color-stop(75.46%, #6053CB));
   background: -o-linear-gradient(left, #FF9C8D 24.18%, #D655A5 50.09%, #6053CB 75.46%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(24.18%, #FF9C8D), color-stop(50.09%, #D655A5), color-stop(75.46%, #6053CB));
   background: linear-gradient(90deg, #FF9C8D 24.18%, #D655A5 50.09%, #6053CB 75.46%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2886,8 +2893,8 @@ popup counter {
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: -o-linear-gradient(top, #ff9c8d, #6053cb, #04050e00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9c8d), color-stop(#6053cb), to(#04050e00));
   background: linear-gradient(180deg, #ff9c8d, #6053cb, #04050e00);
   z-index: -3;
 }
@@ -3182,8 +3189,8 @@ popup counter {
 }
 
 .ecomposer .title .gradient {
-  background: -webkit-gradient(linear, left top, right top, color-stop(20.05%, #FF9C8D), color-stop(41.92%, #D655A5), color-stop(63.34%, #6053CB));
   background: -o-linear-gradient(left, #FF9C8D 20.05%, #D655A5 41.92%, #6053CB 63.34%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(20.05%, #FF9C8D), color-stop(41.92%, #D655A5), color-stop(63.34%, #6053CB));
   background: linear-gradient(90deg, #FF9C8D 20.05%, #D655A5 41.92%, #6053CB 63.34%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -3586,8 +3593,8 @@ popup counter {
   }
 
   .demos .col-inner:hover::after {
-    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
     background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
     background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
     -webkit-animation: bghover 15s linear infinite;
             animation: bghover 15s linear infinite;
@@ -4994,7 +5001,9 @@ popup counter {
   } */
 
   .banner .banner_svg_linear{
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .shopify_app .form .inner {
     gap: 10px;

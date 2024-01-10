@@ -652,7 +652,7 @@ picture {
   display: block !important;
   padding-bottom: var(--ratio-percent);
 }
-.hdt-ratio img{
+.hdt-ratio :where(img,picture){
   position: absolute;
   inset: 0;
   display: block;

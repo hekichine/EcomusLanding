@@ -3847,7 +3847,7 @@ popup counter {
   }
 
   .logo_cta img {
-    max-width: 120px;
+    max-width: 100px;
   }
 
   .video-item .btn-popup-mb {
@@ -4200,6 +4200,9 @@ popup counter {
 }
 
 @media (max-width: 650px) {
+  .demos .demos_count h3{
+    font-size: 70px;
+  }
   .demos .preview_btn {
     margin-bottom: 5px;
   }

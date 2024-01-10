@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by:
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* 
   1. header
   2. main
@@ -5001,9 +4994,12 @@ popup counter {
   } */
 
   .banner .banner_svg_linear{
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
+    -webkit-filter: blur(120px);
+            filter: blur(120px);
+    opacity: 0.8;
+    -webkit-transform: translate(-30%,-50%);
+        -ms-transform: translate(-30%,-50%);
+            transform: translate(-30%,-50%);
   }
   .shopify_app .form .inner {
     gap: 10px;

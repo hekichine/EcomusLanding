@@ -4789,7 +4789,7 @@ popup counter {
 
   .splide-2 .marquee__item {
     margin-right: 15px;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .splide-2 .marquee__item svg {
@@ -4896,7 +4896,7 @@ popup counter {
     font-size: 70px;
   }
   .demos .preview_btn {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .tabs_demo .tabs_inner {
@@ -5257,10 +5257,15 @@ popup counter {
 
   .hdt-table .hdt-des {
     font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .hdt-table .heading{
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 425px) {
+
   :where(.empower_grid .banner_wrap, popup .banner_wrap) .count {
     font-size: 35px;
   }
@@ -5300,8 +5305,13 @@ popup counter {
 
 
 }
-
+@media (max-width: 290px){
+  :where(.empower_grid .banner_wrap, popup .banner_wrap) .text{
+    font-size: 45px;
+  }
+}
 @media (max-width: 375px) {
+ 
   .empower_grid .item3 .col-wrap {
     height: 350px;
   }

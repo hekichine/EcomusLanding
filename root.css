@@ -2482,6 +2482,8 @@ cursor {
 
 .partner-pop .p_content {
   padding: 25px 29px 30px;
+  max-height: min(360px,45vh);
+  overflow-y: scroll;
 }
 
 .partner-pop .p_content h3 {

@@ -2517,6 +2517,15 @@ cursor {
 .partner-pop .p_content ul {
   margin-bottom: 25px;
 }
+.partner-pop .p_content ul li{
+  display: flex;
+  gap: 8px;
+  margin-top: 11px;
+}
+.partner-pop .p_content ul svg{
+  flex: 0 0 15px;
+  margin-top: 4px;
+}
 
 .partner-pop .p_content .pn_cld {
   border-radius: 100px;

@@ -566,33 +566,33 @@ const app = {
     });
   }
   ,
-  table:()=>{
-    if(window.innerWidth < 767){
+  table: () => {
+    if (window.innerWidth < 767) {
       return;
     }
     $('table tbody tr:not(.total)').slice(16).hide();
-    $(document).on('click','.tb_viewmore',function(){
+    $(document).on('click', '.tb_viewmore', function () {
       $('table tbody tr:not(.total)').slideDown();
       $('.hdt-table .ww').addClass('view');
 
     })
   },
-  demo_open:()=>{
-    $(document).on('click','[demo_open]',function(e){
-      if($('.pass_pop').attr('clicked') == 'clicked'){
+  demo_open: () => {
+    $(document).on('click', '[demo_open]', function (e) {
+      if ($('.pass_pop').attr('clicked') == 'clicked') {
         return;
       }
       e.preventDefault();
       $('.pass_pop').addClass('open');
-      $('.pass_pop .view_more').attr('href',`${$(this).attr('href')}`)
+      $('.pass_pop .view_more').attr('href', `${$(this).attr('href')}`)
     })
   },
-  password_popup:()=>{
-    $(document).on('click','.pass_pop .overlay,.pass_pop .close',function(){
+  password_popup: () => {
+    $(document).on('click', '.pass_pop .overlay,.pass_pop .close', function () {
       $('.pass_pop').removeClass('open')
     });
-    $(document).on('click','.pass_pop .view_more',function(){
-      $('.pass_pop').attr('clicked',"clicked")
+    $(document).on('click', '.pass_pop .view_more', function () {
+      $('.pass_pop').attr('clicked', "clicked")
     })
   },
   start: () => {
@@ -633,14 +633,14 @@ const app = {
 
 app.start();
 
-class topBar extends HTMLElement{
-  constructor(){
+class topBar extends HTMLElement {
+  constructor() {
     super();
-    if(window.innerWidth <767){
+    if (window.innerWidth < 767) {
       return;
     }
-    if(JSON.parse(localStorage.getItem('topbar'))?.active == false){
-      this.style.display='none';
+    if (JSON.parse(localStorage.getItem('topbar'))?.active == false) {
+      this.style.display = 'none';
       return;
     }
     this.slider = this.querySelector('.slider');
@@ -648,10 +648,10 @@ class topBar extends HTMLElement{
     this.initSlider();
     this.close()
   }
-  initSlider(){
-    
+  initSlider() {
+
     let self = this;
-    if(!self.slider){
+    if (!self.slider) {
       return;
     }
     return new Swiper(self.slider, {
@@ -660,18 +660,59 @@ class topBar extends HTMLElement{
         delay: 5000,
         disableOnInteraction: false,
       },
-      grabCursor:true
+      grabCursor: true
     })
   }
-  close(){
+  close() {
     let self = this;
-    if(!self.btn_close){
+    if (!self.btn_close) {
       return;
     }
-    self.btn_close.addEventListener('click',function(){
+    self.btn_close.addEventListener('click', function () {
       self.style.height = 0;
-      localStorage.setItem('topbar','{"active":false}')
+      localStorage.setItem('topbar', '{"active":false}')
     })
   }
 }
-customElements.define('topbar-custom',topBar)
+customElements.define('topbar-custom', topBar)
+
+
+class partner extends HTMLElement {
+  constructor() {
+    super();
+    this.overlay = document.querySelector('.partner-pop .overlay');
+    this.close = document.querySelector('.partner-pop button.close');
+    this.popup = document.querySelector('.partner-pop');
+    this.clickAction();
+
+  }
+  clickAction() {
+    let self = this;
+    self.addEventListener('click',function(){
+      self.classList.add('is-active');
+      self.popup.classList.add('open');
+      let data = {
+        img: self.querySelector('[pn-img]').getAttribute('src'),
+        content: self.querySelector('[pn-content]').cloneNode(true).innerHTML,
+      }
+      self.openModal(data)
+    })
+    if(self.popup){
+      self.overlay.addEventListener('click',function(){
+        self.popup.classList.remove('open');
+        self.classList.remove('is-active')
+      })
+      self.close.addEventListener('click',function(){
+        self.popup.classList.remove('open');
+        self.classList.remove('is-active')
+      })
+    }
+  }
+  openModal(data){
+    let self= this;
+    self.popup.querySelector('img').setAttribute('src',data.img);
+    self.popup.querySelector('.p_content').innerHTML = data.content;
+  }
+  
+}
+customElements.define('part-ner', partner)

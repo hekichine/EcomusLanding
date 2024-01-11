@@ -1868,7 +1868,15 @@ popup counter {
   position: relative;
   overflow: hidden;
 }
-
+.grid_layout2 .col:nth-child(1) .col-inner{
+ overflow:visible;
+}
+.grid_layout2 .col-inner .svg_bg {
+  pointer-events: none;
+}
+.grid_layout2 .col-inner .svg_bg img  {
+  position: unset;
+}
 .grid_layout2 .label {
   font-size: 12px;
   font-style: normal;

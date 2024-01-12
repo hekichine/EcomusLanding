@@ -2723,7 +2723,7 @@ popup counter {
 }
 
 .b_ecomus .b_e .inner {
-  border-radius: 20px 20px 200px 200px;
+  border-radius: 20px 20px 105px 105px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: -o-radial-gradient(-5.51% -4.72%, 117.63% 154.08%, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
   background: radial-gradient(117.63% 154.08% at -5.51% -4.72%, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
@@ -2733,7 +2733,7 @@ popup counter {
   max-width: 90%;
   margin: 0 auto;
   text-align: center;
-  padding: 82px 55px 82px;
+  padding: 82px 55px 55px;
   pointer-events: auto;
 }
 
@@ -3783,7 +3783,7 @@ transition: bottom .25s ease-in;
 
 }
 
-@media (min-width: 1366px) and (max-width: 1440px) {
+@media (min-width: 1366px) and (max-width: 1480px) {
   .wrap_partner .p_i{
     max-width: 370px;
   }
@@ -3807,7 +3807,7 @@ transition: bottom .25s ease-in;
 
 }
 
-@media(min-width: 1200px) and (max-width: 1440px) {
+@media(min-width: 1200px) and (max-width: 1480px) {
 
   .empower_grid .col-wrap.item-fix {
     height: 700px;

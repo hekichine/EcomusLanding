@@ -2472,7 +2472,7 @@ cursor {
   margin: auto;
   background: #fff;
   border-radius: 10px;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .partner-pop .content .img_w {
@@ -2482,8 +2482,6 @@ cursor {
 
 .partner-pop .p_content {
   padding: 25px 29px 30px;
-  max-height: min(360px,45vh);
-  overflow-y: scroll;
 }
 
 .partner-pop .p_content h3 {
@@ -2531,7 +2529,7 @@ cursor {
 
 .partner-pop .p_content .pn_cld {
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  border: none;
   background: linear-gradient(93deg, #FF9C8D 1.31%, #D655A5 50.71%, #6053CB 99.1%);
   padding: 13px 22px;
   display: inline-flex;

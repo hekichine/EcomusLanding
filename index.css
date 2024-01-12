@@ -3846,9 +3846,6 @@ transition: bottom .25s ease-in;
   }
 
 
-  .demos .section-inner {
-    padding-top: 50px;
-  }
 
   .empower .tophead {
     margin-bottom: 115px;
@@ -3983,8 +3980,15 @@ transition: bottom .25s ease-in;
 }
 
 @media (max-width: 1500px) {
+
+  .demos .section-inner {
+    padding-top: 50px;
+  }
   .solution .content {
     text-align: center;
+  }
+  .features .col_wrap{
+    padding: 40px;
   }
 
 

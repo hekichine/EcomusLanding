@@ -321,7 +321,7 @@ const app = {
     }
 
     // return;
-    const str2 = "one-time paiment";
+    const str2 = "one-time payment";
     const text2 = $('#payment_circle');
     // console.log(text);
     for (let i = 0; i < str2.length; i++) {
@@ -659,6 +659,7 @@ class topBar extends HTMLElement {
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
       grabCursor: true
     })

@@ -953,6 +953,8 @@ picture {
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
+  width: 735px;
+  max-width: 100%;
 }
 
 @-webkit-keyframes move_right {

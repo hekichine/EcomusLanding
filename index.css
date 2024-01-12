@@ -171,11 +171,6 @@ header {
   overflow: hidden;
 }
 
-.banner .banner_svg_bg img {
-  position: unset;
-}
-
-
 .banner .button-label {
   font-size: 16px;
   font-weight: 600;
@@ -3634,9 +3629,9 @@ transition: bottom .25s ease-in;
 
 @media (min-width: 769px) {
   .my_vid .video_wrap .video-item.is-hover {
-    -webkit-box-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
+    -webkit-box-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
   }
 
   .banner .banner_demo {
@@ -3834,7 +3829,7 @@ transition: bottom .25s ease-in;
   }
 
   .banner .banner_svg_bg {
-    max-width: 500px;
+    width: 500px;
   }
 
   .banner .banner_demo-1 {
@@ -3853,7 +3848,11 @@ transition: bottom .25s ease-in;
 }
 
 @media (min-width: 1700px) {
-
+  .my_vid .video_wrap .video-item.is-hover {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+  }
   .shopify_app .col-left {
     padding-top: 98px;
   }
@@ -4153,6 +4152,9 @@ transition: bottom .25s ease-in;
 }
 
 @media (max-width: 1024px) {
+  .banner .banner_demo-img-wrap::before,.banner .banner_demo-img-wrap::after{
+    display: none;
+  }
   .wrap_partner .p_ctn{
     gap: 20px;
   }
@@ -5435,7 +5437,7 @@ transition: bottom .25s ease-in;
 }
 
 @media (max-width: 425px) {
-
+ 
   :where(.empower_grid .banner_wrap, popup .banner_wrap) .count {
     font-size: 35px;
   }
@@ -5577,8 +5579,8 @@ transition: bottom .25s ease-in;
 
   .my_vid .video_wrap .video-item {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 300px;
-    flex: 1 0 300px;
+    -ms-flex: 1 0 325px;
+    flex: 1 0 325px;
   }
 }
 
@@ -5586,7 +5588,19 @@ transition: bottom .25s ease-in;
   .b_ecomus .title {
     font-size: 12px;
   }
-
+  .video-item .btn-popup span{
+    display: none;
+   
+  }
+  .video-item .btn-popup{
+    width: 40px;height: 40px;
+    padding: 0;
+   
+  }
+  .video-item .popup{
+    top: 50%;left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
   .hdt-table .hdt-des {
     font-size: 10px;
   }

@@ -2754,7 +2754,8 @@ popup counter {
   border-radius: inherit;
   transition: background .35s ease-in;
 }
-.wrap_partner .is-active .p_inner::before{
+.wrap_partner .is-active .p_inner::before,
+.wrap_partner .p_inner:hover::before{
   background: var(--linear);
 }
 

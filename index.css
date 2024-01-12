@@ -5472,7 +5472,9 @@ transition: bottom .25s ease-in;
 }
 
 @media (max-width: 375px) {
-
+  .empower_grid .item14 .col-wrap {
+    height: 400px;
+  }
   .empower_grid .item3 .col-wrap {
     height: 350px;
   }

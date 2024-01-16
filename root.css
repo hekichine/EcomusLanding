@@ -829,9 +829,9 @@ picture {
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
 [filter-tabs] button.coming-soon::before{
-  background: linear-gradient(91.77deg, #76F5BC 4.77%, #221DF3 56.98%, #EBEEF9 99.33%);
+  background: linear-gradient(91.77deg, #76F5BC 4.77%, #221DF3 16.98%, #9417e3 30.33%, #51d306 50%, #ee04a0 70% ,#fafafa 90% , #00eaff 100%);
   background-size: 400% 400%;
-  animation: bghover 15s linear infinite;
+  animation: comingsoon 20s linear infinite forwards;
 }
 
 @-webkit-keyframes text_circle {
@@ -1227,21 +1227,19 @@ back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
-
-@-webkit-keyframes bghover {
+@keyframes comingsoon {
   0% {
-    background-position: 0% 50%;
+    background-position: 50% 100%;
   }
 
   50% {
-    background-position: 100% 50%;
+    background-position: 400% 200%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 100%;
   }
 }
-
 @keyframes bghover {
   0% {
     background-position: 0% 50%;

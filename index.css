@@ -3758,7 +3758,7 @@ popup counter {
     visibility: hidden;
   }
   .demos .col-inner:hover .comingsoon_preview .cms_label{
-    transform: translateX(100%);
+    transform: translateY(100%);
     opacity: 0;
   }
   .demos .col-inner:hover  .comingsoon_preview .view_hover::before{

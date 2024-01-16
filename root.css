@@ -804,6 +804,7 @@ picture {
   transition: 0.25s ease-in-out;
 }
 
+
 [filter-tabs] button.is-active {
   color: #fff;
 }
@@ -812,6 +813,10 @@ picture {
   background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
+}
+[filter-tabs] button.coming-soon{
+  gap: 10px;
+  color: #fff;
 }
 
 [filter-tabs] button:hover {
@@ -822,6 +827,11 @@ picture {
   background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ff9c8d), color-stop(#d655a5), color-stop(60%, #6053cb));
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
+}
+[filter-tabs] button.coming-soon::before{
+  background: linear-gradient(91.77deg, #76F5BC 4.77%, #221DF3 56.98%, #EBEEF9 99.33%);
+  background-size: 400% 400%;
+  animation: bghover 15s linear infinite;
 }
 
 @-webkit-keyframes text_circle {

@@ -579,12 +579,17 @@ const app = {
   },
   demo_open: () => {
     $(document).on('click', '[demo_open]', function (e) {
-      if ($('.pass_pop').attr('clicked') == 'clicked') {
+      if ($(this).attr('href') != '#comingsoon' && $('.pass_pop').attr('clicked') == 'clicked') {
         return;
       }
       e.preventDefault();
-      $('.pass_pop').addClass('open');
-      $('.pass_pop .view_more').attr('href', `${$(this).attr('href')}`)
+      if($(this).attr('href') != '#comingsoon'){
+        let url_link = $(this).attr('href');
+        $('.pass_pop').addClass('open');
+        $('.pass_pop .view_more').attr('href', `${url_link}`);
+      }else{
+        window.open('https://1.envato.market/Y9mvDR','_blank')
+      }
     })
   },
   password_popup: () => {

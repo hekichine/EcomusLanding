@@ -865,7 +865,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 11px;
-  margin-bottom: 34px;
+  margin-bottom: 10px;
 }
 
 .demos .preview_btn a {

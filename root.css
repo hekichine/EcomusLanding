@@ -814,7 +814,8 @@ picture {
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
-[filter-tabs] button.coming-soon{
+
+[filter-tabs] button.coming-soon {
   gap: 10px;
   color: #fff;
 }
@@ -828,8 +829,9 @@ picture {
   background: -o-linear-gradient(left, #ff9c8d 10%, #d655a5, #6053cb 60%);
   background: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 }
-[filter-tabs] button.coming-soon::before{
-  background: linear-gradient(91.77deg, #76F5BC 4.77%, #221DF3 16.98%, #9417e3 30.33%, #51d306 50%, #ee04a0 70% ,#fafafa 90% , #00eaff 100%);
+
+[filter-tabs] button.coming-soon::before {
+  background: linear-gradient(91.77deg, #76F5BC 4.77%, #221DF3 16.98%, #9417e3 30.33%, #51d306 50%, #ee04a0 70%, #fafafa 90%, #00eaff 100%);
   background-size: 400% 400%;
   animation: comingsoon 20s linear infinite forwards;
 }
@@ -1227,6 +1229,7 @@ back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
+
 @keyframes comingsoon {
   0% {
     background-position: 50% 100%;
@@ -1240,6 +1243,7 @@ back-to-top.show {
     background-position: 50% 100%;
   }
 }
+
 @keyframes bghover {
   0% {
     background-position: 0% 50%;
@@ -1331,7 +1335,10 @@ popup button.popup-close {
   right: 0;
   /* transform: translateX(100%); */
   z-index: 1;
+  transition: color .25s ease-in-out;
 }
+
+
 
 popup .content-wrap {
   position: relative;
@@ -1651,6 +1658,8 @@ popup .d-none {
     width: 40px;
     height: 40px;
   }
+
+
 }
 
 @media (max-width: 1023px) {
@@ -2527,12 +2536,14 @@ cursor {
 .partner-pop .p_content ul {
   margin-bottom: 25px;
 }
-.partner-pop .p_content ul li{
+
+.partner-pop .p_content ul li {
   display: flex;
   gap: 8px;
   margin-top: 11px;
 }
-.partner-pop .p_content ul svg{
+
+.partner-pop .p_content ul svg {
   flex: 0 0 15px;
   margin-top: 4px;
 }
@@ -2562,18 +2573,23 @@ cursor {
   align-items: center;
   color: #000;
   z-index: 24;
+  transition: color .25s ease-in-out;
 }
 
 @media (max-width: 767px) {
-  .partner-pop .p_content{
+  .partner-pop .p_content {
     padding: 15px 20px;
   }
-  .partner-pop .p_content h3{
+
+  .partner-pop .p_content h3 {
     font-size: 20px;
   }
-  .partner-pop .p_content p,.partner-pop .p_content :where(ul, a:not(.pn_cld)){
+
+  .partner-pop .p_content p,
+  .partner-pop .p_content :where(ul, a:not(.pn_cld)) {
     font-size: 14px;
   }
+
   .pass_pop .content {
     padding: 35px 15px 25px;
   }
@@ -2597,4 +2613,9 @@ cursor {
   .pass_pop .close {
     padding: 15px 10px;
   }
+}
+
+popup button.popup-close:hover,
+.partner-pop .close:hover {
+  color: var(--link-color-active);
 }

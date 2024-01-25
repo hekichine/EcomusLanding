@@ -5258,11 +5258,6 @@ popup counter {
   .empower_grid .item13 .col-wrap {
     height: 420px;
   }
-
-  .empower_grid .item14 .col-wrap {
-    height: 420px;
-  }
-
   .empower .col-right p,
   .mb_screen .tophead .des {
     font-size: 14px;
@@ -5666,9 +5661,7 @@ popup counter {
 }
 
 @media (max-width: 375px) {
-  .empower_grid .item14 .col-wrap {
-    height: 400px;
-  }
+
 
   .empower_grid .item3 .col-wrap {
     height: 350px;

@@ -3000,3 +3000,6 @@ animation-timing-function: ease-in-out;
 visibility: visible !important;
 }
 /* end loading page when load */
+loading-page{
+  display: none !important;
+}

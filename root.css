@@ -26,6 +26,10 @@
   --link-color: #fff;
   --link-color-active: #ff9c8d;
   --gradient: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
+
+  --loading_bg: #dddddd;
+  --loading-bar: #000;
+  --loading-bar-active: #fff;
 }
 
 body {
@@ -2632,7 +2636,7 @@ display: -webkit-flex;
 display: flex;
 }
 #loading {
-background-color: #dddddd;
+background-color: var(--loading_bg);
 height: 100%;
 width: 100%;
 position: fixed;
@@ -2728,11 +2732,11 @@ transform: translate(-50%,-50%);
   transform: translate(-100%, 0);
 }
 #loader:before {
-  background-color: #0e3b5a;
+  background-color: var(--loading-bar);
   animation: loading 3400ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
 }
 #loader:after {
-  background-color: #fff;
+  background-color: var(--loading-bar-active);
  transform: translate(0);
  z-index: -1;
 }

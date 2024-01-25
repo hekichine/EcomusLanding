@@ -721,4 +721,47 @@ class partner extends HTMLElement {
   }
   
 }
-customElements.define('part-ner', partner)
+customElements.define('part-ner', partner);
+
+// loading page
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+    setTimeout(function() {    
+      document.getElementById("loading").className = "slideDown";
+    }, 3800);
+  },
+  false
+);
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+    setTimeout(function() {
+      document.getElementById("loading-center").className = "zoomOut";
+    }, 3200);
+  },
+  false
+);
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+    setTimeout(function() {
+      // document.getElementById("block-1").className = "slideInUp";
+       document.querySelector('html').style.overflow = 'auto';
+       document.querySelector('#loader-wrap').classList.add('dom_loaded');
+    }, 3800);
+  },
+  false
+);
+
+
+
+
+
+
+
+
+

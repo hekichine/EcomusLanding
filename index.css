@@ -3752,7 +3752,7 @@ popup counter {
   }
 
   .banner .banner_demo-2 {
-    left: -30px;
+    left: -10px;
   }
 }
 
@@ -3855,6 +3855,9 @@ popup counter {
 }
 
 @media (min-width: 1025px) {
+  .video-item .btn-popup:hover{
+    color: var(--link-color-active)
+  }
   .hdt-header_wrap {
     gap: 39px;
   }
@@ -4284,6 +4287,9 @@ popup counter {
 }
 
 @media (max-width: 1024px) {
+  .tabs{
+    justify-content: flex-start;
+  }
   .demos .comingsoon .info .cms_label {
     display: block;
     font-size: 14px;
@@ -4473,6 +4479,7 @@ popup counter {
 
   .banner .section-inner {
     padding-top: 200px;
+    padding-bottom: 60px;
   }
 
   .banner .banner_demo-1 {

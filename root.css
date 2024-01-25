@@ -2406,6 +2406,11 @@ cursor {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  transition: color .25s ease;
+
+}
+.pass_pop .close:hover{
+  color:red
 }
 
 .pass_pop .content {

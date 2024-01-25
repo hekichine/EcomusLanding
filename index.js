@@ -742,14 +742,14 @@ class loadingPage extends HTMLElement {
     let self = this;
     setTimeout(function () {
       self.loading.className = "slideDown";
-    }, 1000);
+    }, 100);
     setTimeout(function () {
       self.load_center.className = "zoomOut";
-    }, 500);
+    }, 100);
     setTimeout(function () {
       document.querySelector('html').style.overflow = 'auto';
       self.load_wrap.classList.add('dom_loaded');
-    }, 1000);
+    }, 100);
   }
 }
 customElements.define('loading-page', loadingPage)

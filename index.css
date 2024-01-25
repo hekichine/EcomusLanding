@@ -2880,7 +2880,10 @@ popup counter {
   border: .8px solid rgba(255, 255, 255, 0.20);
 
 }
-
+.wrap_partner .i_w >div{
+  border-radius: 5px ;
+  overflow: hidden;
+}
 .wrap_partner .p_c {
   padding-right: 10px;
 }

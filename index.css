@@ -4479,7 +4479,6 @@ popup counter {
 
   .banner .section-inner {
     padding-top: 200px;
-    padding-bottom: 60px;
   }
 
   .banner .banner_demo-1 {
@@ -4780,6 +4779,7 @@ popup counter {
 }
 
 @media (min-width: 768px) {
+
   .b_ecomus .section-inner {
     padding-bottom: 700px !important;
   }
@@ -4809,6 +4809,9 @@ popup counter {
 }
 
 @media (max-width: 768px) {
+  .banner .section-inner{
+    padding-bottom: 60px;
+  }
 
   .my_vid .title {
     font-size: 35px;
@@ -5178,7 +5181,7 @@ popup counter {
   }
 
   .banner .banner_demo-2 {
-    bottom: 20px;
+    bottom: -10px;
   }
 
   .demos .section-inner {

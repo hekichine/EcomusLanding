@@ -3996,6 +3996,9 @@ popup counter {
   .ecom_preview .container-xl {
     max-width: 1470px;
   }
+  .ecom_preview .container {
+    max-width: 1700px;
+  }
 
   .banner .banner_svg_bg {
     max-width: 730px;
@@ -4040,6 +4043,9 @@ popup counter {
 
   .shopify_app .shopify_app_svg {
     display: none;
+  }
+  .ecom_preview .container {
+    max-width: 100%;
   }
 }
 
@@ -6055,6 +6061,7 @@ popup counter {
   .ecom_preview .container-fluid {
     padding: 0 15px;
   }
+
 
   .ecom_preview .tophead {
     margin-top: 40px;

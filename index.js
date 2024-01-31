@@ -638,8 +638,16 @@ const app = {
     const tab_sl5 = new Swiper('.ecom_slider', {
       slidesPerView: 1,
       spaceBetween: 15,
-      loop: false,
+      loop: true,
       grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      centeredSlides: true,
+      initialSlide: 2,
+      autoplay:{
+        delay: 5000
+      },
       breakpoints: {
         525: {
           slidesPerView: 2,
@@ -657,9 +665,13 @@ const app = {
           slidesPerView: 4,
           spaceBetween: 30,
         },
-        1800:{
-          slidesPerView: 5,
-          spaceBetween: 36,
+        1680:{
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+        2000:{
+          slidesPerView: 6,
+          spaceBetween: 30,
         }
       }
     })

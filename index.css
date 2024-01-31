@@ -3048,7 +3048,7 @@ popup counter {
 
 /* my video */
 .my_vid .section-inner {
-  padding: 109px 80px 40px 80px;
+  padding: 0 80px 40px 80px;
   position: relative;
 
 }
@@ -4238,6 +4238,7 @@ popup counter {
 
   .my_vid .section-inner {
     padding: 40px 15px;
+    padding-top: 0;
   }
 
   .my_vid .layout_wrap {
@@ -4814,6 +4815,13 @@ popup counter {
 }
 
 @media (max-width: 768px) {
+  .ecom_preview .swiper-pagination{
+    display: none;
+  }
+  .ecom_preview .ecom_slider {
+    padding-bottom: 50px;
+  }
+
   .banner .section-inner {
     padding-bottom: 60px;
   }
@@ -5824,8 +5832,17 @@ popup counter {
 
 /* ecom preview */
 /* desktop */
-.ecom_preview .ec_slide_gradient{
-  --gradient : rgba(255, 255, 255, 0.20);
+.ecom_preview .section-inner {
+  overflow-x: hidden;
+}
+
+.ecom_preview .ecom_slider {
+  padding-bottom: 144px;
+  position: relative;
+}
+
+.ecom_preview .ec_slide_gradient {
+  --gradient: rgba(255, 255, 255, 0.20);
   content: "";
   position: absolute;
   inset: 0;
@@ -5840,7 +5857,8 @@ popup counter {
   pointer-events: none;
   transition: background .35s ease-in;
 }
-.ecom_preview .wrap_linear{
+
+.ecom_preview .wrap_linear {
   --gradient: linear-gradient(180deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
   content: "";
   position: absolute;
@@ -5855,31 +5873,37 @@ popup counter {
   mask-composite: exclude;
   pointer-events: none;
 }
+
 /* tophead */
-.ecom_preview .tophead{
+.ecom_preview .tophead {
   margin-top: 53px;
   margin-bottom: 72px;
   border-radius: 30px;
   padding: 43px 70px;
 }
-.ecom_preview .tophead .hdt-btn{
+
+.ecom_preview .tophead .hdt-btn {
   height: 42px;
   font-size: 14px;
 }
-.ecom_preview .tophead p{
+
+.ecom_preview .tophead p {
   font-size: 32px;
   font-weight: 500;
   line-height: 1.4;
 }
-.ecom_preview .tophead .text-linear1{
+
+.ecom_preview .tophead .text-linear1 {
   background: linear-gradient(91deg, #FF9C8D 12.39%, #D655A5 29.69%, #6053CB 46.64%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.ecom_preview .tophead .content  > .d-flex{
+
+.ecom_preview .tophead .content>.d-flex {
   gap: 15px;
 }
+
 .ecom_preview .ec_slide_inner {
   padding: 14px;
   padding-bottom: 0;
@@ -5954,11 +5978,33 @@ popup counter {
 
 .ecom_preview .premium {
   background: linear-gradient(94deg, #FF9C8D 0%, #D655A5 47.78%, #6053CB 94.58%);
-  color:#fff
+  color: #fff
 }
-.ecom_preview .free{
+
+.ecom_preview .free {
   background: var(--badge-1);
   color: #000;
+}
+
+.ecom_preview .swiper-pagination {
+  bottom: 83px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ecom_preview .swiper-pagination-bullet {
+  border-radius: 100px;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.40);
+  /* transition: width .25s linear, background .25s ease-in; */
+}
+
+.ecom_preview .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 22px;
+  height: 6px;
+  background: #FFF;
 }
 
 @media (min-width: 1025px) {
@@ -5976,7 +6022,8 @@ popup counter {
   .ecom_preview .ec_slide_inner:hover .hdt-btn {
     animation: btn_visible .25s ease-in forwards;
   }
-  .ecom_preview .ec_slide_inner:hover .ec_slide_gradient{
+
+  .ecom_preview .ec_slide_inner:hover .ec_slide_gradient {
     --gradient: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
   }
 }
@@ -5993,6 +6040,13 @@ popup counter {
 
 /* tablet */
 @media (max-width: 1024px) {
+  .ecom_preview .swiper-pagination{
+    bottom: 30px;
+  }
+  .ecom_preview .ecom_slider {
+    padding-bottom: 70px;
+  }
+
   .ecom_preview .ec_pre_btn {
     padding-bottom: 30px;
     /* background: transparent; */
@@ -6001,12 +6055,14 @@ popup counter {
   .ecom_preview .container-fluid {
     padding: 0 15px;
   }
-  .ecom_preview .tophead{
+
+  .ecom_preview .tophead {
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 35px;
   }
-  .ecom_preview .tophead p{
+
+  .ecom_preview .tophead p {
     font-size: 24px;
   }
 }
@@ -6016,15 +6072,18 @@ popup counter {
   .ecom_preview .ec_pre_btn {
     padding-bottom: 15px;
   }
-  .ecom_preview .tophead{
+
+  .ecom_preview .tophead {
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 20px;
   }
-  .ecom_preview .tophead p{
+
+  .ecom_preview .tophead p {
     font-size: 18px;
   }
-  .ecom_preview .tophead .content > .d-flex{
+
+  .ecom_preview .tophead .content>.d-flex {
     text-align: center;
   }
 }

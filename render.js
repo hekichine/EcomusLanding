@@ -217,4 +217,4 @@ const render_code = () => {
 
   document.getElementById('render_ecom_preview').innerHTML = html.join("").split(",")
 }
-render_code()
+// render_code()

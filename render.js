@@ -114,7 +114,7 @@ const data_ecom_preview = [
   {
     id: 17,
     href: 'https://ecomposer.app/demo/2965',
-    src: 'gym.jpeg',
+    src: 'gym_store.jpeg',
     name: 'GYM Store',
     vip: true,
   },
@@ -128,7 +128,7 @@ const data_ecom_preview = [
   {
     id: 19,
     href: 'https://ecomposer.app/demo/3008',
-    src: 'sneak.jpeg',
+    src: 'snake.jpeg',
     name: 'Sneaker Store',
     vip: false,
   },
@@ -149,7 +149,7 @@ const data_ecom_preview = [
   {
     id: 22,
     href: 'https://ecomposer.app/demo/3061',
-    src: 'cake.jpeg',
+    src: 'cake_shop.jpeg',
     name: 'Cake Shop',
     vip: true,
   },

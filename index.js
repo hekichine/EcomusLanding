@@ -638,7 +638,7 @@ const app = {
     const tab_sl5 = new Swiper('.ecom_slider', {
       slidesPerView: 1,
       spaceBetween: 15,
-      loop: true,
+      loop: false,
       grabCursor: true,
       // slidesPerGroup: 4,
       initialSlide: 9,

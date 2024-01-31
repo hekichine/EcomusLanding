@@ -122,7 +122,7 @@ ol {
     max-width: 100%;
   }
   .container-xl{
-    padding: 0 70px;
+    padding: 0 50px;
   }
 
   .container-fluid {
@@ -140,6 +140,9 @@ ol {
   .container-sm {
     max-width: 1540px;
     padding: 0 50px;
+  }
+  .container-xl{
+    padding: 0 70px;
   }
 }
 

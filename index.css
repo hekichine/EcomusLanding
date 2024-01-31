@@ -6071,12 +6071,14 @@ popup counter {
     transform: translateY(0);
   }
 }
-
-/* tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1680px){
   .ecom_preview .asxkt::before, .ecom_preview .asxkt::after{
     display: none;
   }
+}
+/* tablet */
+@media (max-width: 1024px) {
+ 
   .ecom_preview .bg_blur {
     display: none;
   }

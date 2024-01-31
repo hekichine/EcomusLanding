@@ -6074,7 +6074,9 @@ popup counter {
 
 /* tablet */
 @media (max-width: 1024px) {
-
+  .ecom_preview .asxkt::before, .ecom_preview .asxkt::after{
+    display: none;
+  }
   .ecom_preview .bg_blur {
     display: none;
   }

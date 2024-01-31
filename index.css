@@ -6078,10 +6078,7 @@ popup counter {
 }
 /* tablet */
 @media (max-width: 1024px) {
- 
-  .ecom_preview .bg_blur {
-    display: none;
-  }
+
 
   .ecom_preview .section-inner {
     padding-bottom: 30px;
@@ -6110,6 +6107,10 @@ popup counter {
 
 /* mobile */
 @media (max-width: 767px) {
+   
+  .ecom_preview .bg_blur {
+    display: none;
+  }
   .ecom_preview .ec_pre_btn {
     padding-bottom: 15px;
   }

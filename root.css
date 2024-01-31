@@ -3009,3 +3009,15 @@ visibility: visible !important;
 loading-page{
   display: none !important;
 }
+
+/* text gradient with underline */
+
+.text-gradient_underline {
+  --g:linear-gradient(91deg, #FF9C8D 12.39%, #D655A5 59.69%, #6053CB 96.64%);
+  color:transparent;
+  background: 
+    var(--g),
+    var(--g)  bottom 2px left 0/100% 2px no-repeat; /* adjust the bottom value to control the offset */
+  background-clip: text,padding-box;
+  -webkit-background-clip: text,padding-box;
+}

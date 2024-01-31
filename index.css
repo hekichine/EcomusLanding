@@ -3996,6 +3996,7 @@ popup counter {
   .ecom_preview .container-xl {
     max-width: 1470px;
   }
+
   .ecom_preview .container {
     max-width: 1700px;
   }
@@ -4044,6 +4045,7 @@ popup counter {
   .shopify_app .shopify_app_svg {
     display: none;
   }
+
   .ecom_preview .container {
     max-width: 100%;
   }
@@ -4821,12 +4823,7 @@ popup counter {
 }
 
 @media (max-width: 768px) {
-  .ecom_preview .swiper-pagination{
-    display: none;
-  }
-  .ecom_preview .ecom_slider {
-    padding-bottom: 50px;
-  }
+
 
   .banner .section-inner {
     padding-bottom: 60px;
@@ -5840,13 +5837,33 @@ popup counter {
 /* desktop */
 .ecom_preview .section-inner {
   overflow-x: hidden;
-}
-
-.ecom_preview .ecom_slider {
-  padding-bottom: 144px;
+  padding-bottom: 107px;
   position: relative;
 }
 
+.ecom_preview .swiper-button-prev,
+.ecom_preview .swiper-button-next {
+  --swiper-navigation-sides-offset: 34px;
+}
+
+.ecom_preview .asxkt::before,
+.ecom_preview .asxkt::after {
+  position: absolute;
+  content: "";
+  width: 160px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #04050E -13.97%, rgba(4, 5, 14, 0.50) 108.01%, rgba(4, 5, 14, 0.00) 249.26%);
+  z-index: 2;
+  /* pointer-events: none; */
+}
+.ecom_preview .asxkt::before{
+  left: 0;
+}
+.ecom_preview .asxkt::after{
+  right: 0;
+}
 .ecom_preview .ec_slide_gradient {
   --gradient: rgba(255, 255, 255, 0.20);
   content: "";
@@ -5950,13 +5967,14 @@ popup counter {
 
 .ecom_preview .ec_pre_btn {
   position: absolute;
-  inset: 0px;
+  inset: -2px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 28.9%, rgba(0, 0, 0, 0.50) 63.74%, #000 100%);
   transition: opacity .25s ease, visibility .25s ease;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 50px;
+  pointer-events: none;
 }
 
 .ecom_preview .title_wrap {
@@ -5993,7 +6011,8 @@ popup counter {
 }
 
 .ecom_preview .swiper-pagination {
-  bottom: 83px;
+  bottom: 0;
+  position: absolute;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -6011,6 +6030,15 @@ popup counter {
   width: 22px;
   height: 6px;
   background: #FFF;
+}
+
+.ecom_preview .bg_blur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 @media (min-width: 1025px) {
@@ -6046,11 +6074,13 @@ popup counter {
 
 /* tablet */
 @media (max-width: 1024px) {
-  .ecom_preview .swiper-pagination{
-    bottom: 30px;
+
+  .ecom_preview .bg_blur {
+    display: none;
   }
-  .ecom_preview .ecom_slider {
-    padding-bottom: 70px;
+
+  .ecom_preview .section-inner {
+    padding-bottom: 30px;
   }
 
   .ecom_preview .ec_pre_btn {
@@ -6092,5 +6122,9 @@ popup counter {
 
   .ecom_preview .tophead .content>.d-flex {
     text-align: center;
+  }
+
+  .ecom_preview .section-inner {
+    padding-bottom: 30px;
   }
 }

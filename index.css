@@ -3954,6 +3954,9 @@ popup counter {
   :where(.empower_grid .banner_wrap, popup .banner_wrap) .count {
     font-size: 32px;
   }
+  .ecom_preview .tophead p br{
+display: none;
+  }
 }
 
 
@@ -5850,7 +5853,7 @@ popup counter {
 .ecom_preview .asxkt::after {
   position: absolute;
   content: "";
-  width: 160px;
+  width: 140px;
   height: 100%;
   top: 0;
   bottom: 0;

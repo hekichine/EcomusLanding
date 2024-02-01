@@ -639,8 +639,9 @@ const app = {
       slidesPerView: 1,
       spaceBetween: 15,
       loop: true,
-      grabCursor: true,
-      // slidesPerGroup: 4,
+      grabCursor: false,
+      // slidesPerGroupSkip: 4,
+      slidesPerGroup: 4,
       initialSlide: 9,
       // loopAdditionalSlides: 1,
 

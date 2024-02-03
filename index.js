@@ -686,6 +686,11 @@ const app = {
         }
       }
     })
+
+    $(document).on('click','#multi_brands_popup_video',function(){
+        $('multi-brand-video').attr('open','');
+        $('html').attr('hidden-bar','');
+    })
   },
 };
 
@@ -800,7 +805,7 @@ class loadingPage extends HTMLElement {
       self.load_center.className = "zoomOut";
     }, 100);
     setTimeout(function () {
-      document.querySelector('html').style.overflow = 'auto';
+      document.querySelector('html').removeAttribute('hidden-bar');
       self.load_wrap.classList.add('dom_loaded');
     }, 100);
   }
@@ -808,8 +813,25 @@ class loadingPage extends HTMLElement {
 customElements.define('loading-page', loadingPage)
 
 
+class multiBrandVideo extends HTMLElement{
+  constructor(){
+    super();
+    this.close = this.querySelector('button.close');
+    this.overlay = this.querySelector('.overlay');
+    this.video = this.querySelector('video');
+    this.close.addEventListener('click',()=>{
+      this.closeVideo();
+    });
+    this.overlay.addEventListener('click',()=>{
+      this.closeVideo();
+    });
 
-
-
-
+  }
+  closeVideo(){
+    this.removeAttribute('open','');
+    document.querySelector('html').removeAttribute('hidden-bar','');
+    this.video.pause();
+  }
+}
+customElements.define('multi-brand-video',multiBrandVideo);
 

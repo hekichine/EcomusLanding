@@ -987,6 +987,7 @@ header {
   transform: translateY(100%);
   visibility: hidden;
   transition: opacity .2s ease-in-out, transform .25s ease-in-out, visibility .3s ease-in-out;
+  transition-delay: .2s;
 }
 
 .demos .comingsoon_preview .view_hover .hdt-btn {
@@ -1003,7 +1004,7 @@ header {
   transform: translateY(100%);
   visibility: hidden;
   transition: opacity .2s ease-in-out, transform .25s ease-in-out, visibility .3s ease-in-out;
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 /* end demos */
@@ -3780,6 +3781,19 @@ popup counter {
     transform: translateY(0);
     visibility: visible;
   }
+  .demos .col-inner:hover .comingsoon_preview .view_hover .comingsoon_multibrands_play{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .comingsoon_multibrands_play:hover{
+    color: var(--link-color-active);
+
+  }
+  .comingsoon_multibrands_play:hover .icon{
+    background: var(--badge-2);
+    border: none;
+  }
 
   .demos .col-inner:hover .comingsoon_preview .view_hover .hdt-btn {
     opacity: 1;
@@ -4321,10 +4335,17 @@ popup counter {
     display: none;
   }
 
-  .demos .comingsoon_preview .view_hover .hdt-btn {
+  .demos .comingsoon_preview .view_hover .hdt-btn,.comingsoon_multibrands_play {
     opacity: 1;
     visibility: visible;
     transform: none;
+  }
+  .comingsoon_multibrands_play .icon{
+    height: 40px;width: 40px;
+  }
+  .demos .multi_brands  .comingsoon_preview .view_hover::before{
+    opacity: 1;
+    visibility: visible;
   }
 
   .demos .comingsoon_preview .view_hover .title {
@@ -5247,6 +5268,9 @@ popup counter {
     font-size: 70px;
   }
 
+  multi-brand-video .close{
+    transform: translateX(0) translateY(-100%);
+  }
   .demos .preview_btn {
     margin-bottom: 15px;
   }

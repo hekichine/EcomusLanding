@@ -681,6 +681,10 @@ header {
 .demos .section-inner {
   margin-bottom: 105px;
 }
+.demos :where(img,picture){
+  border-radius: 5px;
+  overflow: hidden;
+}
 
 .demos .demos_count h3 {
   width: -webkit-fit-content;

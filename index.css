@@ -4349,6 +4349,9 @@ popup counter {
   .comingsoon_multibrands_play .icon{
     height: 40px;width: 40px;
   }
+  .comingsoon_multibrands_play .icon svg{
+    width: 8px;height: 8px;
+  }
   .demos .multi_brands  .comingsoon_preview .view_hover::before{
     opacity: 1;
     visibility: visible;

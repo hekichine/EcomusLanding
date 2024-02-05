@@ -993,7 +993,9 @@ header {
   transition: opacity .2s ease-in-out, transform .25s ease-in-out, visibility .3s ease-in-out;
   transition-delay: .2s;
 }
-
+.demos .multi_brands .comingsoon_preview .view_hover .title{
+  font-size: 20px;
+}
 .demos .comingsoon_preview .view_hover .hdt-btn {
   display: inline-flex;
   padding: 16px 24px;

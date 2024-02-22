@@ -17,8 +17,10 @@
   --text-second: #c7c7c7;
   --container-max-w-dk: 1775px;
   --container-sm: 1440px;
-  --badge-1: #cae972;
-  --badge-2: #fa6060;
+  --badge-1: rgb(67 142 68);
+  --badge-2: rgb(252 87 50);
+  --badge-3: rgb(131 183 53);
+
   --btn-color: #fff;
   --btn-bg: #000;
   --btn-color-hover: #000;
@@ -474,11 +476,15 @@ a {
 
 .hdt-badge-1 {
   --badge-bg-color: var(--badge-1);
-  --badge-color: #000;
+  --badge-color: #fff;
 }
 
 .hdt-badge-2 {
   --badge-bg-color: var(--badge-2);
+  --badge-color: #fff;
+}
+.hdt-badge-3 {
+  --badge-bg-color: var(--badge-3);
   --badge-color: #fff;
 }
 

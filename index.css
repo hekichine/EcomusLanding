@@ -132,7 +132,7 @@ header {
 /* 2. main */
 /* banner */
 .banner .section-inner {
-  padding-top: 253px;
+  padding-top: 150px;
   padding-bottom: 116px;
   text-align: center;
   position: relative;
@@ -4531,7 +4531,7 @@ popup counter {
   }
 
   .banner .section-inner {
-    padding-top: 200px;
+    padding-top: 120px;
   }
 
   .banner .banner_demo-1 {

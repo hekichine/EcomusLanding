@@ -3197,6 +3197,7 @@ multi-brand-video .close:hover {
   border-radius: 60px;
   font-size: 14px;
   font-weight: 500;
+  pointer-events: auto;
 }
 .kxti .text-wrap svg{
   margin-left: 5px;
@@ -3213,6 +3214,9 @@ multi-brand-video .close:hover {
   border: none;
   outline: none;
   color: #fff;
+}
+.kxti .text-wrap p{
+  margin-bottom: 0;
 }
 .kxti[hide]{
   overflow: hidden;

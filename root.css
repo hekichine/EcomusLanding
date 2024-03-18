@@ -26,6 +26,7 @@
   --btn-color-hover: #000;
   --link-color: #fff;
   --link-color-active: #ff9c8d;
+  --primary-color: #ff9c8d;
   --gradient: linear-gradient(90deg, #ff9c8d 10%, #d655a5, #6053cb 60%);
 
   --loading_bg: #dddddd;
@@ -3161,4 +3162,63 @@ multi-brand-video .close {
 
 multi-brand-video .close:hover {
   color: var(--link-color-active);
+}
+
+
+/* banner sticky */
+.kxti{
+  display: block;
+  position: fixed;
+  left: 0;right: 0;bottom: 0;
+  /* z-index: 333; */
+  z-index: 99;
+  pointer-events: none;
+}
+.kxti .banner-wrap{
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.kxti .banner-wrap .img-wrap{
+  max-width: 60px;
+  position: absolute;
+  bottom: 0;left: 30px;
+}
+.kxti .text-wrap{
+  padding: 10px;
+  background-color: var(--primary-color);
+  padding-left: 110px;
+  padding-right: 20px;
+  border-radius: 60px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.kxti .text-wrap svg{
+  margin-left: 5px;
+}
+.kxti .text-wrap a:hover{
+  color: #000;
+}
+@media (max-width: 767px){
+  .kxti .banner-wrap .img-wrap{
+    display: none;
+  }
+  .kxti .text-wrap{
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 375px){
+  .kxti .text-wrap{
+    font-size: 10px;
+  }
+}
+@media (max-width: 325px){
+  .kxti .text-wrap{
+    font-size: 8px;
+    padding: 10px;
+  }
 }

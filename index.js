@@ -835,3 +835,17 @@ class multiBrandVideo extends HTMLElement{
 }
 customElements.define('multi-brand-video',multiBrandVideo);
 
+class stickyBanner extends HTMLElement{
+  constructor(){
+    super();
+    this.btn =this.querySelector('button.close');
+
+    this.btn.addEventListener('click',()=>{
+      this.querySelector('.banner-wrap').setAttribute('hide','')
+      setTimeout(() => {
+        this.setAttribute('hide','');
+      }, 500);
+    })
+  }
+}
+customElements.define('sticky-banner',stickyBanner)

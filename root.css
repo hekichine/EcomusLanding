@@ -3173,6 +3173,7 @@ multi-brand-video .close:hover {
   /* z-index: 333; */
   z-index: 99;
   pointer-events: none;
+  transition: .35s ease-in-out;
 }
 .kxti .banner-wrap{
   align-items: center;
@@ -3181,11 +3182,12 @@ multi-brand-video .close:hover {
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 15px;
+  transition: .5s ease-in-out;
 }
 .kxti .banner-wrap .img-wrap{
-  max-width: 60px;
+  max-width: 90px;
   position: absolute;
-  bottom: 0;left: 30px;
+  bottom: 0;left: 15px;
 }
 .kxti .text-wrap{
   padding: 10px;
@@ -3201,6 +3203,23 @@ multi-brand-video .close:hover {
 }
 .kxti .text-wrap a:hover{
   color: #000;
+}
+.kxti .close{
+  position: absolute;
+  right: 0;top: 0;
+  transform: translateY(-100%);
+  pointer-events: auto;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.kxti[hide]{
+  overflow: hidden;
+  display: none;
+}
+.kxti .banner-wrap[hide]{
+  transform: translateY(500%);
 }
 @media (max-width: 767px){
   .kxti .banner-wrap .img-wrap{
